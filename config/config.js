@@ -77,7 +77,7 @@ export const work = {
     {
       title: "AI Researcher ",
       description:
-        "## What Kamal Pandey Does — AI Researcher at Rivian Kamal Pandey is an AI Researcher focused on advancing practical, enterprise-grade artificial intelligence. His work centers on large language models, agentic AI systems, and intelligent automation, exploring how these technologies can improve decision-making, reliability, and operational efficiency. At Rivian, he bridges research and real-world deployment—designing scalable AI architectures and contributing to next-generation intelligent platforms that support innovation across engineering and digital operations.",
+        "AI Researcher at Rivian Kamal Pandey is an AI Researcher focused on advancing practical, enterprise-grade artificial intelligence. His work centers on large language models, agentic AI systems, and intelligent automation, exploring how these technologies can improve decision-making, reliability, and operational efficiency. At Rivian, he bridges research and real-world deployment—designing scalable AI architectures and contributing to next-generation intelligent platforms that support innovation across engineering and digital operations.",
       icons: null,
     },
   ],
