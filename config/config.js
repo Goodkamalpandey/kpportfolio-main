@@ -162,7 +162,7 @@ export const SEO = {
 export const links = {
   image: profile.src,
   title: "@Kamalpandey",
-  description: "Computer Engineer | Flutter | Reactjs Developer",
+  description: "Computer Engineer • AI Researcher • Software Architect",
   cards: [
     {
       title: "My website",
