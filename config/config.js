@@ -166,7 +166,7 @@ export const links = {
   cards: [
     {
       title: "My website",
-      link: "https://Kamalpandey.com/",
+      link: "https://drKamalpandey.com/",
     },
     {
       title: "QuranTalk App",
@@ -178,11 +178,11 @@ export const links = {
     },
     {
       title: "My GitHub",
-      link: "https://github.com/Kamalpandey/",
+      link: "https://github.com/Goodkamalpandey/",
     },
     {
       title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/Kamalpandey/",
+      link: "https://www.linkedin.com/in/kamalkpandey/",
     },
   ],
 };
