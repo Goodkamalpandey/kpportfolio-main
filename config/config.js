@@ -144,7 +144,7 @@ export const projects = {
       ],
     },
     {
-      title: "SAInexus Innovation",
+      title: "SaInexus Innovation",
       description:
         "An autonomous intelligence platform designed for multi-cloud orchestration and secure signal ingestion.",
       icons: [{ icon: faGithub, link: "https://github.com/Goodkamalpandey" }],
