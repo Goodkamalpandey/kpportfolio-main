@@ -9,6 +9,9 @@ export const About = ({ title, description, image, socialLinks }) => {
           <h2>{title}</h2>
         </div>
         <div className="about-content">
+          <div className="about-image-wrapper">
+            <img className="about-image" src={image} alt="profile" />
+          </div>
           <div className="about-text">
             {description.map((value, index) => (
               <p key={index}>{value}</p>
@@ -27,9 +30,6 @@ export const About = ({ title, description, image, socialLinks }) => {
                 ))}
               </div>
             )}
-          </div>
-          <div className="about-image-wrapper">
-            <img className="about-image" src={image} alt="profile" />
           </div>
         </div>
       </div>

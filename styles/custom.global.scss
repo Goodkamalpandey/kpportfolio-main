@@ -1,35 +1,39 @@
-// Dark Portfolio Theme - Inspired by ericwadkins.com
+// ericwadkins.com-style Portfolio Theme
+// Mixed: Dark navy hero/papers/contact, White about, Light gray skills, Gold timeline
 // ============================================
 
 @import "~bootstrap/scss/functions";
 
 // ============================================
-// Dark Theme Color Palette
+// Color Palette (matching ericwadkins.com)
 // ============================================
-$dark-navy: #0a192f;
-$navy: #112240;
-$light-navy: #1d3557;
-$lightest-navy: #233554;
-$dark-slate: #495670;
-$slate: #8892b0;
-$light-slate: #a8b2d1;
-$lightest-slate: #ccd6f6;
-$white-text: #e6f1ff;
-$accent: #64ffda;
-$accent-tint: rgba(100, 255, 218, 0.1);
+$dark-navy: #1a1a2e;
+$navy: #16213e;
+$navy-light: #0f3460;
+$gold: #e2b13c;
+$gold-light: #f0c850;
+$gold-bg: #f5d060;
+$white: #ffffff;
+$off-white: #f8f9fa;
+$light-gray: #f0f0f0;
+$text-dark: #333333;
+$text-medium: #555555;
+$text-light: #777777;
+$text-muted: #999999;
+$accent: #1a73e8;
+$border-light: #e0e0e0;
 
 // Bootstrap overrides
-$primary: $accent;
-$secondary: $navy;
-$body-bg: $dark-navy;
-$body-color: $slate;
-$light: $white-text;
-$headings-color: $lightest-slate;
+$primary: $navy;
+$secondary: $light-gray;
+$body-bg: $white;
+$body-color: $text-dark;
+$headings-color: $text-dark;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
-$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-family-monospace: 'Fira Code', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+$font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-heading: 'Montserrat', 'Lato', sans-serif;
 
 $card-border-radius: 4px;
 $border-radius: 4px;
@@ -76,20 +80,18 @@ $border-radius: 4px;
 @import "~bootstrap/scss/utilities/api";
 
 // ============================================
-// Global Styles
+// Global
 // ============================================
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: $dark-slate $dark-navy;
   overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  background-color: $dark-navy;
-  color: $slate;
+  background-color: $white;
+  color: $text-dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -98,79 +100,77 @@ body {
   line-height: 1.6;
 }
 
-::selection {
-  background-color: $light-navy;
-  color: $lightest-slate;
-}
-
 a {
   text-decoration: none;
   color: $accent;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s ease;
 
   &:hover {
-    color: $accent;
-    opacity: 0.85;
+    color: darken($accent, 10%);
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+}
+
 // ============================================
-// Navigation
+// Navbar — Dark navy, fixed top
 // ============================================
 
 .nav-dark {
-  background: rgba(10, 25, 47, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-  padding: 0.75rem 0;
+  background: $dark-navy;
+  padding: 0.5rem 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 
   .navbar-brand {
-    color: $white-text !important;
+    color: $white !important;
+    font-family: $font-family-heading;
     font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: -0.5px;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
 
     &:hover {
-      color: $accent !important;
+      color: rgba(255,255,255,0.85) !important;
     }
   }
 
   .nav-link {
-    color: $lightest-slate !important;
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem !important;
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0.75rem !important;
     transition: color 0.3s ease;
 
     &:hover {
-      color: $accent !important;
-    }
-
-    .nav-number {
-      color: $accent;
-      font-family: $font-family-monospace;
-      font-size: 0.75rem;
-      margin-right: 5px;
+      color: $white !important;
     }
   }
 
   .navbar-toggler {
-    border-color: $accent;
+    border-color: rgba(255,255,255,0.3);
 
     .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2364ffda' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      background: $dark-navy;
+      padding: 1rem 0;
     }
   }
 }
 
 // ============================================
-// Hero Section
+// Hero — Dark with background overlay, centered
 // ============================================
 
 .hero-section {
@@ -180,61 +180,47 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: $dark-navy;
   position: relative;
-  padding: 0 2rem;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(100, 255, 218, 0.03) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(100, 255, 218, 0.05) 0%, transparent 40%);
-    pointer-events: none;
-  }
+  padding: 6rem 2rem 4rem;
+  background:
+    linear-gradient(rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.9)),
+    linear-gradient(135deg, $dark-navy, $navy, $navy-light);
+  background-size: cover;
+  background-position: center;
+  color: $white;
 
   .hero-content {
     position: relative;
     z-index: 1;
   }
 
-  .hero-greeting {
-    color: $accent;
-    font-family: $font-family-monospace;
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-    font-weight: 400;
+  .hero-profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.3);
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
   }
 
   .hero-name {
-    color: $white-text;
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 800;
+    color: $white;
+    font-family: $font-family-heading;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 0.5rem;
-    letter-spacing: -2px;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
   }
 
   .hero-tagline {
-    color: $light-slate;
-    font-size: clamp(1.1rem, 3vw, 2rem);
-    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
     line-height: 1.3;
-    margin-bottom: 1.5rem;
-    max-width: 700px;
-  }
-
-  .hero-description {
-    color: $slate;
-    font-size: 1.05rem;
-    max-width: 560px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 600px;
   }
 
   .hero-cta {
@@ -253,220 +239,239 @@ a {
     flex-wrap: wrap;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.15);
 
     .logo-item {
-      color: $light-slate;
-      font-size: 0.85rem;
-      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       transition: color 0.3s ease;
-      opacity: 1;
 
       &:hover {
-        color: $accent;
+        color: $white;
       }
     }
   }
-
-  .scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-
-    .scroll-arrow {
-      width: 20px;
-      height: 20px;
-      border-right: 2px solid $accent;
-      border-bottom: 2px solid $accent;
-      transform: rotate(45deg);
-      animation: scrollBounce 2s infinite;
-      opacity: 0.6;
-    }
-  }
-}
-
-@keyframes scrollBounce {
-  0%, 20%, 50%, 80%, 100% { transform: rotate(45deg) translateY(0); }
-  40% { transform: rotate(45deg) translateY(-10px); }
-  60% { transform: rotate(45deg) translateY(-5px); }
 }
 
 // ============================================
 // Buttons
 // ============================================
 
-.btn-accent {
-  color: $accent;
+.btn-hero {
+  color: $white;
   background-color: transparent;
-  border: 1px solid $accent;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-family: $font-family-monospace;
+  border: 2px solid $white;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $dark-navy;
+  }
+}
+
+.btn-primary-custom {
+  color: $white;
+  background-color: $accent;
+  border: 2px solid $accent;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border-radius: 4px;
   transition: all 0.3s ease;
   cursor: pointer;
-  display: inline-block;
 
   &:hover {
-    background-color: $accent-tint;
-    color: $accent;
+    background-color: darken($accent, 8%);
+    border-color: darken($accent, 8%);
+    color: $white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+}
+
+.btn-outline-custom {
+  color: $text-dark;
+  background-color: transparent;
+  border: 2px solid $text-dark;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $text-dark;
+    color: $white;
     transform: translateY(-2px);
   }
 }
 
 .btn-accent-filled {
-  color: $dark-navy;
+  color: $white;
   background-color: $accent;
-  border: 1px solid $accent;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-family: $font-family-monospace;
+  border: 2px solid $accent;
+  padding: 0.65rem 1.75rem;
+  font-size: 0.85rem;
+  font-family: $font-family-heading;
+  font-weight: 600;
   border-radius: 4px;
   transition: all 0.3s ease;
-  font-weight: 600;
   cursor: pointer;
   display: inline-block;
 
   &:hover {
-    background-color: rgba(100, 255, 218, 0.85);
-    color: $dark-navy;
+    background-color: darken($accent, 8%);
+    color: $white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+}
+
+.btn-accent {
+  color: $accent;
+  background-color: transparent;
+  border: 2px solid $accent;
+  padding: 0.65rem 1.75rem;
+  font-size: 0.85rem;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    background-color: $accent;
+    color: $white;
+    transform: translateY(-2px);
   }
 }
 
 // ============================================
-// Section Styles
+// Section base
 // ============================================
 
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 
   @media (max-width: 768px) {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 }
 
 .section-heading {
-  display: flex;
-  align-items: center;
+  text-align: center;
   margin-bottom: 2.5rem;
-  width: 100%;
-
-  .heading-number {
-    color: $accent;
-    font-family: $font-family-monospace;
-    font-size: 1.25rem;
-    margin-right: 10px;
-    font-weight: 400;
-  }
 
   h2 {
-    color: $lightest-slate;
-    font-size: 1.85rem;
+    font-family: $font-family-heading;
+    font-size: 2.25rem;
     font-weight: 700;
-    white-space: nowrap;
     margin: 0;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: $gold;
+      margin: 0.75rem auto 0;
+    }
   }
 
-  &::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background-color: $lightest-navy;
-    margin-left: 20px;
-    flex: 1;
-    min-width: 0;
-
-    @media (max-width: 768px) {
-      margin-left: 10px;
-    }
+  p {
+    color: $text-light;
+    font-size: 1rem;
+    margin-top: 0.75rem;
   }
 }
 
 // ============================================
-// About Section
+// About — White background, photo left / text right
 // ============================================
 
 .about-section {
-  background: $dark-navy;
+  background: $white;
+  padding: 5rem 0;
+
+  .section-heading h2 {
+    color: $text-dark;
+  }
 
   .about-content {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 250px 1fr;
     gap: 3rem;
+    align-items: start;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-    }
-  }
-
-  .about-text {
-    p {
-      color: $slate;
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
+      text-align: center;
     }
   }
 
   .about-image-wrapper {
     position: relative;
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 auto;
-    display: inline-block;
-    align-self: start;
 
     .about-image {
-      border-radius: 4px;
-      width: 100%;
-      height: auto;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
       display: block;
-      position: relative;
-      z-index: 1;
-      filter: grayscale(20%) contrast(1.05);
-      transition: all 0.3s ease;
-      aspect-ratio: 1 / 1;
       object-fit: cover;
+      border: 5px solid $light-gray;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin: 0 auto;
     }
 
     &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: -15px;
-      bottom: -15px;
-      border-radius: 4px;
-      border: 2px solid $accent;
-      z-index: 0;
-      transition: all 0.3s ease;
+      display: none;
     }
+  }
 
-    &:hover {
-      .about-image {
-        filter: none;
-      }
-
-      &::after {
-        top: 10px;
-        left: 10px;
-      }
+  .about-text {
+    p {
+      color: $text-medium;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
     }
   }
 
   .social-links {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
 
     a {
-      color: $light-slate;
-      font-size: 1.5rem;
+      color: $text-dark;
+      font-size: 1.4rem;
       transition: all 0.3s ease;
 
       &:hover {
@@ -478,18 +483,19 @@ a {
 }
 
 // ============================================
-// Quick Links
+// Quick Links (Learn more about my:)
 // ============================================
 
 .quick-links-section {
-  background: $navy;
-  padding: 4rem 0;
+  background: $off-white;
+  padding: 3rem 0;
   text-align: center;
 
-  h2 {
-    color: $lightest-slate;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+  h3 {
+    color: $text-dark;
+    font-family: $font-family-heading;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .quick-links-grid {
@@ -500,30 +506,36 @@ a {
   }
 
   .quick-link-btn {
-    color: $accent;
-    border: 1px solid $accent;
-    padding: 0.6rem 1.5rem;
+    color: $text-dark;
+    border: 2px solid $text-dark;
+    padding: 0.5rem 1.25rem;
     border-radius: 4px;
-    font-family: $font-family-monospace;
-    font-size: 0.875rem;
+    font-family: $font-family-heading;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     background: transparent;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
 
     &:hover {
-      background: $accent-tint;
-      transform: translateY(-2px);
+      background: $text-dark;
+      color: $white;
     }
   }
 }
 
 // ============================================
-// Skills / Competencies
+// Skills — Light gray background
 // ============================================
 
 .skills-section {
-  background: $dark-navy;
+  background: $light-gray;
+
+  .section-heading h2 {
+    color: $text-dark;
+  }
 
   .skills-grid {
     display: grid;
@@ -532,52 +544,36 @@ a {
   }
 
   .skill-card {
-    background: $navy;
-    border: 1px solid $lightest-navy;
+    background: $white;
+    border: 1px solid $border-light;
     border-radius: 8px;
     padding: 2rem;
+    text-align: center;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: $accent;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
     &:hover {
-      transform: translateY(-7px);
-      border-color: $accent;
-      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-
-      &::before {
-        transform: scaleX(1);
-      }
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .skill-icon {
-      color: $accent;
-      font-size: 2rem;
+      color: $navy;
+      font-size: 2.5rem;
       margin-bottom: 1.25rem;
     }
 
     h4 {
-      color: $lightest-slate;
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-family: $font-family-heading;
+      color: $text-dark;
+      font-size: 1.1rem;
+      font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
     p {
-      color: $slate;
-      font-size: 0.95rem;
+      color: $text-medium;
+      font-size: 0.9rem;
       line-height: 1.6;
       margin-bottom: 0;
     }
@@ -585,39 +581,47 @@ a {
 }
 
 // ============================================
-// Publications
+// Publications — Dark navy background
 // ============================================
 
 .publications-section {
   background: $dark-navy;
+  color: $white;
+
+  .section-heading h2 {
+    color: $white;
+
+    &::after {
+      background-color: $gold;
+    }
+  }
 
   .publication-item {
-    background: $navy;
-    border: 1px solid $lightest-navy;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 8px;
     padding: 1.75rem;
     margin-bottom: 1.25rem;
     transition: all 0.3s ease;
-    border-left: 3px solid transparent;
 
     &:hover {
-      transform: translateX(5px);
-      border-left-color: $accent;
-      box-shadow: 0 5px 20px -5px rgba(2, 12, 27, 0.5);
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
     }
 
     h5 {
-      color: $lightest-slate;
-      font-size: 1.05rem;
+      color: $white;
+      font-family: $font-family-heading;
+      font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
-      line-height: 1.4;
+      line-height: 1.5;
 
       a {
-        color: $lightest-slate;
+        color: $white;
 
         &:hover {
-          color: $accent;
+          color: $gold;
         }
       }
     }
@@ -630,13 +634,13 @@ a {
       gap: 0.5rem;
 
       .pub-journal {
-        color: $accent;
-        font-family: $font-family-monospace;
-        font-size: 0.8rem;
+        color: $gold;
+        font-size: 0.85rem;
+        font-weight: 600;
       }
 
       .pub-authors {
-        color: $slate;
+        color: rgba(255,255,255,0.6);
         font-size: 0.85rem;
         font-style: italic;
       }
@@ -646,28 +650,33 @@ a {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: $accent;
-      font-family: $font-family-monospace;
-      font-size: 0.8rem;
+      color: $gold;
+      font-size: 0.85rem;
+      font-weight: 600;
       margin-top: 0.75rem;
 
       &:hover {
         text-decoration: underline;
+        color: $gold-light;
       }
     }
   }
 }
 
 // ============================================
-// Honors
+// Honors — White background
 // ============================================
 
 .honors-section {
-  background: $navy;
+  background: $white;
+
+  .section-heading h2 {
+    color: $text-dark;
+  }
 
   .honor-card {
-    background: $dark-navy;
-    border: 1px solid $lightest-navy;
+    background: $off-white;
+    border: 1px solid $border-light;
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
@@ -675,59 +684,63 @@ a {
     height: 100%;
 
     &:hover {
-      transform: translateY(-7px);
-      border-color: $accent;
-      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .honor-icon {
-      color: $accent;
+      color: $gold;
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     h4 {
-      color: $lightest-slate;
+      font-family: $font-family-heading;
+      color: $text-dark;
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
     .honor-org {
-      color: $slate;
+      color: $text-medium;
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
     }
 
     .honor-year {
       color: $accent;
-      font-family: $font-family-monospace;
       font-size: 0.85rem;
+      font-weight: 700;
     }
   }
 }
 
 // ============================================
-// Projects
+// Projects — White bg
 // ============================================
 
 .projects-section {
-  background: $dark-navy;
+  background: $off-white;
+
+  .section-heading h2 {
+    color: $text-dark;
+  }
 
   .project-card {
-    background: $navy;
-    border: 1px solid $lightest-navy;
+    background: $white;
+    border: 1px solid $border-light;
     border-radius: 8px;
     padding: 2rem;
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
     &:hover {
-      transform: translateY(-7px);
-      border-color: $accent;
-      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .project-top {
@@ -737,7 +750,7 @@ a {
       margin-bottom: 1.5rem;
 
       .folder-icon {
-        color: $accent;
+        color: $navy;
         font-size: 2.5rem;
       }
 
@@ -746,7 +759,7 @@ a {
         gap: 0.75rem;
 
         a {
-          color: $light-slate;
+          color: $text-medium;
           font-size: 1.25rem;
           transition: color 0.3s ease;
 
@@ -758,15 +771,16 @@ a {
     }
 
     h4 {
-      color: $lightest-slate;
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-family: $font-family-heading;
+      color: $text-dark;
+      font-size: 1.15rem;
+      font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
     p {
-      color: $slate;
-      font-size: 0.95rem;
+      color: $text-medium;
+      font-size: 0.9rem;
       line-height: 1.6;
       flex-grow: 1;
       margin-bottom: 0;
@@ -775,111 +789,184 @@ a {
 }
 
 // ============================================
-// Timeline
+// Timeline — Gold/Yellow background (ericwadkins style)
 // ============================================
 
 .timeline-section {
-  background: $dark-navy;
+  background: $gold-bg;
+  position: relative;
+
+  .section-heading h2 {
+    color: $text-dark;
+
+    &::after {
+      background-color: $dark-navy;
+    }
+  }
 
   .timeline {
     position: relative;
-    padding-left: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 
     &::before {
       content: '';
       position: absolute;
-      left: 0;
+      left: 50%;
       top: 0;
       bottom: 0;
-      width: 2px;
-      background: $lightest-navy;
+      width: 3px;
+      background: $dark-navy;
+      transform: translateX(-50%);
+
+      @media (max-width: 768px) {
+        left: 20px;
+      }
     }
   }
 
   .timeline-item {
     position: relative;
-    padding: 0 0 3rem 2rem;
+    padding: 1.5rem 0;
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding-right: 3rem;
+      text-align: right;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 3.5rem;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(even) {
+      margin-left: 50%;
+      padding-left: 3rem;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 3.5rem;
+      }
+    }
 
     &::before {
       content: '';
       position: absolute;
-      left: -2rem;
-      top: 5px;
-      width: 12px;
-      height: 12px;
+      top: 2rem;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background: $dark-navy;
-      border: 2px solid $accent;
+      border: 3px solid $gold-bg;
       z-index: 1;
-      transform: translateX(-5px);
     }
 
-    &:last-child {
-      padding-bottom: 0;
+    &:nth-child(odd)::before {
+      right: -8px;
+
+      @media (max-width: 768px) {
+        left: 13px;
+        right: auto;
+      }
+    }
+
+    &:nth-child(even)::before {
+      left: -8px;
+
+      @media (max-width: 768px) {
+        left: 13px;
+      }
+    }
+
+    .timeline-card {
+      background: $white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      }
     }
 
     .timeline-period {
-      color: $accent;
-      font-family: $font-family-monospace;
-      font-size: 0.85rem;
+      color: $navy;
+      font-family: $font-family-heading;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 0.5rem;
     }
 
     h4 {
-      color: $lightest-slate;
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-family: $font-family-heading;
+      color: $text-dark;
+      font-size: 1.1rem;
+      font-weight: 700;
       margin-bottom: 0.25rem;
     }
 
     .timeline-company {
       color: $accent;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
     }
 
     .timeline-location {
-      color: $slate;
-      font-size: 0.85rem;
-      font-family: $font-family-monospace;
-      margin-bottom: 0.75rem;
+      color: $text-light;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
-      color: $slate;
-      font-size: 0.95rem;
-      line-height: 1.7;
+      color: $text-medium;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 0;
     }
   }
 }
 
 // ============================================
-// Contact
+// Contact — Dark navy
 // ============================================
 
 .contact-section {
   background: $dark-navy;
   text-align: center;
-  padding: 8rem 0;
+  padding: 6rem 0;
 
   .contact-overline {
-    color: $accent;
-    font-family: $font-family-monospace;
-    font-size: 1rem;
+    color: $gold;
+    font-family: $font-family-heading;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 0.75rem;
     display: block;
   }
 
   h2 {
-    color: $lightest-slate;
+    color: $white;
+    font-family: $font-family-heading;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   p {
-    color: $slate;
-    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 1.05rem;
     max-width: 500px;
     margin: 0 auto 2.5rem;
     line-height: 1.7;
@@ -890,59 +977,79 @@ a {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+
+    .btn-accent-filled {
+      background-color: $gold;
+      border-color: $gold;
+      color: $dark-navy;
+
+      &:hover {
+        background-color: $gold-light;
+        border-color: $gold-light;
+        color: $dark-navy;
+      }
+    }
+
+    .btn-accent {
+      color: $white;
+      border-color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $dark-navy;
+      }
+    }
   }
 }
 
 // ============================================
-// Footer
+// Footer — Dark
 // ============================================
 
 .footer-dark {
-  background: $dark-navy;
+  background: darken($dark-navy, 3%);
   padding: 2rem 0;
   text-align: center;
-  border-top: 1px solid $lightest-navy;
+  border-top: 1px solid rgba(255,255,255,0.1);
 
   .footer-social {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     a {
-      color: $light-slate;
+      color: rgba(255,255,255,0.6);
       font-size: 1.25rem;
       transition: all 0.3s ease;
 
       &:hover {
-        color: $accent;
+        color: $white;
         transform: translateY(-3px);
       }
     }
   }
 
   .footer-text {
-    color: $dark-slate;
-    font-family: $font-family-monospace;
+    color: rgba(255,255,255,0.4);
     font-size: 0.8rem;
-    line-height: 1.8;
 
     a {
-      color: $light-slate;
+      color: rgba(255,255,255,0.6);
 
       &:hover {
-        color: $accent;
+        color: $white;
       }
     }
   }
 }
 
 // ============================================
-// Icon Styles
+// Icon styles
 // ============================================
 
 .icon-style {
-  color: $accent;
+  color: $navy;
 }
 
 // ============================================
@@ -950,82 +1057,33 @@ a {
 // ============================================
 
 @media (max-width: 576px) {
-  .hero-section {
-    padding: 0 1rem;
-  }
-
   .section {
     padding: 3rem 0;
   }
-
-  .section-heading h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-section .about-image-wrapper {
-    max-width: 200px;
-  }
 }
 
 // ============================================
-// Animations
-// ============================================
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// ============================================
-// Scrollbar
-// ============================================
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: $dark-navy;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: $dark-slate;
-  border-radius: 10px;
-}
-
-// ============================================
-// Card work (for links page)
+// Card work (links page)
 // ============================================
 
 .card-work {
-  background: $navy;
-  border: 1px solid $lightest-navy;
+  background: $white;
+  border: 1px solid $border-light;
   border-radius: 8px;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: $accent;
-    box-shadow: 0 5px 20px -5px rgba(2, 12, 27, 0.5);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transform: translateY(-2px);
   }
 
   h4 {
-    color: $lightest-slate;
+    color: $text-dark;
   }
 }
 
-// ============================================
-// Card Image
-// ============================================
-
 .card-image {
-  border-radius: $card-border-radius;
+  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
@@ -1034,13 +1092,17 @@ a {
 // ============================================
 
 .bg-secondary {
-  background-color: $navy !important;
+  background-color: $light-gray !important;
 }
 
 .text-primary {
-  color: $accent !important;
+  color: $navy !important;
 }
 
 .text-muted {
-  color: $dark-slate !important;
+  color: $text-muted !important;
+}
+
+.text-dark {
+  color: $text-dark !important;
 }

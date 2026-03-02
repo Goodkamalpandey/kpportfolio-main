@@ -1,23 +1,29 @@
 import React from "react";
 import Link from "next/link";
 
-export const Hero = ({ title, name, description, buttons, affiliations }) => {
+export const Hero = ({
+  title,
+  name,
+  description,
+  image,
+  buttons,
+  affiliations,
+}) => {
   return (
     <section className="hero-section" id="home">
       <div className="hero-content">
-        <div className="hero-greeting">Welcome. My name is</div>
+        {image && <img className="hero-profile-img" src={image} alt={name} />}
         <h1 className="hero-name">{name}</h1>
         <h2 className="hero-tagline">{title}</h2>
-        <p className="hero-description">{description}</p>
         <div className="hero-cta">
           {buttons.map((value, index) =>
             value.isPrimary ? (
               <Link key={index} href={value.link}>
-                <a className="btn-accent-filled">{value.title}</a>
+                <a className="btn-hero">{value.title}</a>
               </Link>
             ) : (
               <Link key={index} href={value.link}>
-                <a className="btn-accent" target="_blank" rel="noreferrer">
+                <a className="btn-hero" target="_blank" rel="noreferrer">
                   {value.title}
                 </a>
               </Link>
@@ -26,18 +32,13 @@ export const Hero = ({ title, name, description, buttons, affiliations }) => {
         </div>
         {affiliations && affiliations.length > 0 && (
           <div className="hero-logos">
-            {affiliations.map((name, index) => (
+            {affiliations.map((aff, index) => (
               <span key={index} className="logo-item">
-                {name}
+                {aff}
               </span>
             ))}
           </div>
         )}
-      </div>
-      <div className="scroll-indicator">
-        <a href="#about">
-          <div className="scroll-arrow"></div>
-        </a>
       </div>
     </section>
   );

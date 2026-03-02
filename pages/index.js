@@ -31,6 +31,7 @@ export default function Home() {
         title={intro.title}
         name={intro.name}
         description={intro.description}
+        image={intro.image}
         buttons={intro.buttons}
         affiliations={intro.affiliations}
       />
