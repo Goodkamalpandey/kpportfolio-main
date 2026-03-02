@@ -19,10 +19,10 @@ export const navigation = {
   name: "Dr. Kamal Pandey",
   links: [
     { title: "About", link: "#about" },
-    { title: "Research", link: "#ResearchScholarlyInterests" },
-    { title: "Publications", link: "#Publications" },
-    { title: "Honors", link: "#Awards" },
-    { title: "Experience", link: "#work" },
+    { title: "Research", link: "#skills" },
+    { title: "Publications", link: "#publications" },
+    { title: "Honors", link: "#honors" },
+    { title: "Experience", link: "#experience" },
     { title: "Contact", link: "#contact" },
     { title: "Blog", link: "https://medium.com/@kamalkismca" },
   ],
@@ -42,6 +42,7 @@ export const intro = {
       isPrimary: false,
     },
   ],
+  affiliations: ["Rivian", "IEEE", "IET", "SAInexus", "AI150"],
 };
 
 export const about = {
@@ -176,4 +177,57 @@ export const SEO = {
   description:
     "Dr. Kamal Pandey is a leading expert in AI, custom AI application development, software engineering, cloud architecture, and digital transformation. He is the Founding CTO of Kentron AI and SAInexus, and serves as a Sr Staff Software Architect at Rivian.",
   image: profile.src,
+};
+
+export const experience = {
+  title: "Professional Journey",
+  timeline: [
+    {
+      company: "Rivian",
+      role: "Sr Staff Software Architect",
+      period: "Present",
+      location: "Digital Strategy & Innovation",
+      description:
+        "Driving the digital strategy for the electric vehicle ecosystem, focusing on intelligent automation and software-defined vehicle architectures.",
+    },
+    {
+      company: "SAInexus",
+      role: "Founder & CTO",
+      period: "Founded",
+      location: "Global Operations",
+      description:
+        "Architected global transformation programs for industry titans including Samsung, Goodyear, and Merck, consistently delivering 1% level innovation in high-stakes environments.",
+    },
+    {
+      company: "Kentron AI",
+      role: "Founding CTO",
+      period: "",
+      location: "AI & Custom Applications",
+      description:
+        "Led development of custom AI application solutions, specializing in enterprise-scale intelligent systems and autonomous innovation platforms.",
+    },
+  ],
+};
+
+export const socialLinks = [
+  { icon: faLinkedin, link: "https://www.linkedin.com/in/kamalpandey" },
+  { icon: faGithub, link: "https://github.com/Goodkamalpandey" },
+  { icon: faMedium, link: "https://medium.com/@kamalkismca" },
+];
+
+export const links = {
+  title: "Dr. Kamal Pandey",
+  description:
+    "Solutions Architect & AI Researcher | Rivian | Agentic AI Expert",
+  image: profile.src,
+  cards: [
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/kamalpandey" },
+    { title: "GitHub", link: "https://github.com/Goodkamalpandey" },
+    { title: "Blog", link: "https://medium.com/@kamalkismca" },
+    {
+      title: "Resume / Portfolio",
+      link: "https://drive.google.com/file/d/1MgvnMC-dLEUwewv0rvUzd5CC49Tnwfnf/view?usp=sharing",
+    },
+    { title: "Topmate Consultation", link: "https://topmate.io/Kamalpandey" },
+  ],
 };
