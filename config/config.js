@@ -4,7 +4,7 @@ import {
   faAppStore,
   faGooglePlay,
 } from "@fortawesome/free-brands-svg-icons";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 export const navigation = {
   name: "Home",
@@ -25,7 +25,7 @@ export const navigation = {
     { title: "Contact", link: "#contact" },
     { title: "Links", link: "/links" },
     { title: "Blog", link: "https://medium.com/@kamalkismca" },
-    { title: "Linkedin", link: "https://www.linkedin.com/in/kamalkpandey/" },
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/kamalkpandey/" },
     {
       title: "Google Scholar",
       link: "https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en",
@@ -81,7 +81,7 @@ export const projects = {
   title: "Projects",
   cards: [
     {
-      title: "Books",
+      title: "Books & Research Monographs",
       description: "AI-2050: Visions of Future & Sustainability",
       icons: [
         {
@@ -92,9 +92,9 @@ export const projects = {
       ],
     },
     {
-      title: "ResearchGate",
+      title: "ResearchGate Profile",
       description:
-        "Research publications spanning AI systems, enterprise platforms, predictive analytics, and intelligent automation.",
+        "View complete research record on ResearchGate (21+ publications, multiple articles & conference papers).",
       icons: [
         {
           icon: faGooglePlay,
@@ -107,6 +107,47 @@ export const projects = {
       description:
         "Ph.D., Computer Science • Master’s, Computer Science • Bachelor’s, Computer Science",
       icons: [{ icon: faGraduationCap, link: "#" }],
+    },
+  ],
+};
+
+export const publications = {
+  title: "Publications",
+  papers: [
+    {
+      title:
+        "Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap",
+      journal: "Journal of Computer Science and Technology Studies (2025)",
+      link: "https://al-kindipublishers.org/index.php/jcsts/article/view/11004",
+      authors: "Kamal Pandey",
+    },
+    {
+      title:
+        "The Convergence of Artificial Intelligence and Low-Code/No-Code Platforms: Evolution, Applications, and Benchmarks",
+      journal: "IEEE Access (2025)",
+      link: "https://www.researchgate.net/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks",
+      authors: "Kamal Pandey",
+    },
+    {
+      title:
+        "Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI",
+      journal: "Preprints.org (2025)",
+      link: "#",
+      authors: "Kamal Pandey",
+    },
+    {
+      title:
+        "Designing Ethical AI for Development: Challenges & Opportunities in Humanitarian Engineering and Electric Vehicles",
+      journal: "Preprints.org (2025)",
+      link: "#",
+      authors: "Kamal Pandey",
+    },
+    {
+      title:
+        "Artificial Intelligence (AI) in Electric Vehicle Ecosystems: Challenges, Opportunities, and Models for Accelerated Adoption",
+      journal: "Conference Paper (2024)",
+      link: "#",
+      authors: "Kamal Pandey",
     },
   ],
 };
@@ -148,6 +189,10 @@ export const links = {
     {
       title: "ResearchGate",
       link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
+    },
+    {
+      title: "Google Scholar",
+      link: "https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en",
     },
   ],
 };
