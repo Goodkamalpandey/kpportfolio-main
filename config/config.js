@@ -34,7 +34,7 @@ export const navigation = {
       link: "#Boards",
     },
     {
-      title: "Professional Education",
+      title: "ProfessionalEducation",
       link: "#ProfessionalEducation",
     },
 
@@ -172,7 +172,7 @@ export const contact = {
     },
   ],
 };
-export const pro = {
+export const ProfessionalEducation = {
   // 50 - 60 char
   title:
     "Dr. Kamal Pandey holds a Bachelor’s, Master’s, and Doctoral degree in Computer Science, with advanced specialization in Artificial Intelligence, Cloud Computing, Distributed Systems, and Digital Transformation. His academic research integrates theoretical computer science with applied enterprise innovation, forming the foundation of his work in AI architectures, autonomous systems, and large-scale cloud modernization.",
