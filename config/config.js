@@ -3,45 +3,41 @@ import {
   faGithub,
   faAppStore,
   faGooglePlay,
+  faLinkedin,
+  faMedium,
 } from "@fortawesome/free-brands-svg-icons";
-import { faGraduationCap, faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGraduationCap,
+  faFileAlt,
+  faAward,
+  faBrain,
+  faCloud,
+  faCar,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const navigation = {
-  name: "Home",
+  name: "Dr. Kamal Pandey",
   links: [
     { title: "About", link: "#about" },
-    { title: "Projects", link: "#projects" },
-    {
-      title: "Current Research and Scholarly Interests",
-      link: "#ResearchScholarlyInterests",
-    },
+    { title: "Research", link: "#ResearchScholarlyInterests" },
     { title: "Publications", link: "#Publications" },
-    { title: "Honors and Awards", link: "#Awards" },
-    {
-      title: "Boards, Advisory Committees, Professional Organizations",
-      link: "#Boards",
-    },
-    { title: "Professional Education", link: "#ProfessionalEducation" },
+    { title: "Honors", link: "#Awards" },
+    { title: "Experience", link: "#work" },
     { title: "Contact", link: "#contact" },
-    { title: "Links", link: "/links" },
     { title: "Blog", link: "https://medium.com/@kamalkismca" },
-    { title: "LinkedIn", link: "https://www.linkedin.com/in/kamalkpandey/" },
-    {
-      title: "Google Scholar",
-      link: "https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en",
-    },
   ],
 };
 
 export const intro = {
-  title: "Hey, I'm Dr Kamal Pandey",
+  title: "Architecting the Future of Agentic AI",
+  name: "Dr. Kamal Pandey",
   description:
-    "Kamal Pandey is an AI researcher and Solutions Architect who builds scalable intelligent systems that connect advanced research with real-world enterprise innovation at Rivian.",
+    "Solutions Architect & AI Researcher specializing in scalable intelligent systems and autonomous innovation. Bridging the gap between doctoral-level research and enterprise-scale execution at Rivian.",
   image: profile.src,
   buttons: [
-    { title: "Contact Me", link: "#contact", isPrimary: true },
+    { title: "Inquire for Collaboration", link: "#contact", isPrimary: true },
     {
-      title: "Resume",
+      title: "View Portfolio",
       link: "https://drive.google.com/file/d/1MgvnMC-dLEUwewv0rvUzd5CC49Tnwfnf/view?usp=sharing",
       isPrimary: false,
     },
@@ -49,121 +45,125 @@ export const intro = {
 };
 
 export const about = {
-  title: "Who I am",
+  title: "Professional Profile",
   description: [
-    "Dr. Kamal Pandey is a Solutions Architect specializing in Artificial Intelligence, Cloud Computing, and Digital Transformation with more than 16 years of experience delivering enterprise-scale technology initiatives.",
-    "At Rivian, he shapes digital and cloud strategy, modern workplace platforms, and AI-driven solutions that support sustainable innovation in the electric vehicle ecosystem.",
-    "He has led transformation programs across global organizations including Rivian, Samsung, Goodyear, Eaton, and Merck, focusing on enterprise architecture, intelligent automation, and data platforms.",
-    "Dr. Pandey holds doctoral, master’s, and bachelor’s degrees in Computer Science and actively publishes research on agentic AI, conversational resilience, digital twins, and intelligent edge-cloud systems.",
-    "He is also the founder of SAInexus, an AI innovation initiative focused on multi-cloud autonomous intelligence platforms.",
+    "Dr. Kamal Pandey is a technology strategist with over 16 years of leadership in Artificial Intelligence, Cloud Computing, and Digital Transformation. At Rivian, he drives the digital strategy for the electric vehicle ecosystem, focusing on intelligent automation and software-defined vehicle architectures.",
+    "A recognized global influencer, he was named to the 'Artificial Intelligence 150 (AI150)' for 2025–2026. His work transitions complex theoretical models—such as Agentic Self-Correction and Synthetic Reasoning—into robust industrial applications.",
+    "Founder of SAInexus, he has architected global transformation programs for industry titans including Samsung, Goodyear, and Merck, consistently delivering 1% level innovation in high-stakes environments.",
+    "He holds a Doctorate and advanced degrees in Computer Science, and is a Senior Member of the IEEE and IET, reflecting a career-long commitment to technical excellence and ethical AI governance.",
   ],
 };
 
 export const work = {
-  title: "What I do",
+  title: "Core Competencies",
   cards: [
     {
-      title: "AI & Cloud Architecture",
+      title: "Enterprise AI Architecture",
       description:
-        "Designs and delivers AI-powered, cloud-native platforms that enable scalable digital capabilities across engineering, manufacturing, and enterprise operations.",
-      icons: null,
+        "Engineering resilient, cloud-native platforms that integrate LLMs and Agentic AI into manufacturing and operational workflows.",
+      icon: faBrain,
     },
     {
-      title: "AI Research",
+      title: "Cloud & Digital Strategy",
       description:
-        "Focuses on agentic AI, large language models, and intelligent automation—bridging research with production systems to improve reliability and decision intelligence.",
-      icons: null,
-    },
-  ],
-};
-
-export const projects = {
-  title: "Projects",
-  cards: [
-    {
-      title: "Books & Research Monographs",
-      description: "AI-2050: Visions of Future & Sustainability",
-      icons: [
-        {
-          icon: faAppStore,
-          link: "https://www.amazon.com/-/es/Kamal-Pandey-ebook/dp/B0GCKZTPPT",
-        },
-        { icon: faGithub, link: "https://github.com/Goodkamalpandey" },
-      ],
+        "Leading multi-cloud digital transformation initiatives that prioritize scalability, security, and sustainable innovation.",
+      icon: faCloud,
     },
     {
-      title: "ResearchGate Profile",
+      title: "SDV & Predictive Systems",
       description:
-        "View complete research record on ResearchGate (21+ publications, multiple articles & conference papers).",
-      icons: [
-        {
-          icon: faGooglePlay,
-          link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
-        },
-      ],
-    },
-    {
-      title: "Professional Education",
-      description:
-        "Ph.D., Computer Science • Master’s, Computer Science • Bachelor’s, Computer Science",
-      icons: [{ icon: faGraduationCap, link: "#" }],
+        "Developing next-generation frameworks for Software-Defined Vehicles using Edge computing and Digital Twin technology.",
+      icon: faCar,
     },
   ],
 };
 
 export const publications = {
-  title: "Publications",
+  title: "Selected Scholarly Works",
   papers: [
     {
       title:
-        "Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap",
-      journal: "Journal of Computer Science and Technology Studies (2025)",
-      link: "https://al-kindipublishers.org/index.php/jcsts/article/view/11004",
+        "The Dynamic Reasoning Trace: Achieving Verifiable Faithfulness through Agentic Self-Correction",
+      journal: "IJSRCSE (2025)",
+      link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
+      authors: "Kamal Pandey",
+    },
+    {
+      title: "Synthetic Reasoning: Verifiable AI by Modular Program Synthesis",
+      journal: "World Journal of AI & Robotics Research (2025)",
+      link: "https://doi.org/10.63620/MK.WJAIRR.2025",
       authors: "Kamal Pandey",
     },
     {
       title:
-        "The Convergence of Artificial Intelligence and Low-Code/No-Code Platforms: Evolution, Applications, and Benchmarks",
+        "The Convergence of AI and Low-Code Platforms: Evolution, Applications, and Benchmarks",
       journal: "IEEE Access (2025)",
-      link: "https://www.researchgate.net/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks",
+      link: "https://www.researchgate.net/publication/394170940",
       authors: "Kamal Pandey",
     },
     {
       title:
-        "Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI",
-      journal: "Preprints.org (2025)",
-      link: "#",
-      authors: "Kamal Pandey",
-    },
-    {
-      title:
-        "Designing Ethical AI for Development: Challenges & Opportunities in Humanitarian Engineering and Electric Vehicles",
-      journal: "Preprints.org (2025)",
-      link: "#",
-      authors: "Kamal Pandey",
-    },
-    {
-      title:
-        "Artificial Intelligence (AI) in Electric Vehicle Ecosystems: Challenges, Opportunities, and Models for Accelerated Adoption",
-      journal: "Conference Paper (2024)",
+        "An Architectural Framework for AI-Driven Intelligent Commerce: The Data Nervous System",
+      journal: "Jana Nexus: Journal of Computer Science (2025)",
       link: "#",
       authors: "Kamal Pandey",
     },
   ],
 };
 
+export const honors = {
+  title: "Honors and Awards",
+  awards: [
+    {
+      title: "Artificial Intelligence 150 (AI150)",
+      organization: "Global AI Influencers 2025-2026",
+      year: "2025",
+    },
+    {
+      title: "National Geomatics Award",
+      organization: "Indian Society of Geomatics (ISRO Campus)",
+      year: "2022",
+    },
+    {
+      title: "Senior Member Grade",
+      organization: "IEEE & IET",
+      year: "Professional Recognition",
+    },
+  ],
+};
+
+export const projects = {
+  title: "Key Initiatives",
+  cards: [
+    {
+      title: "AI-2050: Visions of Future",
+      description:
+        "Research Monograph exploring the intersection of advanced AI and global sustainability metrics.",
+      icons: [
+        { icon: faAppStore, link: "https://www.amazon.com/dp/B0GCKZTPPT" },
+      ],
+    },
+    {
+      title: "SAInexus Innovation",
+      description:
+        "An autonomous intelligence platform designed for multi-cloud orchestration and secure signal ingestion.",
+      icons: [{ icon: faGithub, link: "https://github.com/Goodkamalpandey" }],
+    },
+  ],
+};
+
 export const contact = {
-  title: "Get in touch",
+  title: "Connect",
   description:
-    "Coffee Chat welcome — feel free to reach out directly or schedule time to connect.",
+    "Available for strategic consulting, research inquiries, and high-level tech discourse.",
   buttons: [
     {
-      title: "Email Me",
+      title: "Email Dr. Pandey",
       link: "mailto:kamalkismca@gmail.com",
       isPrimary: true,
     },
     {
-      title: "Schedule Meeting",
+      title: "Topmate.io Consultation",
       link: "https://topmate.io/Kamalpandey",
       isPrimary: false,
     },
@@ -172,27 +172,8 @@ export const contact = {
 
 export const SEO = {
   title:
-    "Dr Kamal Pandey | AI Architect & Researcher | Agentic AI | Cloud & Digital Transformation",
+    "Dr. Kamal Pandey | AI Solutions Architect | Rivian | Agentic AI Expert",
   description:
-    "Dr. Kamal Pandey is a technology strategist and researcher specializing in AI, cloud computing, and enterprise innovation.",
+    "Dr. Kamal Pandey is a leading expert in AI, custom AI application development, software engineering, cloud architecture, and digital transformation. He is the Founding CTO of Kentron AI and SAInexus, and serves as a Sr Staff Software Architect at Rivian.",
   image: profile.src,
-};
-
-export const links = {
-  image: profile.src,
-  title: "@Kamalpandey",
-  description: "Computer Engineer • AI Researcher • Software Architect",
-  cards: [
-    { title: "My Website", link: "https://drKamalpandey.com/" },
-    { title: "GitHub", link: "https://github.com/Goodkamalpandey/" },
-    { title: "LinkedIn", link: "https://www.linkedin.com/in/kamalkpandey/" },
-    {
-      title: "ResearchGate",
-      link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
-    },
-    {
-      title: "Google Scholar",
-      link: "https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en",
-    },
-  ],
 };
