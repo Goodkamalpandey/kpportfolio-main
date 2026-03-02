@@ -1,76 +1,45 @@
 import profile from "./profile.png";
 import {
-  faAppStore,
   faGithub,
+  faAppStore,
   faGooglePlay,
 } from "@fortawesome/free-brands-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 export const navigation = {
   name: "Home",
   links: [
-    {
-      title: "About",
-      link: "#about",
-    },
-    {
-      title: "Projects",
-      link: "#projects",
-    },
+    { title: "About", link: "#about" },
+    { title: "Projects", link: "#projects" },
     {
       title: "Current Research and Scholarly Interests",
       link: "#ResearchScholarlyInterests",
     },
-    {
-      title: "Publications",
-      link: "#Publications",
-    },
-    {
-      title: "Honors and Awards",
-      link: "#Awards",
-    },
+    { title: "Publications", link: "#Publications" },
+    { title: "Honors and Awards", link: "#Awards" },
     {
       title: "Boards, Advisory Committees, Professional Organizations",
       link: "#Boards",
     },
+    { title: "Professional Education", link: "#ProfessionalEducation" },
+    { title: "Contact", link: "#contact" },
+    { title: "Links", link: "/links" },
+    { title: "Blog", link: "https://medium.com/@kamalkismca" },
+    { title: "Linkedin", link: "https://www.linkedin.com/in/kamalkpandey/" },
     {
-      title: "ProfessionalEducation",
-      link: "#ProfessionalEducation",
-    },
-
-    {
-      title: "Contact",
-      link: "#contact",
-    },
-    {
-      title: "Links",
-      link: "/links",
-    },
-    {
-      title: "Blog",
-      link: "https://medium.com/@kamalkismca",
-    },
-    {
-      title: "Linkedin",
-      link: "https://www.linkedin.com/in/kamalkpandey/",
-    },
-    {
-      title: "Google scholar ",
+      title: "Google Scholar",
       link: "https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en",
     },
   ],
 };
+
 export const intro = {
   title: "Hey, I'm Dr Kamal Pandey",
   description:
-    "Kamal Pandey is an AI researcher and architect who builds scalable, real-world intelligent systems that bridge cutting-edge research with enterprise innovation at Rivian.",
+    "Kamal Pandey is an AI researcher and Solutions Architect who builds scalable intelligent systems that connect advanced research with real-world enterprise innovation at Rivian.",
   image: profile.src,
   buttons: [
-    {
-      title: "Contact Me",
-      link: "#contact",
-      isPrimary: true,
-    },
+    { title: "Contact Me", link: "#contact", isPrimary: true },
     {
       title: "Resume",
       link: "https://drive.google.com/file/d/1MgvnMC-dLEUwewv0rvUzd5CC49Tnwfnf/view?usp=sharing",
@@ -82,11 +51,11 @@ export const intro = {
 export const about = {
   title: "Who I am",
   description: [
-    "Dr. Kamal Pandey is a Solutions Architect specializing in Artificial Intelligence, Cloud Computing, and Digital Transformation, with more than 16 years of experience delivering large-scale technology initiatives across global enterprises. He currently serves at Rivian, where he plays a key role in shaping digital and cloud strategy, enabling modern workplace capabilities, and integrating advanced AI solutions to support the company’s mission of sustainable innovation in the electric vehicle industry.",
-    "In industry, Dr. Pandey has led and contributed to transformative programs across organizations including Rivian, Samsung, Goodyear, Eaton, and Merck, focusing on enterprise architecture, cloud modernization, intelligent automation, and data-driven platforms. He is also the Founder of SAInexus, an AI innovation initiative centered on multi-cloud agentic systems and next-generation autonomous intelligence frameworks.",
-    "Dr. Pandey holds a Ph.D., master’s, and bachelor’s degree in Computer Science. His academic and professional work spans artificial intelligence, distributed systems, enterprise platforms, and digital operating models. He has authored multiple research papers and technical publications, with current research exploring areas such as agentic AI architectures, conversational resilience in large language models, AI-powered digital twins, and intelligent edge-cloud systems.",
-    "A recognized technology leader and innovator, Dr. Pandey is known for bridging research and real-world impact—translating emerging technologies into scalable enterprise solutions. He actively mentors technologists and contributes to the broader AI and cloud community through publications, thought leadership, and collaborative research.",
-    "Dr. Pandey’s work is driven by a focus on building resilient, human-centered intelligent systems that enhance organizational agility and unlock new forms of digital value across industries.",
+    "Dr. Kamal Pandey is a Solutions Architect specializing in Artificial Intelligence, Cloud Computing, and Digital Transformation with more than 16 years of experience delivering enterprise-scale technology initiatives.",
+    "At Rivian, he shapes digital and cloud strategy, modern workplace platforms, and AI-driven solutions that support sustainable innovation in the electric vehicle ecosystem.",
+    "He has led transformation programs across global organizations including Rivian, Samsung, Goodyear, Eaton, and Merck, focusing on enterprise architecture, intelligent automation, and data platforms.",
+    "Dr. Pandey holds doctoral, master’s, and bachelor’s degrees in Computer Science and actively publishes research on agentic AI, conversational resilience, digital twins, and intelligent edge-cloud systems.",
+    "He is also the founder of SAInexus, an AI innovation initiative focused on multi-cloud autonomous intelligence platforms.",
   ],
 };
 
@@ -94,15 +63,15 @@ export const work = {
   title: "What I do",
   cards: [
     {
-      title: "AI Software developmnet ",
+      title: "AI & Cloud Architecture",
       description:
-        "Kamal Pandey is a Solutions Architect focused on turning ambitious ideas into production-ready digital capabilities. At Rivian, he designs and delivers AI-powered and cloud-native solutions that strengthen the company’s digital backbone—from modern workplace platforms and intelligent automation to scalable cloud architectures that support engineering, manufacturing, and business operations.",
+        "Designs and delivers AI-powered, cloud-native platforms that enable scalable digital capabilities across engineering, manufacturing, and enterprise operations.",
       icons: null,
     },
     {
-      title: "AI Researcher ",
+      title: "AI Research",
       description:
-        "AI Researcher at Rivian Kamal Pandey is an AI Researcher focused on advancing practical, enterprise-grade artificial intelligence. His work centers on large language models, agentic AI systems, and intelligent automation, exploring how these technologies can improve decision-making, reliability, and operational efficiency. At Rivian, he bridges research and real-world deployment—designing scalable AI architectures and contributing to next-generation intelligent platforms that support innovation across engineering and digital operations.",
+        "Focuses on agentic AI, large language models, and intelligent automation—bridging research with production systems to improve reliability and decision intelligence.",
       icons: null,
     },
   ],
@@ -113,29 +82,20 @@ export const projects = {
   cards: [
     {
       title: "Books",
-      description: "AI-2050-Visions-Future-Sustainability",
+      description: "AI-2050: Visions of Future & Sustainability",
       icons: [
         {
-          icon: faAppStore,
-          link: "https://www.amazon.in/AI-2050-Visions-Future-Sustainability/dp/B0FV3W41W2x",
           icon: faAppStore,
           link: "https://www.amazon.com/-/es/Kamal-Pandey-ebook/dp/B0GCKZTPPT",
         },
-        {
-          icon: faGithub,
-          link: "https://github.com/Goodkamalpandey",
-        },
+        { icon: faGithub, link: "https://github.com/Goodkamalpandey" },
       ],
     },
     {
-      title: "Researchgate",
+      title: "ResearchGate",
       description:
-        "Kamal Pandey is an AI researcher and technology leader with a Doctor of Business Administration and over 16 years of global experience across AI, cloud computing, and digital transformation. He serves as an AI & Cloud Solutions Architect at Rivian and has authored multiple research publications spanning intelligent systems, AI-driven commerce, predictive maintenance, and the future of digital workplaces",
+        "Research publications spanning AI systems, enterprise platforms, predictive analytics, and intelligent automation.",
       icons: [
-        {
-          icon: faAppStore,
-          link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
-        },
         {
           icon: faGooglePlay,
           link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
@@ -145,13 +105,8 @@ export const projects = {
     {
       title: "Professional Education",
       description:
-        "Dr. Kamal Pandey holds a Bachelor’s, Master’s, and Doctoral degree in Computer Science, with advanced specialization in Artificial Intelligence, Cloud Computing, Distributed Systems, and Digital Transformation. His academic research integrates theoretical computer science with applied enterprise innovation, forming the foundation of his work in AI architectures, autonomous systems, and large-scale cloud modernization.",
-      icons: [
-        {
-          icon: faGraduationCap,
-          link: "https://github.com/Kamalpandey/portfolio",
-        },
-      ],
+        "Ph.D., Computer Science • Master’s, Computer Science • Bachelor’s, Computer Science",
+      icons: [{ icon: faGraduationCap, link: "#" }],
     },
   ],
 };
@@ -159,7 +114,7 @@ export const projects = {
 export const contact = {
   title: "Get in touch",
   description:
-    "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at Kamalpandey@gmail.com.",
+    "Coffee Chat welcome — feel free to reach out directly or schedule time to connect.",
   buttons: [
     {
       title: "Email Me",
@@ -174,13 +129,11 @@ export const contact = {
   ],
 };
 
-// SEARCH ENGINE
 export const SEO = {
-  // 50 - 60 char
   title:
-    "Dr Kamal Pandey| Solutions Architect | Researcher- Agentic &, Applied AI | Cloud Solutions | Digital Workplace | Intelligent automation (IA) | Enterprise Architecture | Startup Engineer | AI Enthusiast | Guest Lecturer",
+    "Dr Kamal Pandey | AI Architect & Researcher | Agentic AI | Cloud & Digital Transformation",
   description:
-    "Dr. Kamal Pandey is a technology strategist, researcher, and author focused on the evolving relationship between artificial intelligence, cloud computing, and enterprise innovation",
+    "Dr. Kamal Pandey is a technology strategist and researcher specializing in AI, cloud computing, and enterprise innovation.",
   image: profile.src,
 };
 
@@ -189,25 +142,12 @@ export const links = {
   title: "@Kamalpandey",
   description: "Computer Engineer • AI Researcher • Software Architect",
   cards: [
+    { title: "My Website", link: "https://drKamalpandey.com/" },
+    { title: "GitHub", link: "https://github.com/Goodkamalpandey/" },
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/kamalkpandey/" },
     {
-      title: "My website",
-      link: "https://drKamalpandey.com/",
-    },
-    {
-      title: "QuranTalk App",
-      link: "https://www.qurantalk.app/",
-    },
-    {
-      title: "StarBook App",
-      link: "https://starbook.dev/",
-    },
-    {
-      title: "My GitHub",
-      link: "https://github.com/Goodkamalpandey/",
-    },
-    {
-      title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/kamalkpandey/",
+      title: "ResearchGate",
+      link: "https://www.researchgate.net/profile/Kamal-Pandey-21",
     },
   ],
 };
