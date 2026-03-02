@@ -7,7 +7,7 @@ import {
 import {} from "@fortawesome/free-solid-svg-icons";
 
 export const navigation = {
-  name: "Kamal",
+  name: "Home",
   links: [
     {
       title: "About",
@@ -18,6 +18,27 @@ export const navigation = {
       link: "#projects",
     },
     {
+      title: "Current Research and Scholarly Interests",
+      link: "#ResearchScholarlyInterests",
+    },
+    {
+      title: "Publications",
+      link: "#Publications",
+    },
+    {
+      title: "Honors and Awards",
+      link: "#Awards",
+    },
+    {
+      title: "Boards, Advisory Committees, Professional Organizations",
+      link: "#Boards",
+    },
+    {
+      title: "Professional Education",
+      link: "#ProfessionalEducation",
+    },
+
+    {
       title: "Contact",
       link: "#contact",
     },
@@ -27,7 +48,11 @@ export const navigation = {
     },
     {
       title: "Blog",
-      link: "https://medium.com/@Kamalpandey",
+      link: "https://medium.com/@kamalkismca",
+    },
+    {
+      title: "Linkedin",
+      link: "https://www.linkedin.com/in/kamalkpandey/",
     },
     {
       title: "Google scholar ",
@@ -118,9 +143,8 @@ export const projects = {
       ],
     },
     {
-      title: "Portfolio",
-      description:
-        "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
+      title: "Professional Education",
+      description: "Professional Education",
       icons: [
         {
           icon: faGithub,
@@ -148,7 +172,14 @@ export const contact = {
     },
   ],
 };
-
+export const pro = {
+  // 50 - 60 char
+  title:
+    "Dr. Kamal Pandey holds a Bachelor’s, Master’s, and Doctoral degree in Computer Science, with advanced specialization in Artificial Intelligence, Cloud Computing, Distributed Systems, and Digital Transformation. His academic research integrates theoretical computer science with applied enterprise innovation, forming the foundation of his work in AI architectures, autonomous systems, and large-scale cloud modernization.",
+  description:
+    "Ph.D., Computer Science (2024), Master’s, Computer Science (2007) ,Bachelor’s, Computer Science (2004)",
+  image: profile.src,
+};
 // SEARCH ENGINE
 export const SEO = {
   // 50 - 60 char
