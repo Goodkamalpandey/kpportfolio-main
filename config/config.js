@@ -144,10 +144,11 @@ export const projects = {
     },
     {
       title: "Professional Education",
-      description: "Professional Education",
+      description:
+        "Dr. Kamal Pandey holds a Bachelor’s, Master’s, and Doctoral degree in Computer Science, with advanced specialization in Artificial Intelligence, Cloud Computing, Distributed Systems, and Digital Transformation. His academic research integrates theoretical computer science with applied enterprise innovation, forming the foundation of his work in AI architectures, autonomous systems, and large-scale cloud modernization.",
       icons: [
         {
-          icon: faGithub,
+          icon: faGraduationCap,
           link: "https://github.com/Kamalpandey/portfolio",
         },
       ],
@@ -172,14 +173,7 @@ export const contact = {
     },
   ],
 };
-export const ProfessionalEducation = {
-  // 50 - 60 char
-  title:
-    "Dr. Kamal Pandey holds a Bachelor’s, Master’s, and Doctoral degree in Computer Science, with advanced specialization in Artificial Intelligence, Cloud Computing, Distributed Systems, and Digital Transformation. His academic research integrates theoretical computer science with applied enterprise innovation, forming the foundation of his work in AI architectures, autonomous systems, and large-scale cloud modernization.",
-  description:
-    "Ph.D., Computer Science (2024), Master’s, Computer Science (2007) ,Bachelor’s, Computer Science (2004)",
-  image: profile.src,
-};
+
 // SEARCH ENGINE
 export const SEO = {
   // 50 - 60 char
