@@ -36,14 +36,14 @@ export default function ConsultingPage() {
             href={SITE.topmate}
             target="_blank"
             rel="noopener noreferrer"
-            className="kp-topmate-cta inline-flex items-center justify-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-semibold leading-tight"
+            className="kp-topmate-cta inline-flex items-center justify-center gap-1 rounded-full px-3 py-1.5 text-caption2 font-semibold leading-tight"
           >
             <KpUiIcon name="calendarDays" size={12} className="text-white" />
             Book on Topmate
           </a>
           <a
             href={`mailto:${SITE.email}`}
-            className="inline-flex items-center justify-center gap-1 rounded-full border border-kp-line px-3 py-1.5 text-[11px] font-semibold leading-tight text-kp-ink dark:border-white/10 dark:text-dark-text"
+            className="inline-flex items-center justify-center gap-1 rounded-full border border-kp-line px-3 py-1.5 text-caption2 font-semibold leading-tight text-kp-ink dark:border-white/10 dark:text-dark-text"
           >
             <KpUiIcon name="mail" size={12} className="text-kp-accent dark:text-blue-300" />
             Email

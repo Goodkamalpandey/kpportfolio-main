@@ -1,6 +1,24 @@
 /** Public profile data — links are official profiles only; no secrets in client bundle. */
 
 const SCHOLAR_USER = 'rA_dpyAAAAAJ'
+/** IEEE Xplore — SoutheastCon 2026 (official record). */
+const IEEE_ASN_FLORENCE = 'https://ieeexplore.ieee.org/abstract/document/11476575'
+const IEEE_AGENTIC_ENTERPRISE_FLLM = 'https://ieeexplore.ieee.org/abstract/document/11390962'
+const JCSTS_LABOR_MARKET_PDF =
+  'https://al-kindipublishers.org/index.php/jcsts/article/download/11004/9927'
+const PREPRINTS_SDV_PREDICTIVE_MAINTENANCE =
+  'https://www.preprints.org/frontend/manuscript/1b8a62797f9505de59463457be38c2f2/download_pub'
+const INTELLIGENT_WORKPLACE_RG_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/389652520_The_Intelligent_Workplace_AI_and_Automation_Shaping_the_Future_of_Digital_Workplaces/links/67cb3262e62c604a0dd61c3d/The-Intelligent-Workplace-AI-and-Automation-Shaping-the-Future-of-Digital-Workplaces.pdf'
+const IJEASM_EV_ECOSYSTEMS_PDF =
+  'https://ijeasm.com/PublishedPaper/5Vol/Issue12/2024IJEASM520243659-ec9380bf-727b-44b1-b267-9a083bceba8957899.pdf'
+const TECHRXIV_ETHICAL_AI_EV_PDF =
+  'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339233.38524916'
+const TECHRXIV_FUTURE_AUTOMOTIVE_US_PDF =
+  'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339236.68743756'
+/** ResearchGate — Dynamic Reasoning Trace (IJSRCSE 2025) PDF. */
+const DYNAMIC_REASONING_TRACE_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394535014_The_Dynamic_Reasoning_Trace_Achieving_Verifiable_Faithfulness_through_Agentic_Self-Correction/links/68a387176327cf7b63d7586e/The-Dynamic-Reasoning-Trace-Achieving-Verifiable-Faithfulness-through-Agentic-Self-Correction.pdf'
 
 export function scholarCitation(citationForViewSuffix: string) {
   return `https://scholar.google.com/citations?view_op=view_citation&hl=en&user=${SCHOLAR_USER}&citation_for_view=${SCHOLAR_USER}:${citationForViewSuffix}`
@@ -31,31 +49,31 @@ export const PAPERS = [
     title: 'Autonomous ASN Label Compliance Using a Hybrid YOLOV8—Vision-Language Framework and Florence-2',
     venue: 'IEEE SoutheastCon',
     year: '2026',
-    href: scholarCitation('LGlY6t8CeOMC'),
+    href: IEEE_ASN_FLORENCE,
   },
   {
     title: 'The Dynamic Reasoning Trace: Achieving Verifiable Faithfulness through Agentic Self-Correction',
     venue: 'Int. J. Sci. Res. in Computer Science and Engineering',
     year: '2025',
-    href: scholarCitation('0CzhzZyukY4C'),
+    href: DYNAMIC_REASONING_TRACE_PDF,
   },
   {
     title: 'The Intelligent Workplace: AI and Automation Shaping the Future of Digital Workplaces',
     venue: 'Int. J. Sci. Res. in Computer Science and Engineering',
     year: '2025',
-    href: scholarCitation('r_AWSJRzSzQC'),
+    href: INTELLIGENT_WORKPLACE_RG_PDF,
   },
   {
     title: 'Artificial Intelligence (AI) in Electric Vehicle Ecosystems: Challenges, Opportunities, and Models for Accelerated Adoption',
     venue: 'Int. J. Engineering Applied Science and Management',
     year: '2025',
-    href: scholarCitation('BJbdYPG6LGMC'),
+    href: IJEASM_EV_ECOSYSTEMS_PDF,
   },
   {
     title: 'Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap',
     venue: 'Journal of Computer Science and Technology Studies',
     year: '2025',
-    href: scholarCitation('wKETBy42zhYC'),
+    href: JCSTS_LABOR_MARKET_PDF,
   },
   {
     title: 'AI Powered Transformation in the Modern Digital Workplace: Roadmap for the Future of Work and Ethical Consideration',
@@ -73,19 +91,19 @@ export const PAPERS = [
     title: 'The Agentic Enterprise: A Strategic Analysis of Advanced Agentic Workflows and Collaborative AI',
     venue: '3rd Int. Conf. on Foundation and Large Language Models (FLLM)',
     year: '2025',
-    href: scholarCitation('YTuZlYwrTOUC'),
+    href: IEEE_AGENTIC_ENTERPRISE_FLLM,
   },
   {
     title: 'Synthetic Reasoning: Verifiable AI by Modular Program Synthesis',
     venue: 'World Journal of AI & Robotics Research',
     year: '2025',
-    href: scholarCitation('PVgj2kMGcgYC'),
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/395245321_Synthetic_Reasoning_Verifiable_AI_by_Modular_Program_Synthesis/links/68b91246d9261f6f51b132b9/Synthetic-Reasoning-Verifiable-AI-by-Modular-Program-Synthesis.pdf',
   },
   {
     title: 'The Convergence of Artificial Intelligence and Low-Code/No-Code Platforms: Evolution, Applications, and Benchmarks',
     venue: 'IEEE Access',
     year: '2025',
-    href: scholarCitation('hGdtkIFZdKAC'),
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf',
   },
   {
     title: 'AI-Powered Low-Code App Development: A Benchmark Review for 2025 Digital Transformation',
@@ -97,19 +115,19 @@ export const PAPERS = [
     title: 'Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI',
     venue: 'Research article (indexed on Google Scholar)',
     year: '2024',
-    href: scholarCitation('tH6gc1N1XXoC'),
+    href: PREPRINTS_SDV_PREDICTIVE_MAINTENANCE,
   },
   {
     title: 'The Future of Automotive Industry: AI and Cloud-Driven Digital Transformation in the US Region — A Holistic Examination',
     venue: 'Int. J. Engineering Applied Science and Management',
     year: '2024',
-    href: scholarCitation('LO7wyVUgiFcC'),
+    href: TECHRXIV_FUTURE_AUTOMOTIVE_US_PDF,
   },
   {
     title: 'Designing Ethical AI for Development: Challenges and Opportunities in Humanitarian Engineering and Electric Vehicles, Designed for Adventure',
-    venue: 'Scholar-indexed manuscript',
+    venue: 'TechRxiv',
     year: '2025',
-    href: scholarCitation('lvd772isFD0C'),
+    href: TECHRXIV_ETHICAL_AI_EV_PDF,
   },
   {
     title: 'Principles of Building AI Agents, 1st Edition: The Next Generation Foreword: The Next Generation is Here',
@@ -171,7 +189,7 @@ export const PROJECTS = [
     tag: 'Spotlight',
     title: 'Verifiable reasoning & agentic self-correction',
     desc: 'Dynamic reasoning traces for faithfulness under audit — bridge from publication to Rivian-scale delivery.',
-    href: scholarCitation('0CzhzZyukY4C'),
+    href: DYNAMIC_REASONING_TRACE_PDF,
     external: true,
   },
   {
@@ -185,7 +203,7 @@ export const PROJECTS = [
     tag: 'Computer vision',
     title: 'Hybrid YOLOv8 — vision-language ASN label compliance',
     desc: 'IEEE SoutheastCon track — Florence-2 and hybrid perception for regulated labeling workflows.',
-    href: scholarCitation('LGlY6t8CeOMC'),
+    href: IEEE_ASN_FLORENCE,
     external: true,
   },
   {

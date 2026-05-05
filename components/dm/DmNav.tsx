@@ -16,7 +16,7 @@ export default function DmNav() {
         </nav>
         <a
           className="dm-nav-cta"
-          href="https://topmate.io/Kamalpandey"
+          href="https://topmate.io/kamalpandey/"
           target="_blank"
           rel="noopener noreferrer"
         >

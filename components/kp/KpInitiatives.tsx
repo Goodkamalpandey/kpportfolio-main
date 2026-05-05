@@ -31,8 +31,8 @@ export default function KpInitiatives() {
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.13em] text-kp-emerald">
-            <KpUiIcon name="layers2" size={15} className="text-kp-emerald" />
+          <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+            <KpUiIcon name="layers2" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Key initiatives
           </p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl font-light leading-tight text-white md:text-5xl">
@@ -49,7 +49,7 @@ export default function KpInitiatives() {
               <KpReveal key={item.title}>
                 <article className="group h-full rounded-[14px] border border-white/[0.12] bg-dark-card/90 p-8 shadow-sm transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:border-kp-accent/40 hover:shadow-kp-primary md:p-9">
                   <span
-                    className={`inline-flex rounded-full border px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider ${tagClass}`}
+                    className={`inline-flex rounded-full border px-3 py-1 font-mono text-caption2 font-semibold uppercase tracking-wider ${tagClass}`}
                   >
                     {item.tag}
                   </span>

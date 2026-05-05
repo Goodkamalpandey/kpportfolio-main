@@ -12,11 +12,11 @@ export default function KpExpertise() {
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.13em] text-kp-emerald">
-            <KpUiIcon name="cpu" size={15} className="text-kp-emerald" />
+          <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+            <KpUiIcon name="cpu" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Core competencies
           </p>
-          <h2 className="mt-4 max-w-xl font-serif text-4xl font-light leading-tight tracking-tight md:text-[52px]">
+          <h2 className="mt-4 max-w-xl font-serif text-4xl font-light leading-tight tracking-tight md:text-5xl">
             Where 16 years of hard problems live.
           </h2>
         </KpReveal>
@@ -31,7 +31,7 @@ export default function KpExpertise() {
                 <div className="min-w-0 flex-1">
                   <span className="font-mono text-sm text-kp-accent dark:text-blue-400">{cell.n}</span>
                   <h3 className="mt-2 text-xl font-medium">{cell.title}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-white/[0.62]">{cell.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/[0.62]">{cell.body}</p>
                 </div>
               </div>
             </KpReveal>

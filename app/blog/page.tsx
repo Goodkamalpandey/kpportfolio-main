@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { externalLinkProps } from '@/components/kp/externalLinkProps'
+import { externalLinkProps } from '@/components/externalLinkProps'
 
 const MEDIUM = 'https://medium.com/@kamalkismca'
 

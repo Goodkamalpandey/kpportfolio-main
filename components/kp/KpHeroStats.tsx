@@ -35,8 +35,8 @@ export default function KpHeroStats({ variant = 'default' }: { variant?: Variant
               <p
                 className={
                   spec
-                    ? 'font-sans text-[1.65rem] font-medium leading-none tracking-tight text-white tabular-nums sm:text-3xl lg:text-[1.85rem]'
-                    : 'font-serif text-[1.65rem] font-light leading-none tracking-tight text-kp-ink tabular-nums dark:text-dark-text sm:text-3xl lg:text-[1.85rem]'
+                    ? 'font-sans text-2xl font-medium leading-none tracking-tight text-white tabular-nums sm:text-3xl'
+                    : 'font-serif text-2xl font-light leading-none tracking-tight text-kp-ink tabular-nums dark:text-dark-text sm:text-3xl'
                 }
               >
                 <KpCountUp end={s.value} suffix={s.suffix} />
@@ -44,8 +44,8 @@ export default function KpHeroStats({ variant = 'default' }: { variant?: Variant
               <p
                 className={
                   spec
-                    ? 'mt-1 text-[12px] font-semibold leading-snug text-neutral-200'
-                    : 'mt-1 text-[12px] font-semibold leading-snug text-kp-ink dark:text-dark-text'
+                    ? 'mt-1 text-xs font-semibold leading-snug text-neutral-200'
+                    : 'mt-1 text-xs font-semibold leading-snug text-kp-ink dark:text-dark-text'
                 }
               >
                 {s.label}
@@ -54,8 +54,8 @@ export default function KpHeroStats({ variant = 'default' }: { variant?: Variant
                 <p
                   className={
                     spec
-                      ? 'mt-0.5 text-[10px] font-medium uppercase tracking-[0.12em] text-neutral-500'
-                      : 'mt-0.5 text-[10px] font-medium uppercase tracking-[0.12em] text-kp-muted dark:text-kp-line'
+                      ? 'mt-0.5 text-caption2 font-medium uppercase tracking-[0.12em] text-neutral-500'
+                      : 'mt-0.5 text-caption2 font-medium uppercase tracking-[0.12em] text-kp-muted dark:text-kp-line'
                   }
                 >
                   {s.sub}

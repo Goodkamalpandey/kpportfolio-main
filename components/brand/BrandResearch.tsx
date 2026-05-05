@@ -29,7 +29,7 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'safety',
-    href: 'https://doi.org/10.63620/MK.WJAIRR.2025',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/395245321_Synthetic_Reasoning_Verifiable_AI_by_Modular_Program_Synthesis/links/68b91246d9261f6f51b132b9/Synthetic-Reasoning-Verifiable-AI-by-Modular-Program-Synthesis.pdf',
     label: 'AI Safety',
     journal: 'World Journal of AI & Robotics Research',
     cy: '2025',
@@ -40,7 +40,7 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'safety',
-    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394535014_The_Dynamic_Reasoning_Trace_Achieving_Verifiable_Faithfulness_through_Agentic_Self-Correction/links/68a387176327cf7b63d7586e/The-Dynamic-Reasoning-Trace-Achieving-Verifiable-Faithfulness-through-Agentic-Self-Correction.pdf',
     label: 'AI Safety',
     journal: 'IJSRCSE',
     cy: '2025',
@@ -96,7 +96,7 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'workplace',
-    href: 'https://ijsrcse.isroset.org/index.php/j/article/view/607',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/389652520_The_Intelligent_Workplace_AI_and_Automation_Shaping_the_Future_of_Digital_Workplaces/links/67cb3262e62c604a0dd61c3d/The-Intelligent-Workplace-AI-and-Automation-Shaping-the-Future-of-Digital-Workplaces.pdf',
     label: 'Digital Workplace',
     journal: 'IJSRCSE · 2025',
     cy: '2025',
@@ -118,7 +118,7 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'workplace',
-    href: 'https://doi.org/10.32996/jcsts.2025.7.10.33',
+    href: 'https://al-kindipublishers.org/index.php/jcsts/article/download/11004/9927',
     label: 'Digital Workplace',
     journal: 'Journal of CS & Technology Studies · Vol. 7(10)',
     cy: 'Oct 2025',
@@ -129,19 +129,20 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'auto',
-    href: 'https://essopenarchive.org/users/942841-kamal-pandey',
+    href: 'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339233.38524916',
     label: 'Automotive & EV',
-    journal: 'ESS Open Archive · 2025',
+    journal: 'TechRxiv · 2025',
     cy: '2025',
-    title: 'Designing Ethical AI for Development: Challenges and Opportunities in Humanitarian Engineering and Electric Vehicles',
+    title:
+      'Designing Ethical AI for Development: Challenges and Opportunities in Humanitarian Engineering and Electric Vehicles, Designed for Adventure',
     ab: 'Systematic literature review synthesising AI ethics frameworks and EV applications in disaster management and humanitarian contexts — proposing an integrated ethical framework for EV and AI deployment.',
-    badge: 'ESS Archive',
+    badge: 'TechRxiv',
   },
   { k: 'y', year: '2024', right: '5 papers' },
   {
     k: 'p',
     c: 'auto',
-    href: 'https://www.researchgate.net/publication/388010118',
+    href: 'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339236.68743756',
     label: 'Automotive & EV',
     journal: 'IJEASM Vol.5 Issue 11',
     cy: 'Nov 2024',
@@ -153,7 +154,7 @@ const ROWS: Row[] = [
   {
     k: 'p',
     c: 'auto',
-    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21',
+    href: 'https://ijeasm.com/PublishedPaper/5Vol/Issue12/2024IJEASM520243659-ec9380bf-727b-44b1-b267-9a083bceba8957899.pdf',
     label: 'Automotive & EV',
     journal: 'IJEASM Vol.5 Issue 12',
     cy: 'Dec 2024',
@@ -529,7 +530,7 @@ export default function BrandResearch() {
                   <a
                     key="feat"
                     className="pfeat"
-                    href="https://www.researchgate.net/publication/394170940"
+                    href="https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-c="enterprise"

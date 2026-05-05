@@ -1,10 +1,47 @@
 /** Verified publications, career, awards, skills — sourced from brief. Public URLs only. */
 
 const RG = 'https://www.researchgate.net/profile/Kamal-Pandey-21'
-const SCHOLAR = 'https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en'
+const SCHOLAR_USER_ID = 'rA_dpyAAAAAJ'
+const SCHOLAR = `https://scholar.google.com/citations?user=${SCHOLAR_USER_ID}&hl=en`
+/** Full profile list sorted by publication date (matches Scholar “Sort by year”). */
+export const SCHOLAR_WORKS_BY_PUBDATE = `https://scholar.google.com/citations?view_op=list_works&hl=en&user=${SCHOLAR_USER_ID}&sortby=pubdate`
 const AUTHOREA = 'https://www.authorea.com/users/942841-dr-kamal-pandey'
+
+/** Stable Google Scholar citation record URL (works when venue PDF is unavailable). */
+function scholarCitationHref(citationSuffix: string) {
+  return `https://scholar.google.com/citations?view_op=view_citation&hl=en&user=${SCHOLAR_USER_ID}&citation_for_view=${SCHOLAR_USER_ID}:${citationSuffix}`
+}
 /** IEEE Xplore — SoutheastCon 2026 (official record). */
-const IEEE_ASN_FLORENCE = 'https://ieeexplore.ieee.org/abstract/document/11476575/'
+const IEEE_ASN_FLORENCE = 'https://ieeexplore.ieee.org/abstract/document/11476575'
+/** IEEE Xplore — 3rd IEEE FLLM: The Agentic Enterprise (2025). */
+const IEEE_AGENTIC_ENTERPRISE_FLLM = 'https://ieeexplore.ieee.org/abstract/document/11390962'
+/** JCSTS — labor market review (publisher PDF). */
+const JCSTS_LABOR_MARKET_PDF =
+  'https://al-kindipublishers.org/index.php/jcsts/article/download/11004/9927'
+/** Preprints.org — SDV predictive maintenance framework (download). */
+const PREPRINTS_SDV_PREDICTIVE_MAINTENANCE =
+  'https://www.preprints.org/frontend/manuscript/1b8a62797f9505de59463457be38c2f2/download_pub'
+/** ResearchGate — Intelligent Workplace (IJSRCSE) PDF. */
+const INTELLIGENT_WORKPLACE_RG_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/389652520_The_Intelligent_Workplace_AI_and_Automation_Shaping_the_Future_of_Digital_Workplaces/links/67cb3262e62c604a0dd61c3d/The-Intelligent-Workplace-AI-and-Automation-Shaping-the-Future-of-Digital-Workplaces.pdf'
+/** IJEASM — AI in EV ecosystems (Vol. 5 Issue 12, 2024) PDF. */
+const IJEASM_EV_ECOSYSTEMS_PDF =
+  'https://ijeasm.com/PublishedPaper/5Vol/Issue12/2024IJEASM520243659-ec9380bf-727b-44b1-b267-9a083bceba8957899.pdf'
+/** TechRxiv — ethical AI / humanitarian engineering / EV (Designed for Adventure). */
+const TECHRXIV_ETHICAL_AI_EV_PDF =
+  'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339233.38524916'
+/** TechRxiv — future of automotive / US AI & cloud transformation. */
+const TECHRXIV_FUTURE_AUTOMOTIVE_US_PDF =
+  'https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175339236.68743756'
+/** ResearchGate — Dynamic Reasoning Trace (IJSRCSE 2025) PDF. */
+const DYNAMIC_REASONING_TRACE_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394535014_The_Dynamic_Reasoning_Trace_Achieving_Verifiable_Faithfulness_through_Agentic_Self-Correction/links/68a387176327cf7b63d7586e/The-Dynamic-Reasoning-Trace-Achieving-Verifiable-Faithfulness-through-Agentic-Self-Correction.pdf'
+/** ResearchGate — Synthetic Reasoning (WJAIRR 2025) PDF. */
+const SYNTHETIC_REASONING_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/395245321_Synthetic_Reasoning_Verifiable_AI_by_Modular_Program_Synthesis/links/68b91246d9261f6f51b132b9/Synthetic-Reasoning-Verifiable-AI-by-Modular-Program-Synthesis.pdf'
+/** ResearchGate — IEEE Access AI & low-code / no-code convergence (2025) PDF. */
+const IEEE_AI_LOWCODE_CONVERGENCE_PDF =
+  'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf'
 
 export const PUBLICATIONS_FULL = [
   {
@@ -23,7 +60,7 @@ export const PUBLICATIONS_FULL = [
     journal: 'IJSRCSE (International Journal of Scientific Research in Computer Science and Engineering) · 2025',
     abstract:
       'Proposes verifiable reasoning traces as first-class computational artifacts — not post-hoc justifications.',
-    href: RG,
+    href: DYNAMIC_REASONING_TRACE_PDF,
   },
   {
     year: '2025',
@@ -32,15 +69,7 @@ export const PUBLICATIONS_FULL = [
       'World Journal of Artificial Intelligence and Robotics Research — Vol. 2(5) · September 2025 (submitted Aug 23, 2025; accepted Sep 1; published Sep 7, 2025)',
     abstract:
       'Resolves the LLM faithfulness gap by shifting from text generation to structured executable program synthesis.',
-    href: 'https://doi.org/10.63620/MK.WJAIRR.2025',
-  },
-  {
-    year: '2025',
-    title: 'ReAct-MRST: Reactive Reasoning with Modular Synthesis for Transparent AI (full title on ResearchGate)',
-    journal: 'Pending — listed on ResearchGate · 2025',
-    abstract:
-      'Addresses opacity and brittleness of one-shot neuro-symbolic MRST models. Introduces ReAct-MRST combining reactive reasoning with modular synthesis for robust, interpretable AI reasoning.',
-    href: RG,
+    href: SYNTHETIC_REASONING_PDF,
   },
   {
     year: '2025',
@@ -49,15 +78,41 @@ export const PUBLICATIONS_FULL = [
     journal: 'IEEE Access · 2025',
     abstract:
       'Definitive empirical benchmarks across AI-augmented low-code platforms — the reference for enterprise adoption decisions.',
-    href: 'https://www.researchgate.net/publication/394170940',
+    href: IEEE_AI_LOWCODE_CONVERGENCE_PDF,
   },
   {
     year: '2025',
     title: 'An Architectural Framework for AI-Driven Intelligent Commerce: The Data Nervous System',
-    journal: 'Jana Nexus: Journal of Computer Science · 2025',
+    journal: 'Jana Nexus: Journal of Computer Science · 2025 · pp. 15–29',
     abstract:
       'Novel quantitative framework for AI integration across financial, retail, and supply chain sectors. Confirms transformative impact via the “Data Nervous System” architecture.',
-    href: RG,
+    href: scholarCitationHref('otzGkya1bYkC'),
+  },
+  {
+    year: '2025',
+    title: 'The Agentic Enterprise: A Strategic Analysis of Advanced Agentic Workflows and Collaborative AI',
+    journal: '3rd IEEE Int. Conf. on Foundation and Large Language Models (FLLM) · 2025',
+    abstract:
+      'Strategic analysis of advanced agentic workflows and collaborative AI patterns for enterprise-scale deployment and governance.',
+    href: IEEE_AGENTIC_ENTERPRISE_FLLM,
+  },
+  {
+    year: '2025',
+    title:
+      'Principles of Building AI Agents, 1st Edition: The Next Generation Foreword: The Next Generation is Here',
+    journal: 'ResearchGate · DOI 10.13140/RG.2.2.27011.57120 · 2025',
+    abstract:
+      'Foreword framing first-edition principles for building AI agents — architecture, lifecycle, and what “next generation” implies for practitioners.',
+    href: scholarCitationHref('6yz0xqPARnAC'),
+  },
+  {
+    year: '2025',
+    title:
+      'AI Powered Transformation in the Modern Digital Workplace: Roadmap for the Future of Work and Ethical Consideration',
+    journal: 'International Journal of Engineering Applied Science and Management · Vol. 6 · 2025',
+    abstract:
+      'Enterprise roadmap for AI-powered workplace transformation — workforce implications, governance, and ethical adoption at scale.',
+    href: 'https://www.researchgate.net/publication/389326069',
   },
   {
     year: '2025',
@@ -73,7 +128,7 @@ export const PUBLICATIONS_FULL = [
     journal: 'IJEASM — Vol. 5, Issue 12 · 2024 (Paper ID: 2024/IJEASM/8/2024/3658)',
     abstract:
       'Examines factors shaping the EV industry including AI, ML, emerging tech, and regulatory frameworks. Proposes models for accelerated EV adoption.',
-    href: 'https://ijeasm.com/PublishedPaper/5Vol/I',
+    href: IJEASM_EV_ECOSYSTEMS_PDF,
   },
   {
     year: '2024',
@@ -82,16 +137,16 @@ export const PUBLICATIONS_FULL = [
     journal: 'IJEASM · 2024',
     abstract:
       'Examines AI/cloud integration in vehicle manufacturing, autonomous driving, predictive maintenance, and Industry 4.0.',
-    href: 'https://ijeasm.com/PublishedPaper/5Vol/I',
+    href: TECHRXIV_FUTURE_AUTOMOTIVE_US_PDF,
   },
   {
     year: '2025',
     title:
-      'Designing Ethical AI for Development: Challenges and Opportunities in Humanitarian Engineering and Electric Vehicles',
-    journal: 'ESS Open Archive · 2025',
+      'Designing Ethical AI for Development: Challenges and Opportunities in Humanitarian Engineering and Electric Vehicles, Designed for Adventure',
+    journal: 'TechRxiv · 2025',
     abstract:
       'Reviews AI ethics frameworks and EV integration in disaster management and humanitarian engineering contexts.',
-    href: 'https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en',
+    href: TECHRXIV_ETHICAL_AI_EV_PDF,
   },
   {
     year: '2025',
@@ -99,7 +154,15 @@ export const PUBLICATIONS_FULL = [
     journal: 'IJSRCSE — Vol. 13, No. 1 · February 2025',
     abstract:
       'Explores AI-driven digital workplace complexities, job displacement, algorithmic bias, and data privacy impacts.',
-    href: 'https://ijsrcse.isroset.org/index.php/j/article/view/607',
+    href: INTELLIGENT_WORKPLACE_RG_PDF,
+  },
+  {
+    year: '2025',
+    title: 'Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap',
+    journal: 'Journal of Computer Science and Technology Studies (JCSTS) · Vol. 7(10) · October 2025',
+    abstract:
+      'Policy-oriented review of AI’s impact on labor markets — wage dynamics, skill displacement, and augmentation pathways — with a concrete policy roadmap for governments and enterprises.',
+    href: JCSTS_LABOR_MARKET_PDF,
   },
   {
     year: '2025',
@@ -110,13 +173,39 @@ export const PUBLICATIONS_FULL = [
     href: RG,
   },
   {
-    year: '2025',
-    title: 'Framework for Next-Generation Predictive Systems and Analytics',
-    journal: 'ResearchGate · 2025',
-    abstract: 'Technical framework for predictive systems at enterprise scale (full title on ResearchGate profile).',
-    href: RG,
+    year: '2024',
+    title:
+      'Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI',
+    journal: 'Preprints.org · 2024',
+    abstract:
+      'Framework for predictive maintenance in software-defined vehicles using cloud, edge computing, and modern AI for fleet-scale reliability.',
+    href: PREPRINTS_SDV_PREDICTIVE_MAINTENANCE,
   },
 ] as const
+
+/**
+ * Homepage “Research that moves the field” — mirrors Google Scholar profile sorted by publication date
+ * (latest first). One Scholar row (“Journal of Applied Mechanics…”) is a metadata artefact; replaced here with
+ * Synthetic Reasoning, the next substantive work in the same ordering.
+ */
+const PUBLICATIONS_MOVES_FIELD_ORDER = [
+  'Autonomous ASN Label Compliance Using a Hybrid YOLOV8—Vision-Language Framework and Florence-2',
+  'The Agentic Enterprise: A Strategic Analysis of Advanced Agentic Workflows and Collaborative AI',
+  'Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap',
+  'Principles of Building AI Agents, 1st Edition: The Next Generation Foreword: The Next Generation is Here',
+  'Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI',
+  'The Dynamic Reasoning Trace: Achieving Verifiable Faithfulness through Agentic Self-Correction',
+  'The Intelligent Workplace: AI and Automation Shaping the Future of Digital Workplaces',
+  'AI Powered Transformation in the Modern Digital Workplace: Roadmap for the Future of Work and Ethical Consideration',
+  'An Architectural Framework for AI-Driven Intelligent Commerce: The Data Nervous System',
+  'Synthetic Reasoning: Verifiable AI by Modular Program Synthesis',
+] as const
+
+export const PUBLICATIONS_MOVES_FIELD = PUBLICATIONS_MOVES_FIELD_ORDER.map((title) => {
+  const p = PUBLICATIONS_FULL.find((x) => x.title === title)
+  if (!p) throw new Error(`PUBLICATIONS_MOVES_FIELD: missing "${title}"`)
+  return p
+})
 
 export const GLOBAL_RECOGNITION = [
   'AI150 Global AI Influencer — 2025–2026 (Constellation Research · constellationr.com)',
@@ -209,6 +298,7 @@ export const CERTIFICATIONS = {
 export const SKILLS_BLOCKS = [
   {
     title: 'AI, ML & agentic systems',
+    icon: 'bot' as const,
     lines: [
       'LLMs: GPT-4/5, Claude, Gemini, LLaMA',
       'Frameworks: PyTorch, TensorFlow, JAX, Hugging Face',
@@ -220,6 +310,7 @@ export const SKILLS_BLOCKS = [
   },
   {
     title: 'Cloud & infrastructure',
+    icon: 'cloud' as const,
     lines: [
       'AWS: Bedrock, SageMaker, Lambda, S3, CodePipeline, WorkSpaces',
       'GCP: Vertex AI, BigQuery, Cloud Run, Colab, Google AI Platform',
@@ -230,6 +321,7 @@ export const SKILLS_BLOCKS = [
   },
   {
     title: 'Development',
+    icon: 'network' as const,
     lines: [
       'Languages: Python, C#, TypeScript, JavaScript, PowerShell',
       'Frontend: React, Angular, Node.js, SPFx, Fluent UI',
@@ -239,6 +331,7 @@ export const SKILLS_BLOCKS = [
   },
   {
     title: 'Platforms & workplace',
+    icon: 'usersRound' as const,
     lines: [
       'Microsoft: M365, SharePoint, Teams, Power Platform, Dynamics 365, ServiceNow, ADFS',
       'Google: Workspace, Gemini, AppSheet, AppScript, Glean',
@@ -249,6 +342,7 @@ export const SKILLS_BLOCKS = [
   },
   {
     title: 'Governance & security',
+    icon: 'scale' as const,
     lines: [
       'Frameworks: NIST RMF, ISO 42001, TOGAF, Zachman, ITIL, SAFe',
       'Security: IAM, DLP, CASB, eDiscovery, compliance automation, Splunk',

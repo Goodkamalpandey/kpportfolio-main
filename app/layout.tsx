@@ -159,7 +159,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${jetbrains.variable}`}>
-      <body className="min-h-dvh bg-kp-bg pl-[env(safe-area-inset-left,0px)] pr-[env(safe-area-inset-right,0px)] font-sans text-kp-ink antialiased dark:bg-dark-bg dark:text-dark-text">
+      <body className="min-h-dvh bg-kp-bg pl-[env(safe-area-inset-left,0px)] pr-[env(safe-area-inset-right,0px)] font-sans text-base text-kp-ink antialiased dark:bg-dark-bg dark:text-dark-text">
         <a href="#main-content" className="kp-skip-link">
           Skip to main content
         </a>

@@ -1,14 +1,14 @@
 import KpReveal from './KpReveal'
 import KpUiIcon from './KpUiIcon'
-import { PUBLICATIONS_FULL, SITE } from './data'
+import { PUBLICATIONS_MOVES_FIELD, SITE } from './data'
 
 export default function KpPublications() {
   return (
     <section id="publications" className="scroll-mt-24 bg-white pb-16 pt-10 dark:bg-dark-bg md:pb-20 md:pt-12">
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.13em] text-kp-emerald">
-            <KpUiIcon name="bookOpen" size={15} className="text-kp-emerald" />
+          <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+            <KpUiIcon name="bookOpen" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Scholarly work
           </p>
           <h2 className="mt-4 font-serif text-4xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-5xl">
@@ -35,11 +35,11 @@ export default function KpPublications() {
             </p>
           </div>
         </KpReveal>
-        <ul className="mt-8 divide-y divide-kp-line/80 overflow-hidden rounded-[14px] border border-kp-line/70 bg-kp-bg/35 shadow-kp-soft dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none md:mt-10">
-          {PUBLICATIONS_FULL.map((p) => (
+        <ul className="mt-8 divide-y divide-kp-line/80 overflow-hidden rounded-2xl border border-kp-line/60 bg-kp-bg/40 shadow-kp-soft dark:divide-white/10 dark:border-white/[0.09] dark:bg-white/[0.04] dark:shadow-none md:mt-10">
+          {PUBLICATIONS_MOVES_FIELD.map((p) => (
             <li
               key={p.title}
-              className="bg-white/60 px-5 py-9 transition-colors first:rounded-t-[14px] last:rounded-b-[14px] hover:bg-white/95 dark:bg-transparent dark:hover:bg-white/[0.06] md:px-8"
+              className="bg-white/65 px-5 py-9 transition-colors first:rounded-t-2xl last:rounded-b-2xl hover:bg-white/95 dark:bg-transparent dark:hover:bg-white/[0.06] md:px-8"
             >
               <KpReveal>
                 <div className="grid gap-6 md:grid-cols-[minmax(0,80px)_1fr_auto] md:items-start">
@@ -57,7 +57,7 @@ export default function KpPublications() {
                         {p.title}
                       </span>
                     </a>
-                    <p className="mt-2 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-kp-muted dark:text-kp-line">
+                    <p className="mt-2 font-mono text-caption2 font-semibold uppercase tracking-[0.12em] text-kp-muted dark:text-kp-line">
                       {p.journal}
                     </p>
                     <p className="mt-3 max-w-3xl text-sm leading-relaxed text-kp-muted dark:text-kp-line">{p.abstract}</p>
@@ -77,6 +77,18 @@ export default function KpPublications() {
           ))}
         </ul>
 
+        <p className="mt-8 flex flex-wrap justify-center md:mt-10">
+          <a
+            href={SITE.scholarWorksByPubDate}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-kp-line/70 bg-white/80 px-5 py-2.5 text-sm font-semibold text-kp-ink shadow-sm hover:border-kp-accent/40 hover:text-kp-accent dark:border-white/15 dark:bg-white/[0.06] dark:text-dark-text dark:hover:border-blue-400/40 dark:hover:text-blue-300"
+          >
+            See more on Google Scholar
+            <KpUiIcon name="externalLink" size={15} />
+          </a>
+        </p>
+
         <p className="mt-10 flex flex-wrap justify-center gap-4 md:mt-12">
           <a
             href={SITE.scholar}
@@ -84,7 +96,7 @@ export default function KpPublications() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-blue-300"
           >
-            Google Scholar
+            Google Scholar profile
             <KpUiIcon name="externalLink" size={15} />
           </a>
           <a

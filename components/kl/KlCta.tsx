@@ -5,7 +5,7 @@ export default function KlCta() {
       <p>Advisory, architecture reviews, speaking, and partnerships on agentic AI and software-defined mobility.</p>
       <a
         className="kl-pill"
-        href="https://topmate.io/Kamalpandey"
+        href="https://topmate.io/kamalpandey/"
         target="_blank"
         rel="noopener noreferrer"
       >

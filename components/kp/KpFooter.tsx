@@ -22,7 +22,7 @@ const FOOTER_PROFILES: readonly { href: string; label: string; Icon: LucideIcon 
 ]
 
 const linkClass =
-  `${iconWrap} text-[13px] font-normal tracking-wide text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400/80`
+  `${iconWrap} text-footnote font-normal tracking-wide text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400/80`
 
 export default function KpFooter() {
   const y = new Date().getFullYear()
@@ -31,11 +31,11 @@ export default function KpFooter() {
     <footer className="border-t border-white/[0.08] bg-[#1b0f19] pb-[calc(3rem+env(safe-area-inset-bottom,0px))] pt-12 text-zinc-200 md:pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:pt-14">
       <div className="mx-auto max-w-content px-6 text-center md:px-8">
         <nav
-          className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+          className="mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-2xl border border-white/[0.1] bg-white/[0.04] px-4 py-4 backdrop-blur-md supports-[backdrop-filter]:bg-white/[0.03]"
           aria-label="Profiles and email"
         >
           {FOOTER_PROFILES.map((item) => (
-            <a key={item.href} href={item.href} {...externalLinkProps} className={`${linkClass} text-[12px]`}>
+            <a key={item.href} href={item.href} {...externalLinkProps} className={`${linkClass} text-xs`}>
               <FooterLinkIcon Icon={item.Icon} />
               {item.label}
             </a>
@@ -50,7 +50,7 @@ export default function KpFooter() {
           Orange County / Los Angeles, CA
         </p>
 
-        <p className="mt-3 text-[13px] text-zinc-500">
+        <p className="mt-3 text-footnote text-zinc-500">
           © {y} {SITE.name}
         </p>
 
