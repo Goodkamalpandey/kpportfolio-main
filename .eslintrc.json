@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals"],
+  "overrides": [
+    {
+      "files": ["app/layout.tsx"],
+      "rules": {
+        "react/no-danger": "off"
+      }
+    }
+  ]
+}
