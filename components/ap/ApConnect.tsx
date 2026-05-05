@@ -21,7 +21,7 @@ export default function ApConnect() {
           </a>
           <a
             className="ap-btn ap-btn--outline"
-            href="https://topmate.io/Kamalpandey"
+            href="https://topmate.io/kamalpandey/"
             target="_blank"
             rel="noopener noreferrer"
           >

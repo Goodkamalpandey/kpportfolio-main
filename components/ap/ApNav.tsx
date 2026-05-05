@@ -15,7 +15,7 @@ export default function ApNav() {
           ))}
           <a
             className="ap-btn"
-            href="https://topmate.io/Kamalpandey"
+            href="https://topmate.io/kamalpandey/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,7 +33,7 @@ export default function ApNav() {
             <a
               className="ap-btn"
               style={{ marginTop: 8, textAlign: 'center' }}
-              href="https://topmate.io/Kamalpandey"
+              href="https://topmate.io/kamalpandey/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -75,7 +75,7 @@ export default function ApFooter() {
               <a href="#connect">Collaborate</a>
             </li>
             <li>
-              <a href="https://topmate.io/Kamalpandey" target="_blank" rel="noopener noreferrer">
+              <a href="https://topmate.io/kamalpandey/" target="_blank" rel="noopener noreferrer">
                 Topmate
               </a>
             </li>

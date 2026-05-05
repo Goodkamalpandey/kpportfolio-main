@@ -93,7 +93,7 @@ export default function BrandNav() {
           </li>
         </ul>
         <a
-          href="https://topmate.io/Kamalpandey"
+          href="https://topmate.io/kamalpandey/"
           target="_blank"
           rel="noopener noreferrer"
           className="ncta"
@@ -138,7 +138,7 @@ export default function BrandNav() {
           Blog
         </a>
         <a
-          href="https://topmate.io/Kamalpandey"
+          href="https://topmate.io/kamalpandey/"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setMobileOpen(false)}

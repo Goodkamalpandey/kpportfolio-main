@@ -16,8 +16,8 @@ export default function ResearchPage() {
       className="min-h-screen bg-gradient-to-b from-kp-bg to-white/40 pb-24 pt-28 dark:from-dark-bg dark:to-dark-bg md:pb-28 md:pt-32"
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
-        <p className="inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-kp-emerald">
-          <KpUiIcon name="fileText" size={15} className="text-kp-emerald" />
+        <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+          <KpUiIcon name="fileText" size={15} className="text-kp-emerald dark:text-emerald-400" />
           Research index
         </p>
         <h1 className="mt-4 inline-flex items-center gap-3 font-serif text-4xl font-light text-kp-ink dark:text-dark-text md:text-5xl">
@@ -40,14 +40,14 @@ export default function ResearchPage() {
             </span>
           </p>
           <p>
-            Expandable detail per paper. For citation graphs and sorting, use{' '}
+            Expandable detail per paper. For the full list sorted by publication date (newest first), see{' '}
             <a
-              href={SITE.scholar}
+              href={SITE.scholarWorksByPubDate}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-kp-accent hover:underline dark:text-blue-300"
             >
-              Google Scholar
+              Google Scholar — all works by date
             </a>
             .
           </p>
@@ -63,7 +63,7 @@ export default function ResearchPage() {
                   {p.title}
                 </summary>
                 <div className="mt-4 border-t border-kp-line pt-4 text-sm dark:border-white/10">
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-kp-muted dark:text-kp-line">
+                  <p className="font-mono text-caption2 uppercase tracking-wider text-kp-muted dark:text-kp-line">
                     {p.journal}
                   </p>
                   <p className="mt-3 text-kp-muted dark:text-kp-line">{p.abstract}</p>

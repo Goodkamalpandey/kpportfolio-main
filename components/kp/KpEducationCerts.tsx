@@ -10,8 +10,8 @@ export default function KpEducationCerts() {
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.13em] text-kp-emerald">
-            <KpUiIcon name="graduationCap" size={15} className="text-kp-emerald" />
+          <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+            <KpUiIcon name="graduationCap" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Education &amp; certifications
           </p>
           <h2 className="mt-4 font-serif text-3xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-4xl">

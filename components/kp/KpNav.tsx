@@ -125,7 +125,7 @@ export default function KpNav() {
         <div className="mx-auto flex max-w-content items-center justify-between px-5 py-3 md:px-8 md:py-3.5">
           <Link
             href="/"
-            className="rounded-lg px-2 py-2 text-[15px] font-medium text-kp-accent transition-[opacity,transform] duration-200 ease-out-soft hover:opacity-80 active:scale-[0.98] dark:text-blue-300 motion-reduce:active:scale-100"
+            className="rounded-lg px-2 py-2 text-sm font-medium text-kp-accent transition-[opacity,transform] duration-200 ease-out-soft hover:opacity-80 active:scale-[0.98] dark:text-blue-300 motion-reduce:active:scale-100"
           >
             Dr. Kamal Pandey
           </Link>
@@ -136,7 +136,7 @@ export default function KpNav() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-[12px] font-medium tracking-[-0.01em] transition-colors duration-200 ease-out-soft ${
+                  className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium tracking-[-0.01em] transition-colors duration-200 ease-out-soft ${
                     active
                       ? 'is-active text-kp-accent dark:text-blue-300'
                       : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
@@ -154,7 +154,7 @@ export default function KpNav() {
             <a
               href={SITE.medium}
               {...externalLinkProps}
-              className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-[12px] font-medium ${
+              className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium ${
                 pathname === '/blog'
                   ? 'is-active text-kp-accent dark:text-blue-300'
                   : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
@@ -171,7 +171,7 @@ export default function KpNav() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="min-h-[44px] min-w-[44px] rounded-xl px-3 py-2 font-mono text-[13px] font-medium text-kp-ink transition-[color,transform] duration-200 ease-out-soft hover:text-kp-accent active:scale-[0.97] lg:hidden dark:text-dark-text dark:hover:text-blue-300 motion-reduce:active:scale-100"
+            className="min-h-[44px] min-w-[44px] rounded-xl px-3 py-2 font-mono text-footnote font-medium text-kp-ink transition-[color,transform] duration-200 ease-out-soft hover:text-kp-accent active:scale-[0.97] lg:hidden dark:text-dark-text dark:hover:text-blue-300 motion-reduce:active:scale-100"
             aria-expanded={open}
             aria-controls={open ? MOBILE_MENU_ID : undefined}
             aria-haspopup="dialog"

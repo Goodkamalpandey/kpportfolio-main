@@ -10,8 +10,8 @@ export default function KpBooks() {
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-kp-emerald">
-            <KpUiIcon name="bookOpen" size={15} className="text-kp-emerald" />
+          <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
+            <KpUiIcon name="bookOpen" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Books
           </p>
           <h2 className="mt-4 font-serif text-4xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-5xl">
@@ -27,7 +27,7 @@ export default function KpBooks() {
             <li key={b.href} className="px-5 py-9 first:rounded-t-2xl last:rounded-b-2xl md:px-8">
               <KpReveal>
                 <div className="grid gap-6 md:grid-cols-[minmax(0,140px)_1fr_auto] md:items-start">
-                  <span className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-kp-line bg-white px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-kp-emerald dark:border-white/15 dark:bg-white/[0.04] dark:text-emerald-300">
+                  <span className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-kp-line bg-white px-3 py-1.5 font-mono text-caption2 font-semibold uppercase tracking-wider text-kp-emerald dark:border-white/15 dark:bg-white/[0.04] dark:text-emerald-300">
                     <KpUiIcon name="bookmark" size={13} className="text-kp-emerald dark:text-emerald-300" />
                     {b.kind}
                   </span>

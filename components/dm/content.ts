@@ -5,19 +5,19 @@ export const SPOTLIGHT_PAPERS = [
     title: 'The Dynamic Reasoning Trace: Achieving Verifiable Faithfulness through Agentic Self-Correction',
     venue: 'IJSRCSE',
     year: '2025',
-    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394535014_The_Dynamic_Reasoning_Trace_Achieving_Verifiable_Faithfulness_through_Agentic_Self-Correction/links/68a387176327cf7b63d7586e/The-Dynamic-Reasoning-Trace-Achieving-Verifiable-Faithfulness-through-Agentic-Self-Correction.pdf',
   },
   {
     title: 'Synthetic Reasoning: Verifiable AI by Modular Program Synthesis',
     venue: 'World Journal of AI & Robotics Research',
     year: '2025',
-    href: 'https://doi.org/10.63620/MK.WJAIRR.2025',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/395245321_Synthetic_Reasoning_Verifiable_AI_by_Modular_Program_Synthesis/links/68b91246d9261f6f51b132b9/Synthetic-Reasoning-Verifiable-AI-by-Modular-Program-Synthesis.pdf',
   },
   {
     title: 'The Convergence of AI and Low-Code Platforms: Evolution, Applications, and Benchmarks',
     venue: 'IEEE Access',
     year: '2025',
-    href: 'https://www.researchgate.net/publication/394170940',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf',
   },
   {
     title: 'An Architectural Framework for AI-Driven Intelligent Commerce: The Data Nervous System',
@@ -38,7 +38,7 @@ export const BREAKTHROUGHS = [
     kicker: 'Flagship paper',
     title: 'IEEE Access — AI & low-code convergence',
     blurb: 'Benchmarks and applications at the intersection of generative AI and enterprise platforms.',
-    href: 'https://www.researchgate.net/publication/394170940',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf',
     external: true,
   },
   {
@@ -52,7 +52,7 @@ export const BREAKTHROUGHS = [
     kicker: 'Synthetic reasoning',
     title: 'Modular program synthesis',
     blurb: 'Structured, verifiable AI through compositional programs instead of opaque monoliths.',
-    href: 'https://doi.org/10.63620/MK.WJAIRR.2025',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/395245321_Synthetic_Reasoning_Verifiable_AI_by_Modular_Program_Synthesis/links/68b91246d9261f6f51b132b9/Synthetic-Reasoning-Verifiable-AI-by-Modular-Program-Synthesis.pdf',
     external: true,
   },
   {
@@ -87,7 +87,7 @@ export const UPDATES = [
     date: '2025',
     category: 'Systems',
     title: 'IEEE Access — convergence of AI and low-code platforms',
-    href: 'https://www.researchgate.net/publication/394170940',
+    href: 'https://www.researchgate.net/profile/Kamal-Pandey-21/publication/394170940_The_Convergence_of_Artificial_Intelligence_and_Low-CodeNo-_Code_Platforms_Evolution_Applications_and_Benchmarks/links/688beb4f12647e01a03aeb70/The-Convergence-of-Artificial-Intelligence-and-Low-Code-No-Code-Platforms-Evolution-Applications-and-Benchmarks.pdf',
     external: true,
   },
   {
@@ -117,7 +117,7 @@ export const LAB_STORIES = [
   {
     title: 'Collaborate on the next breakthrough',
     desc: 'Speaking, advisory, and architecture partnerships at the frontier of agentic and SDV intelligence.',
-    href: 'https://topmate.io/Kamalpandey',
+    href: 'https://topmate.io/kamalpandey/',
     external: true,
   },
 ] as const

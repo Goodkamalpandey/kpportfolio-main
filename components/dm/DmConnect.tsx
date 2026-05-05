@@ -5,7 +5,7 @@ export default function DmConnect() {
       <p>Advisory, architecture reviews, speaking, and collaboration on agentic AI and SDV programs.</p>
       <a
         className="dm-btn-primary"
-        href="https://topmate.io/Kamalpandey"
+        href="https://topmate.io/kamalpandey/"
         target="_blank"
         rel="noopener noreferrer"
       >

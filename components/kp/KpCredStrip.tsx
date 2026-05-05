@@ -16,7 +16,7 @@ export default function KpCredStrip() {
             {TRUSTED_ORGS.map((name) => (
               <span
                 key={name}
-                className="inline-flex max-w-full items-center rounded-full border border-kp-line/60 bg-white/85 px-3 py-1.5 text-center text-[11px] font-medium leading-tight tracking-wide text-kp-muted shadow-sm transition-[color,transform,box-shadow] duration-200 ease-out-soft hover:border-kp-accent/25 hover:text-kp-ink sm:text-xs dark:border-white/[0.1] dark:bg-white/[0.06] dark:text-kp-line dark:hover:border-blue-400/30 dark:hover:text-dark-text motion-safe:hover:-translate-y-px"
+                className="inline-flex max-w-full items-center rounded-full border border-kp-line/60 bg-white/85 px-3 py-1.5 text-center text-caption2 font-medium leading-tight tracking-wide text-kp-muted shadow-sm transition-[color,transform,box-shadow] duration-200 ease-out-soft hover:border-kp-accent/25 hover:text-kp-ink sm:text-xs dark:border-white/[0.1] dark:bg-white/[0.06] dark:text-kp-line dark:hover:border-blue-400/30 dark:hover:text-dark-text motion-safe:hover:-translate-y-px"
               >
                 {name}
               </span>

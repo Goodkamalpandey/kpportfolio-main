@@ -32,7 +32,7 @@ export default function KpHonors() {
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         <KpReveal>
-          <p className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.13em] text-kp-muted dark:text-kp-line">
+          <p className="kp-section-eyebrow inline-flex items-center gap-2">
             <Star className="h-4 w-4 text-kp-award" strokeWidth={1.5} aria-hidden />
             Recognition
           </p>

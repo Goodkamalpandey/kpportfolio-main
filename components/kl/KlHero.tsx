@@ -19,7 +19,7 @@ export default function KlHero() {
         <div className="kl-hero-actions">
           <a
             className="kl-pill"
-            href="https://topmate.io/Kamalpandey"
+            href="https://topmate.io/kamalpandey/"
             target="_blank"
             rel="noopener noreferrer"
           >

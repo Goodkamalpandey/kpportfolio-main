@@ -2,6 +2,7 @@
 
 import {
   PUBLICATIONS_FULL,
+  SCHOLAR_WORKS_BY_PUBDATE,
   HERO_STATS,
   HEADLINE_IMPACT_STATS,
   CAREER_ROLES,
@@ -20,11 +21,13 @@ export const SITE = {
   position:
     'Sr. Software Architect / Principal Engineer — Applied AI & Solutions Engineering @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
-  /** Profile + Topmate marketing UTM (see https://topmate.io/?utm_source=end_point) */
-  topmate: 'https://topmate.io/Kamalpandey?utm_source=end_point',
+  /** Creator page — https://topmate.io/kamalpandey/ */
+  topmate: 'https://topmate.io/kamalpandey/',
   linkedin: 'https://www.linkedin.com/in/kamalkpandey/',
   github: 'https://github.com/Goodkamalpandey',
   scholar: 'https://scholar.google.com/citations?user=rA_dpyAAAAAJ&hl=en&authuser=1',
+  /** All works on Scholar, newest first — same as profile “Sort by year”. */
+  scholarWorksByPubDate: SCHOLAR_WORKS_BY_PUBDATE,
   researchgate: 'https://www.researchgate.net/profile/Kamal-Pandey-21',
   medium: 'https://medium.com/@kamalkismca',
   orcid: 'https://orcid.org/0009-0009-1669-4450',
@@ -88,6 +91,8 @@ export const PUBLICATIONS_HOME = PUBLICATIONS_FULL
 
 export {
   PUBLICATIONS_FULL,
+  PUBLICATIONS_MOVES_FIELD,
+  SCHOLAR_WORKS_BY_PUBDATE,
   HERO_STATS,
   HEADLINE_IMPACT_STATS,
   CAREER_ROLES,

@@ -25,9 +25,11 @@
   --t1: #eef2eb;
   --t2: #9aa89a;
   --t3: #5a6658;
-  --serif: var(--font-brand-serif), Georgia, serif;
-  --sans: var(--font-brand-sans), system-ui, sans-serif;
-  --mono: var(--font-brand-mono), ui-monospace, monospace;
+  --serif: ui-serif, 'New York', Iowan Old Style, Georgia, var(--font-brand-serif), serif;
+  --sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial,
+    var(--font-brand-sans, sans-serif), sans-serif;
+  --mono: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, var(--font-brand-mono), monospace;
   --r1: 2px;
   --r2: 4px;
 }
@@ -42,7 +44,9 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   scroll-padding-top: 72px;
 }
 

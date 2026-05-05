@@ -8,6 +8,18 @@
     --kp-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --kp-radius-card: 1.25rem;
     --kp-radius-hero: 1.375rem;
+    /* Apple HIG text styles @ default content size (pt ≈ px for reference) */
+    --kp-text-large-title: 2.125rem; /* 34pt */
+    --kp-text-title1: 1.75rem; /* 28pt */
+    --kp-text-title2: 1.375rem; /* 22pt */
+    --kp-text-title3: 1.25rem; /* 20pt */
+    --kp-text-headline: 1.0625rem; /* 17pt semibold */
+    --kp-text-body: 1.0625rem; /* 17pt */
+    --kp-text-callout: 1rem; /* 16pt */
+    --kp-text-subheadline: 0.9375rem; /* 15pt */
+    --kp-text-footnote: 0.8125rem; /* 13pt */
+    --kp-text-caption1: 0.75rem; /* 12pt */
+    --kp-text-caption2: 0.6875rem; /* 11pt */
   }
 
   /* WCAG 2.4.1 — first focusable in layout; slides into view on :focus-visible only */
@@ -53,6 +65,9 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* iOS Safari — avoid auto text zoom on orientation / focus */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   ::selection {
@@ -67,6 +82,9 @@
 
   body {
     text-rendering: optimizeLegibility;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1;
   }
 
   :where(a, button) {
@@ -90,8 +108,13 @@
     @apply border border-kp-line/55 bg-white/[0.82] shadow-kp-soft ring-1 ring-black/[0.025] backdrop-blur-2xl backdrop-saturate-150 dark:border-white/[0.09] dark:bg-dark-card/80 dark:shadow-none dark:ring-white/[0.035];
   }
 
-  /** Section eyebrow — one rhythm site-wide (mono / caps / tracking) */
+  /** Section eyebrow — Caption 2 scale + mono (SF Mono on iOS via theme) */
   .kp-section-eyebrow {
-    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-kp-muted dark:text-kp-line;
+    @apply font-mono text-caption2 font-semibold uppercase tracking-[0.13em] text-kp-muted dark:text-kp-line;
+  }
+
+  /** iOS Settings–style grouped surface (inset list / CTAs) */
+  .kp-grouped-inset {
+    @apply rounded-2xl border border-kp-line/50 bg-white/[0.72] p-4 shadow-kp-soft backdrop-blur-md dark:border-white/[0.09] dark:bg-white/[0.05] dark:shadow-none;
   }
 }

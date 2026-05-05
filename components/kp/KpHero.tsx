@@ -20,10 +20,10 @@ export default function KpHero() {
           >
             <div className="min-w-0 flex-1">
               <div className="kp-hero-identity-nameblock">
-                <p className="text-pretty text-[1.0625rem] font-semibold leading-tight tracking-[-0.022em] text-kp-ink md:text-[1.1875rem] dark:text-dark-text">
+                <p className="text-pretty text-base font-semibold leading-tight tracking-[-0.022em] text-kp-ink md:text-lg dark:text-dark-text">
                   {HERO_IDENTITY.displayName}
                 </p>
-                <p className="mt-2 max-w-prose text-pretty text-[0.8125rem] font-normal leading-[1.45] text-kp-muted md:text-[0.875rem] dark:text-kp-line">
+                <p className="mt-2 max-w-prose text-pretty text-footnote font-normal leading-snug text-kp-muted md:text-sm dark:text-kp-line">
                   {HERO_IDENTITY.degrees}
                 </p>
               </div>
@@ -34,29 +34,29 @@ export default function KpHero() {
               />
 
               <div className="space-y-1">
-                <p className="text-pretty text-[0.875rem] font-medium leading-snug tracking-[-0.015em] text-kp-ink md:text-[0.9375rem] dark:text-dark-text">
+                <p className="text-pretty text-sm font-medium leading-snug tracking-[-0.015em] text-kp-ink dark:text-dark-text">
                   {HERO_IDENTITY.roleTitle}
                 </p>
-                <p className="text-[0.8125rem] font-normal text-kp-muted dark:text-kp-line">
+                <p className="text-footnote font-normal text-kp-muted dark:text-kp-line">
                   <span className="text-kp-ink/55 dark:text-white/45">@ </span>
                   {HERO_IDENTITY.employer}
                 </p>
               </div>
 
-              <p className="mt-4 inline-flex items-start gap-2 text-[0.8125rem] leading-snug text-kp-muted dark:text-kp-line">
+              <p className="mt-4 inline-flex items-start gap-2 text-footnote leading-snug text-kp-muted dark:text-kp-line">
                 <KpUiIcon name="mapPin" size={15} className="mt-0.5 shrink-0 text-kp-accent/80 dark:text-blue-400/90" />
                 <span>{HERO_IDENTITY.location}</span>
               </p>
 
               <div className="mt-5">
-                <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
+                <p className="inline-flex items-center gap-2 font-mono text-caption2 font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
                   <KpUiIcon name="badgeCheck" size={13} className="shrink-0 text-kp-accent/85 dark:text-blue-400/90" />
                   Membership
                 </p>
                 <ul className="mt-2.5 flex flex-wrap gap-2">
                   {HERO_IDENTITY.memberships.map((m) => (
                     <li key={m}>
-                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-[0.6875rem] font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
+                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
                         {m}
                       </span>
                     </li>
@@ -65,14 +65,14 @@ export default function KpHero() {
               </div>
 
               <div className="mt-4">
-                <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
+                <p className="inline-flex items-center gap-2 font-mono text-caption2 font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
                   <KpUiIcon name="award" size={13} className="shrink-0 text-kp-award" />
                   Recognition
                 </p>
                 <ul className="mt-2.5 flex flex-wrap gap-2">
                   {HERO_IDENTITY.recognition.map((r) => (
                     <li key={r}>
-                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-[0.6875rem] font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
+                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
                         {r}
                       </span>
                     </li>
@@ -92,7 +92,7 @@ export default function KpHero() {
                   className="object-cover object-[center_12%]"
                 />
               </div>
-              <figcaption className="mt-2 max-w-[11.25rem] text-center text-[10px] font-medium leading-snug tracking-wide text-kp-muted dark:text-kp-line md:text-left">
+              <figcaption className="mt-2 max-w-[11.25rem] text-center text-caption2 font-medium leading-snug tracking-wide text-kp-muted dark:text-kp-line md:text-left">
                 Ai4 · 2025
               </figcaption>
             </figure>
@@ -107,10 +107,10 @@ export default function KpHero() {
             transition={{ duration: 0.5, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="kp-hero-grid-title">
-              <p className="mb-2 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
+              <p className="mb-2 font-mono text-caption2 font-semibold uppercase tracking-[0.2em] text-neutral-500">
                 Overview
               </p>
-              <h1 className="max-w-4xl text-pretty font-sans text-[1.85rem] font-medium leading-[1.12] tracking-[-0.035em] text-white sm:text-[2.25rem] sm:leading-[1.1] md:text-5xl md:leading-[1.08] lg:text-[3.25rem] lg:leading-[1.06]">
+              <h1 className="max-w-4xl text-pretty font-sans text-2xl font-medium leading-[1.12] tracking-[-0.035em] text-white sm:text-3xl sm:leading-[1.1] md:text-5xl md:leading-[1.08] lg:text-6xl lg:leading-[1.06]">
                 {SITE.tagline}
               </h1>
             </div>
@@ -118,7 +118,7 @@ export default function KpHero() {
               <KpHeroStats variant="spec" />
             </div>
             <motion.p
-              className="kp-hero-grid-copy max-w-xl border-l-2 border-[#e82127] pl-5 text-pretty text-[0.9375rem] font-normal leading-relaxed text-neutral-400 md:max-w-[28rem] md:text-base md:leading-relaxed"
+              className="kp-hero-grid-copy max-w-xl border-l-2 border-[#e82127] pl-5 text-pretty text-sm font-normal leading-relaxed text-neutral-400 md:max-w-[28rem] md:text-base md:leading-relaxed"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.12 }}
@@ -144,7 +144,7 @@ export default function KpHero() {
                 href={SITE.topmate}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[13px] md:px-6 md:py-3 md:text-sm"
+                className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-footnote md:px-6 md:py-3 md:text-sm"
               >
                 <KpUiIcon name="calendarDays" size={14} className="text-white" />
                 Book on Topmate

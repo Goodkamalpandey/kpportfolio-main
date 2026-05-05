@@ -15,7 +15,7 @@ export default function DmHero() {
       <div className="dm-hero-actions">
         <a
           className="dm-btn-primary"
-          href="https://topmate.io/Kamalpandey"
+          href="https://topmate.io/kamalpandey/"
           target="_blank"
           rel="noopener noreferrer"
         >

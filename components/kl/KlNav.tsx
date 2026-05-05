@@ -16,7 +16,7 @@ export default function KlNav() {
           ))}
           <a
             className="kl-pill"
-            href="https://topmate.io/Kamalpandey"
+            href="https://topmate.io/kamalpandey/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -34,7 +34,7 @@ export default function KlNav() {
             <a
               className="kl-pill"
               style={{ marginTop: 8, textAlign: 'center' }}
-              href="https://topmate.io/Kamalpandey"
+              href="https://topmate.io/kamalpandey/"
               target="_blank"
               rel="noopener noreferrer"
             >

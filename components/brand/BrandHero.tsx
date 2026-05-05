@@ -22,7 +22,7 @@ export default function BrandHero() {
         research into production systems that pass enterprise, safety, and governance bars.
       </p>
       <div className="hacts">
-        <a href="https://topmate.io/Kamalpandey" target="_blank" rel="noopener noreferrer" className="btn1">
+        <a href="https://topmate.io/kamalpandey/" target="_blank" rel="noopener noreferrer" className="btn1">
           Inquire for collaboration <span>↗</span>
         </a>
         <a href="#about" className="btn2">

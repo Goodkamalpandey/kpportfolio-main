@@ -16,9 +16,9 @@ export default function BrandContact() {
               agentic AI, SDV intelligence, and enterprise transformation at Rivian-class scale.
             </p>
             <div className="clinks">
-              <a href="https://topmate.io/Kamalpandey" target="_blank" rel="noopener noreferrer" className="clink">
+              <a href="https://topmate.io/kamalpandey/" target="_blank" rel="noopener noreferrer" className="clink">
                 <span className="cl-label">Book Consultation</span>
-                <span className="cl-val">topmate.io/Kamalpandey ↗</span>
+                <span className="cl-val">topmate.io/kamalpandey ↗</span>
               </a>
               <a href="mailto:kamalkismca@gmail.com" className="clink">
                 <span className="cl-label">Email</span>

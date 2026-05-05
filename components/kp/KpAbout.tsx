@@ -38,7 +38,7 @@ export default function KpAbout() {
           </ul>
         </KpReveal>
         <KpReveal className="md:col-span-7">
-          <div className="space-y-6 rounded-2xl border border-kp-line/70 bg-white/90 p-8 text-[17px] leading-[1.8] text-kp-muted shadow-kp-soft md:p-10 dark:border-white/10 dark:bg-dark-card dark:shadow-none dark:text-kp-line">
+          <div className="space-y-6 rounded-2xl border border-kp-line/70 bg-white/90 p-8 text-base leading-[1.8] text-kp-muted shadow-kp-soft md:p-10 dark:border-white/10 dark:bg-dark-card dark:shadow-none dark:text-kp-line">
             <p className="text-kp-ink dark:text-dark-text">{ABOUT_P1}</p>
             <p>{ABOUT_P2}</p>
             <p>{ABOUT_P3}</p>

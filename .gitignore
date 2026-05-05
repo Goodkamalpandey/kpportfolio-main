@@ -31,5 +31,5 @@ Thumbs.db
 # vercel
 .vercel
 
-# accidental brace-expansion folder name (do not track)
-{app,components,public/
+# accidental brace-expansion folder name (do not track) — literal “{” for ripglob/git
+[{]app,components,public/
