@@ -1,0 +1,325 @@
+/* Kamal Pandey world-class site — motion + cursor + nav underline (beyond Tailwind). */
+
+/* Hero credential strip — SF-style system rhythm + DM Sans */
+.kp-hero-identity {
+  font-family:
+    var(--font-kp-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kp-hero-identity-nameblock::after {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-top: 0.625rem;
+  background: linear-gradient(90deg, #1d4ed8, transparent);
+  border-radius: 1px;
+}
+
+.dark .kp-hero-identity-nameblock::after {
+  background: linear-gradient(90deg, #60a5fa, transparent);
+}
+
+/* Headline + stats + copy share one grid so copy isn’t pushed below a tall stats column */
+.kp-hero-main-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'hero-title'
+    'hero-stats'
+    'hero-copy'
+    'hero-cta';
+}
+
+.kp-hero-main-grid > .kp-hero-grid-title {
+  grid-area: hero-title;
+  min-width: 0;
+}
+
+.kp-hero-main-grid > .kp-hero-grid-stats {
+  grid-area: hero-stats;
+  min-width: 0;
+  align-self: start;
+}
+
+.kp-hero-main-grid > .kp-hero-grid-copy {
+  grid-area: hero-copy;
+  min-width: 0;
+}
+
+.kp-hero-main-grid > .kp-hero-grid-cta {
+  grid-area: hero-cta;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .kp-hero-main-grid {
+    column-gap: 2.5rem;
+    row-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'hero-title hero-stats'
+      'hero-copy hero-stats'
+      'hero-cta hero-stats';
+  }
+}
+
+@media (min-width: 1024px) {
+  .kp-hero-main-grid {
+    column-gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .kp-hero-main-grid {
+    column-gap: 5rem;
+  }
+}
+
+/* Soft ambient light behind the hero — keeps layout flat, adds depth */
+/* Keep hero background close to flat kp-bg — top radial was reading as a pale band above the headline */
+.kp-hero {
+  background-color: #f6f7f9;
+  background-image: radial-gradient(ellipse 80% 55% at 100% 100%, rgba(5, 150, 105, 0.04), transparent 50%);
+}
+
+.dark .kp-hero {
+  background-color: #070d1c;
+  background-image: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(5, 150, 105, 0.06), transparent 50%);
+}
+
+/* Hero “spec” slab — charcoal field; 14px radius reads closer to continuous corners on retina */
+.kp-hero-spec-panel {
+  position: relative;
+  border-radius: 14px;
+  background: linear-gradient(168deg, #0a0a0a 0%, #141414 42%, #0c0c0c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 28px 90px -28px rgba(0, 0, 0, 0.55);
+}
+
+.kp-hero-spec-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.04) 0%, transparent 38%);
+  opacity: 0.35;
+}
+
+.kp-hero-spec-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.kp-hero-spec-cta-primary {
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #0a0a0a;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kp-hero-spec-cta-primary:hover {
+  background: #ffffff;
+}
+
+.kp-hero-spec-cta-primary:active {
+  transform: scale(0.98);
+}
+
+.kp-hero-spec-cta-primary:focus-visible {
+  outline: 2px solid #f5f5f5;
+  outline-offset: 3px;
+}
+
+.kp-hero-spec-cta-secondary {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fafafa;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  background: transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kp-hero-spec-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.kp-hero-spec-cta-secondary:active {
+  transform: scale(0.98);
+}
+
+.kp-hero-spec-cta-secondary:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 3px;
+}
+
+.dark .kp-hero-spec-panel {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.03) inset,
+    0 32px 100px -30px rgba(0, 0, 0, 0.65);
+}
+
+.kp-hero-spec-panel .kp-hero-main-grid {
+  row-gap: 1.75rem;
+  column-gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .kp-hero-spec-panel .kp-hero-main-grid {
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kp-hero-spec-panel .kp-hero-main-grid {
+    column-gap: 3rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.kp-cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1d4ed8;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.kp-cursor-dot.is-on {
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .kp-cursor-dot {
+    display: none;
+  }
+}
+
+.kp-nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.kp-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: #1d4ed8;
+  transition: width 0.2s ease-out;
+}
+
+.kp-nav-link:hover::after,
+.kp-nav-link.is-active::after {
+  width: 100%;
+}
+
+.kp-nav-link.is-active {
+  color: #1d4ed8;
+}
+
+.dark .kp-nav-link::after {
+  background: #60a5fa;
+}
+
+.dark .kp-nav-link.is-active {
+  color: #60a5fa;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kp-hero-spec-cta-primary,
+  .kp-hero-spec-cta-secondary {
+    transition: none;
+  }
+
+  .kp-hero-spec-cta-primary:active,
+  .kp-hero-spec-cta-secondary:active {
+    transform: none;
+  }
+
+  .kp-nav-link::after {
+    transition: none;
+  }
+
+  .kp-cursor-dot {
+    transition: none;
+  }
+}
+
+/* Topmate — storefront-style CTA (aligned with topmate.io creator marketing) */
+.kp-topmate-cta {
+  color: #fff;
+  background: linear-gradient(92deg, #5b21b6 0%, #7c3aed 38%, #c026d3 72%, #db2777 100%);
+  box-shadow:
+    0 1px 2px rgba(91, 33, 182, 0.18),
+    0 4px 16px -3px rgba(124, 58, 237, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.kp-topmate-cta:hover {
+  color: #fff;
+  filter: brightness(1.06);
+  box-shadow:
+    0 2px 3px rgba(91, 33, 182, 0.22),
+    0 6px 20px -3px rgba(192, 38, 211, 0.42);
+}
+
+.kp-topmate-cta:focus-visible {
+  outline: 2px solid #e879f9;
+  outline-offset: 3px;
+}
+
+.kp-topmate-ghost {
+  color: #6d28d9;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1.5px solid rgba(124, 58, 237, 0.45);
+}
+
+.kp-topmate-ghost:hover {
+  color: #fff;
+  background: linear-gradient(92deg, #5b21b6 0%, #7c3aed 50%, #a21caf 100%);
+  border-color: transparent;
+}
+
+.dark .kp-topmate-ghost {
+  color: #e9d5ff;
+  background: rgba(124, 58, 237, 0.15);
+  border-color: rgba(216, 180, 254, 0.35);
+}
+
+.dark .kp-topmate-ghost:hover {
+  color: #fff;
+}
