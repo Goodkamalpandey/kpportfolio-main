@@ -14,7 +14,6 @@ const SECTIONS = [
 ]
 
 const BLOG = { href: 'https://medium.com/@kamalkismca', label: 'Blog' }
-
 function scrollToHash(hash: string) {
   const id = hash.replace('#', '')
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })

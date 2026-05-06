@@ -8,7 +8,6 @@ export default function CountUpSpan({ target, className }: Props) {
   const ref = useRef<HTMLSpanElement>(null)
   const [val, setVal] = useState(0)
   const done = useRef(false)
-
   useEffect(() => {
     const el = ref.current
     if (!el || done.current) return
