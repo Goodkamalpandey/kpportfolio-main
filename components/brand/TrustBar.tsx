@@ -22,7 +22,6 @@ function Track({ suffix }: { suffix: string }) {
     </>
   )
 }
-
 export default function TrustBar() {
   return (
     <div id="trust">
