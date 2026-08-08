@@ -52,6 +52,16 @@ export default function KpContact({ page = false }: { page?: boolean }) {
             <KpUiIcon name="linkedin" size={14} />
             LinkedIn
           </a>
+          {SITE.resume ? (
+            <a
+              href={SITE.resume}
+              download
+              className="inline-flex min-h-12 w-full flex-1 items-center justify-center gap-2 rounded-2xl border border-kp-line px-5 py-3 text-sm font-semibold leading-tight text-kp-ink transition duration-200 ease-out-soft hover:border-kp-accent hover:text-kp-accent active:scale-[0.98] dark:border-white/15 dark:text-dark-text dark:hover:border-blue-400 dark:hover:text-blue-300 motion-reduce:active:scale-100 sm:min-w-[10.5rem] sm:w-auto"
+            >
+              <KpUiIcon name="fileText" size={14} />
+              Download CV
+            </a>
+          ) : null}
         </div>
       </div>
     </section>

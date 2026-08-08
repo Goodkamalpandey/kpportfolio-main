@@ -36,14 +36,14 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
-  honorificSuffix: 'PhD, DBA, MTech',
+  honorificSuffix: 'DBA, MCA',
   jobTitle: 'Sr. Staff Software Architect — Applied AI & Solutions Engineering',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',
   },
   description:
-    'AI150 Global Influencer 2025-26. Global AI Leader 2025. Top 50 AI Researcher (Stanford). Senior Member IEEE. Fellow IET. 59+ citations. 25+ peer-reviewed publications. 16+ years. $100B projected AI operational impact (2022–2026).',
+    'AI150 Global Influencer 2025-26. Global AI Leader 2025. Top 50 AI Researcher (Stanford). Senior Member IEEE. Fellow IET. 100+ citations. 25+ peer-reviewed publications. 17+ years. $100M+ measured annual AI operational impact.',
   url: SITE.domain,
   email: SITE.email,
    address: {
@@ -60,8 +60,8 @@ const jsonLd = {
     },
     {
       '@type': 'CollegeOrUniversity',
-      name: 'IMET Worldwide Singapore',
-      description: 'Doctor of Business Administration in AI and Cloud',
+      name: 'Westcliff University',
+      description: 'Doctor of Business Administration in Computer Science (2023)',
     },
   ],
   knowsAbout: [
@@ -89,7 +89,7 @@ const jsonLd = {
     'GCP',
   ],
   award: [
-    'AI150 Global AI Influencer 2025-2026',
+    'AI150 Global AI Influencer 2025-2026 & 2026-2027',
     'Global AI Leader 2025',
     'Top 50 AI Researcher — Stanford University',
     'IEEE Senior Member',
@@ -121,7 +121,7 @@ export const viewport: Viewport = {
 }
 
 const ogDescription =
-  'Sr. Staff Architect — Applied AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 16+ years.'
+  'Sr. Staff Architect — Applied AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
