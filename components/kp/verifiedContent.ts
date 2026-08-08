@@ -55,19 +55,17 @@ export const PUBLICATIONS_FULL = [
   },
   {
     year: '2026',
-    // Venue/year inferred — verify against IEEE Xplore record 11609631.
     title:
       'Quantization-Induced Robustness Collapse in Edge-Deployed Language Models: Security and Governance Frameworks for 6G IoT Ecosystems',
-    journal: 'IEEE Xplore · 2026',
+    journal: '2026 2nd Int. Conf. on Emerging and Intelligent Technologies and Systems (EITS) · IEEE · Jun 2026',
     abstract:
       'Examines how quantization can induce robustness collapse in edge-deployed language models, and proposes security and governance frameworks for 6G IoT ecosystems.',
     href: 'https://ieeexplore.ieee.org/abstract/document/11609631',
   },
   {
     year: '2026',
-    // Venue/year inferred — verify against IEEE Xplore record 11621263.
     title: 'The Novel Framework for Next-Gen Predictive Maintenance of Software-Defined Vehicles',
-    journal: 'IEEE Xplore · 2026',
+    journal: '2026 2nd Int. Conf. on Artificial Intelligence Systems (AIS) · IEEE · May 2026',
     abstract:
       'Presents a framework for next-generation predictive maintenance of software-defined vehicles.',
     href: 'https://ieeexplore.ieee.org/abstract/document/11621263',
