@@ -37,8 +37,6 @@ export const SITE = {
   /** Hero portrait — `public/kp/…` (e.g. conference stage). */
   heroPortraitSrc: '/kp/kamal-speaking-ai4-2025.png',
   heroPortraitAlt: 'Dr. Kamal Pandey speaking at Ai4 2025',
-  /** CV/résumé served from `public/kp/`. Surfaces the "Download CV" CTA in Contact. */
-  resume: '/kp/dr-kamal-pandey-cv.pdf',
 } as const
 
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */

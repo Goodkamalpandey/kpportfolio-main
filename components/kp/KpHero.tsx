@@ -171,16 +171,6 @@ export default function KpHero() {
                 View research
                 <KpUiIcon name="externalLink" size={14} className="text-white" />
               </KpMagnetic>
-              {SITE.resume ? (
-                <a
-                  href={SITE.resume}
-                  download
-                  className="inline-flex items-center gap-1.5 self-center px-2 py-2.5 text-footnote font-medium text-neutral-300 underline-offset-4 transition-colors hover:text-white hover:underline md:py-3"
-                >
-                  <KpUiIcon name="fileText" size={14} className="text-neutral-300" />
-                  Download CV
-                </a>
-              ) : null}
             </motion.div>
           </motion.div>
         </div>
