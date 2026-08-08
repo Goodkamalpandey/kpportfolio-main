@@ -153,6 +153,21 @@ export default function KpNav() {
                 </Link>
               )
             })}
+            <Link
+              href="/recognition"
+              className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium ${
+                pathname === '/recognition'
+                  ? 'is-active text-kp-accent dark:text-blue-300'
+                  : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
+              }`}
+            >
+              <KpUiIcon
+                name="award"
+                size={15}
+                className={`shrink-0 ${pathname === '/recognition' ? 'opacity-100' : 'opacity-80'}`}
+              />
+              <span>Recognition</span>
+            </Link>
             <a
               href={SITE.medium}
               {...externalLinkProps}
@@ -229,10 +244,25 @@ export default function KpNav() {
                 </motion.div>
               ))}
               <motion.div
-                key="blog-medium"
+                key="recognition-page"
                 initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: reduceMotion ? 0 : MOBILE.length * 0.05, duration: reduceMotion ? 0.01 : 0.28 }}
+              >
+                <Link
+                  href="/recognition"
+                  className="inline-flex items-center gap-4 font-serif text-3xl font-light text-white transition-opacity hover:opacity-90"
+                  onClick={closeMenu}
+                >
+                  <KpUiIcon name="award" size={28} className="shrink-0 text-white/85" strokeWidth={1.5} />
+                  <span>Recognition</span>
+                </Link>
+              </motion.div>
+              <motion.div
+                key="blog-medium"
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: reduceMotion ? 0 : (MOBILE.length + 1) * 0.05, duration: reduceMotion ? 0.01 : 0.28 }}
               >
                 <a
                   href={SITE.medium}
