@@ -37,7 +37,7 @@ const jsonLd = {
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'DBA, MCA',
-  jobTitle: 'Sr. Staff Software Architect — Applied AI & Solutions Engineering',
+  jobTitle: 'Principal AI Architect — Applied & Agentic AI',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',

@@ -47,6 +47,34 @@ export const PUBLICATIONS_FULL = [
   {
     year: '2026',
     title:
+      'TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization',
+    journal: 'N Shukla, K Pandey, O Tiwari · arXiv:2607.16973 · 2026',
+    abstract:
+      'Introduces TurboVec, an open-source index built on TurboQuant — a codebook-oblivious scalar quantizer that needs no corpus-dependent training. On DBpedia embeddings, 4-bit TurboQuant beats trained FAISS Product Quantization on Recall@5 and cuts query latency dramatically, while the codebook-oblivious design lowers membership-inference risk to near-random — cost-efficient, privacy-preserving retrieval for enterprise RAG.',
+    href: 'https://arxiv.org/abs/2607.16973',
+  },
+  {
+    year: '2026',
+    // Venue/year inferred — verify against IEEE Xplore record 11609631.
+    title:
+      'Quantization-Induced Robustness Collapse in Edge-Deployed Language Models: Security and Governance Frameworks for 6G IoT Ecosystems',
+    journal: 'IEEE Xplore · 2026',
+    abstract:
+      'Examines how quantization can induce robustness collapse in edge-deployed language models, and proposes security and governance frameworks for 6G IoT ecosystems.',
+    href: 'https://ieeexplore.ieee.org/abstract/document/11609631',
+  },
+  {
+    year: '2026',
+    // Venue/year inferred — verify against IEEE Xplore record 11621263.
+    title: 'The Novel Framework for Next-Gen Predictive Maintenance of Software-Defined Vehicles',
+    journal: 'IEEE Xplore · 2026',
+    abstract:
+      'Presents a framework for next-generation predictive maintenance of software-defined vehicles.',
+    href: 'https://ieeexplore.ieee.org/abstract/document/11621263',
+  },
+  {
+    year: '2026',
+    title:
       'Autonomous ASN Label Compliance Using a Hybrid YOLOV8—Vision-Language Framework and Florence-2',
     journal: 'K Pandey, SD Vallamsetti, N Tare · SoutheastCon 2026 · pp. 1–7',
     abstract:
@@ -189,6 +217,9 @@ export const PUBLICATIONS_FULL = [
  * Synthetic Reasoning, the next substantive work in the same ordering.
  */
 const PUBLICATIONS_MOVES_FIELD_ORDER = [
+  'TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization',
+  'Quantization-Induced Robustness Collapse in Edge-Deployed Language Models: Security and Governance Frameworks for 6G IoT Ecosystems',
+  'The Novel Framework for Next-Gen Predictive Maintenance of Software-Defined Vehicles',
   'Autonomous ASN Label Compliance Using a Hybrid YOLOV8—Vision-Language Framework and Florence-2',
   'The Agentic Enterprise: A Strategic Analysis of Advanced Agentic Workflows and Collaborative AI',
   'Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap',
@@ -433,7 +464,7 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     org: 'Rivian Automotive Inc.',
     location: 'Orange County / Los Angeles, CA',
     roles: [
-      { title: 'Sr. Software Architect — Applied AI & Solutions Engineering', dates: 'Jan 2023 – Present' },
+      { title: 'Principal AI Architect — Applied & Agentic AI', dates: 'Jan 2023 – Present' },
       { title: 'Principal Engineer / Technical Lead', dates: 'Oct 2022 – Dec 2023' },
       { title: 'Staff Software Engineer — Digital Workplace & Automation', dates: 'Feb 2021 – Sep 2022' },
     ],
