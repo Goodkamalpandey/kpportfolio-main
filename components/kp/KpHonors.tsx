@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Star } from 'lucide-react'
 import KpReveal from './KpReveal'
 import KpUiIcon from './KpUiIcon'
@@ -5,10 +6,10 @@ import { EMPLOYER_RECOGNITION, GLOBAL_RECOGNITION, SPEAKING_DETAIL } from './dat
 
 const HIGHLIGHTS = [
   {
-    year: '2025–2026',
+    year: '2025–2027',
     border: 'border-t-kp-award',
     title: 'AI150 Global AI Influencer',
-    body: 'Constellation Research — constellationr.com — among the world’s most visible AI leaders shaping research and industry.',
+    body: 'Constellation Research — constellationr.com — among the world’s most visible AI leaders shaping research and industry (2025–2026 & 2026–2027).',
   },
   {
     year: '2025',
@@ -93,6 +94,16 @@ export default function KpHonors() {
               ))}
             </ul>
           </KpReveal>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/recognition"
+            className="inline-flex items-center gap-2 rounded-full border border-kp-line/70 bg-white/80 px-5 py-2.5 text-sm font-semibold text-kp-ink shadow-sm transition hover:border-kp-accent/40 hover:text-kp-accent dark:border-white/15 dark:bg-white/[0.06] dark:text-dark-text dark:hover:border-blue-400/40 dark:hover:text-blue-300"
+          >
+            Full recognition &amp; standing
+            <KpUiIcon name="arrowUpRight" size={15} />
+          </Link>
         </div>
       </div>
     </section>
