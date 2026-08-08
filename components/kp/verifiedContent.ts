@@ -208,9 +208,11 @@ export const PUBLICATIONS_MOVES_FIELD = PUBLICATIONS_MOVES_FIELD_ORDER.map((titl
 })
 
 export const GLOBAL_RECOGNITION = [
-  'AI150 Global AI Influencer — 2025–2026 (Constellation Research · constellationr.com)',
+  'AI150 Global AI Influencer — 2025–2026 & 2026–2027 (Constellation Research · constellationr.com)',
   'Global AI Leader Award — 2025',
   'Top 50 AI Researcher & Reviewer — Stanford University recognition',
+  'Guest Lecturer & Research Student Mentor — California State University, Fullerton',
+  'IEEE Conference Judge, Chair & Research Contributor — USA, UK, Europe & Asia',
   'Speaker — IEEE, September 2025',
 ] as const
 
@@ -249,8 +251,8 @@ export const EDUCATION = [
     note: 'In progress',
   },
   {
-    degree: 'Doctor of Business Administration (DBA) in AI and Cloud',
-    school: 'IMET Worldwide (Integrated Management Educational Technology)',
+    degree: 'Doctor of Business Administration (DBA) in Computer Science',
+    school: 'Westcliff University, USA',
     years: '2023',
   },
   {
@@ -353,13 +355,13 @@ export const SKILLS_BLOCKS = [
 
 /** Section B — headline metrics for impact strip + hero subset */
 export const HEADLINE_IMPACT_STATS = [
-  { value: 16, suffix: '+', label: 'Years of global experience' },
+  { value: 17, suffix: '+', label: 'Years of global experience' },
   { value: 100, suffix: '+', label: 'Google Scholar citations' },
   { value: 25, suffix: '+', label: 'Peer-reviewed publications (2023–2026)' },
   { value: 100, suffix: '+', label: 'Peer reviews (verified reviewer)' },
   { value: 30, suffix: '+', label: 'Technical certifications (AI, cloud, architecture)' },
   { value: 7, suffix: '', label: 'Continents delivered (Asia, N. America, Europe, Australia)' },
-  { prefix: '$', value: 100, suffix: ' billion', label: 'Projected operational impact from AI systems by 2022–2026' },
+  { prefix: '$', value: 100, suffix: 'M+', label: 'Measured annual operational impact from AI systems' },
   { prefix: '$', value: 200, suffix: 'M+', label: 'Annual operational savings driven (Samsung SDS)' },
   { prefix: '$', value: 50, suffix: 'M', label: 'Annual cost savings (Workspace migration)' },
   { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
@@ -372,10 +374,10 @@ export const HEADLINE_IMPACT_STATS = [
 
 /** Hero sidebar — six flagship numbers */
 export const HERO_STATS = [
-  { value: 16, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
+  { value: 17, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
   { value: 100, suffix: '+', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
   { value: 25, suffix: '+', label: 'Publications', sub: 'Peer-reviewed 2023–26', icon: 'library' as const },
-  { value: 100, suffix: '+', label: 'Peer reviews', sub: 'Verified reviewer', icon: 'badgeCheck' as const },
+  { value: 100, suffix: '+', label: 'Peer reviews & Judge', sub: 'Verified reviewer', icon: 'badgeCheck' as const },
   { value: 7, suffix: '', label: 'Continents', sub: 'Delivered', icon: 'globe2' as const },
   { value: 30, suffix: '+', label: 'Certifications', sub: 'AI & cloud', icon: 'graduationCap' as const },
 ] as const
@@ -437,12 +439,11 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     ],
     bullets: [
       'Partnered with CIO/CPO as technical architect for $50M AI budget.',
-      'Projected $100B operational impact from AI systems (2022–2026).',
+      '$100M+ measured annual operational impact from AI systems.',
       'Led Rivian–Volkswagen JV digital transformation (Foundry-style AI).',
       'Architected 50+ agentic AI systems using Gemini and Claude → throughput +75%.',
       'Paint defect detection: accuracy 40% → 98% (computer vision / PyTorch).',
       'MLOps (Terraform + Vertex AI): deployment time −70%; ~30ms inference latency.',
-      'Consumer-facing chatbot for Rivian.com → $2.3M revenue uplift; 17% traffic-to-sales conversion.',
       '$6M+ direct savings via license rationalization.',
       '$50M+ annual savings via unified agentic workflows (Workday, SAP, SharePoint, Slack, Salesforce).',
       '$15.7M annual Digital Workspace budget delivered; 33% productivity boost.',

@@ -19,6 +19,7 @@ type NavItem = {
 /** Icons mirror footer semantics where possible; tuned for glanceable section wayfinding. */
 const DESKTOP: readonly NavItem[] = [
   { label: 'About', href: '/#about', match: 'about', icon: 'userRound' },
+  { label: 'Work', href: '/#work', match: 'work', icon: 'briefcase' },
   { label: 'Education', href: '/#education', match: 'education', icon: 'graduationCap' },
   { label: 'Impact', href: '/#impact', match: 'impact', icon: 'rocket' },
   { label: 'Expertise', href: '/#expertise', match: 'expertise', icon: 'layers2' },
@@ -34,6 +35,7 @@ const MOBILE = DESKTOP.map(({ label, href, icon }) => ({ label, href, icon }))
 /** Document order on home — matches KpHomeShell for scroll-spy stability */
 const SECTION_IDS = [
   'about',
+  'work',
   'education',
   'impact',
   'publications',
@@ -167,6 +169,13 @@ export default function KpNav() {
               />
               <span>Blog</span>
             </a>
+            <Link
+              href="/#contact"
+              className="ml-1 inline-flex min-h-[40px] items-center gap-1.5 rounded-full bg-kp-accent px-4 py-2 text-xs font-semibold text-white shadow-kp-primary transition-[background-color,transform] duration-200 ease-out-soft hover:bg-kp-accent/90 active:scale-[0.98] dark:bg-blue-600 dark:hover:bg-blue-500 motion-reduce:active:scale-100"
+            >
+              <KpUiIcon name="send" size={14} className="text-white" />
+              Let&apos;s talk
+            </Link>
           </nav>
           <button
             ref={menuButtonRef}

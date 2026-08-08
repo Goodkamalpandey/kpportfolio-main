@@ -17,7 +17,7 @@ export const SITE = {
   nameWithCredentials: 'Dr. Kamal Pandey, PhD (in progress), DBA, MCA, BCA',
   tagline: 'Architecting the Future of Agentic Enterprise',
   heroSubheadline:
-    '16 years. Seven continents. $100B projected operational impact from AI systems (2022–2026). Turning frontier AI research into systems that survive contact with reality at industrial scale.',
+    '17 years. Seven continents. $100M+ in measured annual operational impact from AI systems in production. Turning frontier AI research into systems that survive contact with reality at industrial scale.',
   position:
     'Sr. Software Architect / Principal Engineer — Applied AI & Solutions Engineering @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
@@ -37,6 +37,8 @@ export const SITE = {
   /** Hero portrait — `public/kp/…` (e.g. conference stage). */
   heroPortraitSrc: '/kp/kamal-speaking-ai4-2025.png',
   heroPortraitAlt: 'Dr. Kamal Pandey speaking at Ai4 2025',
+  /** CV/résumé served from `public/kp/`. Surfaces the "Download CV" CTA in Contact. */
+  resume: '/kp/dr-kamal-pandey-cv.pdf',
 } as const
 
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */
@@ -48,17 +50,17 @@ export const HERO_IDENTITY = {
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
   recognition: [
-    'AI150 Global AI Influencer 2025–2026',
+    'AI150 Global AI Influencer 2025–2026 & 2026–2027',
     'Global AI Leader 2025',
     'Top 50 AI Researcher (Stanford recognition)',
   ] as const,
 } as const
 
 export const ABOUT_P1 =
-  'Dr. Kamal Pandey has spent 16 years at the exact intersection where AI research becomes industrial reality. At Rivian, he serves as Sr. Software Architect — Applied AI & Solutions Engineering — leading the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving a projected $100B in operational impact from AI systems (2022–2026). He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
+  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. At Rivian, he serves as Sr. Software Architect — Applied AI & Solutions Engineering — leading the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
 
 export const ABOUT_P2 =
-  'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 59+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
+  'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 100+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
 
 export const ABOUT_P3 =
   'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey brings what almost no one else does: the rigor of an active peer-reviewed researcher, the delivery record of an enterprise architect across 7 continents, and the technical depth of someone who has coded, shipped, and scaled AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
@@ -145,6 +147,54 @@ export const EXPERTISE_CELLS = [
 ] as const
 
 export const STATS = HERO_STATS
+
+/**
+ * Selected work — proof-of-work case studies (Problem → Approach → Outcome).
+ * DRAFT: drafted from Dr. Pandey's own CAREER_ROLES bullets (self-reported outcomes already in this repo).
+ * Verify each metric, sharpen the copy, and point `href` at a real write-up before publishing.
+ * `featured: true` renders the card full-width at the top of the bento grid.
+ */
+export const CASE_STUDIES = [
+  {
+    featured: true,
+    org: 'Rivian',
+    domain: 'Agentic AI · Compliance',
+    title: 'Cognitive automation for compliance & legal review',
+    problem:
+      'Compliance and legal review ran on manual document handling — 200+ processes, roughly 15 days per cycle.',
+    approach:
+      'Built agentic LLM pipelines (Amazon Bedrock, CrewAI, Google ADK, LangChain) for extraction, summarization, and Q&A, turned into a repeatable enterprise capability.',
+    metric: '15 days → <30 min',
+    metricLabel: '200+ processes automated',
+    href: '/#contact',
+  },
+  {
+    featured: false,
+    org: 'Rivian',
+    domain: 'Computer Vision · Manufacturing',
+    title: 'Production defect detection',
+    problem:
+      'Manual inspection was slow and inconsistent, capping line throughput and letting defects reach later stages.',
+    approach:
+      'Architected and personally built a computer-vision detection system wired into the production line, on fault-tolerant infra (Kubernetes/Terraform).',
+    metric: '40% → 97%',
+    metricLabel: 'detection accuracy',
+    href: '/#contact',
+  },
+  {
+    featured: false,
+    org: 'Goodyear',
+    domain: 'Conversational AI · Revenue',
+    title: 'Customer-facing sales assistant',
+    problem:
+      'High-intent visitors lacked guided, real-time answers at the exact moment of the purchase decision.',
+    approach:
+      'Personally designed and built a customer-facing AI chatbot and its backend APIs, integrated into the commerce funnel with conversion tracking.',
+    metric: '$2.3M',
+    metricLabel: 'revenue growth · 17% conversion lift',
+    href: '/#contact',
+  },
+] as const
 
 /** Legacy `/experience` page — condensed. */
 export const EXPERIENCE = CAREER_ROLES.map((c) => ({
