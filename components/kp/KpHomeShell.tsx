@@ -1,5 +1,6 @@
 import KpHero from './KpHero'
 import KpHeadlineImpact from './KpHeadlineImpact'
+import KpCaseStudies from './KpCaseStudies'
 import KpAbout from './KpAbout'
 import KpEducationCerts from './KpEducationCerts'
 import KpExpertise from './KpExpertise'
@@ -16,6 +17,7 @@ export default function KpHomeShell() {
     <main id="main-content" tabIndex={-1}>
       <KpHero />
       <KpHeadlineImpact />
+      <KpCaseStudies />
       <KpAbout />
       <KpEducationCerts />
       <KpPublications />

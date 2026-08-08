@@ -115,6 +115,38 @@
   z-index: 1;
 }
 
+/* Cursor-follow spotlight — first child, so it paints beneath the grid content */
+.kp-hero-spec-panel {
+  --mx: 50%;
+  --my: 0px;
+}
+
+.kp-hero-spotlight {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(440px circle at var(--mx) var(--my), rgba(96, 165, 250, 0.16), transparent 60%);
+}
+
+.kp-hero-spec-panel:hover .kp-hero-spotlight {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kp-hero-spotlight {
+    display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .kp-hero-spotlight {
+    display: none;
+  }
+}
+
 .kp-hero-spec-cta-primary {
   border-radius: 10px;
   background: #f5f5f5;
@@ -203,19 +235,40 @@ html {
 
 .kp-cursor-dot {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #1d4ed8;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  will-change: transform;
+  transition:
+    opacity 0.2s ease,
+    width 0.18s ease-out,
+    height 0.18s ease-out,
+    background-color 0.18s ease-out;
 }
 
 .kp-cursor-dot.is-on {
   opacity: 1;
+}
+
+/* Contextual grow when hovering interactive elements — ring, not filled dot */
+.kp-cursor-dot.is-hover {
+  width: 34px;
+  height: 34px;
+  background: rgba(29, 78, 216, 0.16);
+}
+
+.dark .kp-cursor-dot {
+  background: #60a5fa;
+}
+
+.dark .kp-cursor-dot.is-hover {
+  background: rgba(96, 165, 250, 0.18);
 }
 
 @media (pointer: coarse) {
