@@ -17,7 +17,7 @@ export default function KpExpertise() {
             Core competencies
           </p>
           <h2 className="mt-4 max-w-xl font-serif text-4xl font-light leading-tight tracking-tight md:text-5xl">
-            Where 16 years of hard problems live.
+            Where 17 years of hard problems live.
           </h2>
         </KpReveal>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 md:mt-10 lg:grid-cols-3">

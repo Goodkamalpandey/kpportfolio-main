@@ -1,12 +1,31 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import KpHeroStats from './KpHeroStats'
 import KpUiIcon from './KpUiIcon'
+import KpMagnetic from './KpMagnetic'
 import { HERO_IDENTITY, SITE } from './data'
 
 export default function KpHero() {
+  const specRef = useRef<HTMLDivElement>(null)
+
+  /** Cursor-follow spotlight on the spec panel — pointer-only, respects reduced motion. */
+  useEffect(() => {
+    const el = specRef.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (window.matchMedia('(pointer: coarse)').matches) return
+    const onMove = (e: PointerEvent) => {
+      const r = el.getBoundingClientRect()
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`)
+      el.style.setProperty('--my', `${e.clientY - r.top}px`)
+    }
+    el.addEventListener('pointermove', onMove)
+    return () => el.removeEventListener('pointermove', onMove)
+  }, [])
+
   return (
     <section className="kp-hero relative">
       <div className="mx-auto flex max-w-content flex-col justify-start px-5 pb-16 pt-4 md:px-8 md:pb-20 md:pt-8 lg:pb-16 lg:pt-10">
@@ -99,7 +118,8 @@ export default function KpHero() {
           </motion.header>
         </div>
 
-        <div className="kp-hero-spec-panel mt-6 md:mt-8">
+        <div ref={specRef} className="kp-hero-spec-panel mt-6 md:mt-8">
+          <div className="kp-hero-spotlight" aria-hidden />
           <motion.div
             className="kp-hero-main-grid px-5 py-8 md:px-8 md:py-10 md:pb-9 lg:px-10 lg:py-11 lg:pb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -118,7 +138,7 @@ export default function KpHero() {
               <KpHeroStats variant="spec" />
             </div>
             <motion.p
-              className="kp-hero-grid-copy max-w-xl border-l-2 border-[#e82127] pl-5 text-pretty text-sm font-normal leading-relaxed text-neutral-400 md:max-w-[28rem] md:text-base md:leading-relaxed"
+              className="kp-hero-grid-copy max-w-xl border-l-2 border-blue-500/70 pl-5 text-pretty text-sm font-normal leading-relaxed text-neutral-400 md:max-w-[28rem] md:text-base md:leading-relaxed"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.12 }}
@@ -131,25 +151,36 @@ export default function KpHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.18 }}
             >
-              <a
-                href={SITE.scholar}
+              <KpMagnetic
+                href={SITE.topmate}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="kp-hero-spec-cta-primary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[13px] md:px-6 md:py-3 md:text-sm"
               >
-                View research &amp; publications
+                <KpUiIcon name="calendarDays" size={14} className="text-neutral-900" />
+                Book a consult
                 <KpUiIcon name="arrowUpRight" size={14} className="text-neutral-900" />
-              </a>
-              <a
-                href={SITE.topmate}
+              </KpMagnetic>
+              <KpMagnetic
+                href={SITE.scholar}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-footnote md:px-6 md:py-3 md:text-sm"
               >
-                <KpUiIcon name="calendarDays" size={14} className="text-white" />
-                Book on Topmate
+                <KpUiIcon name="library" size={14} className="text-white" />
+                View research
                 <KpUiIcon name="externalLink" size={14} className="text-white" />
-              </a>
+              </KpMagnetic>
+              {SITE.resume ? (
+                <a
+                  href={SITE.resume}
+                  download
+                  className="inline-flex items-center gap-1.5 self-center px-2 py-2.5 text-footnote font-medium text-neutral-300 underline-offset-4 transition-colors hover:text-white hover:underline md:py-3"
+                >
+                  <KpUiIcon name="fileText" size={14} className="text-neutral-300" />
+                  Download CV
+                </a>
+              ) : null}
             </motion.div>
           </motion.div>
         </div>
