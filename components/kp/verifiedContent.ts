@@ -382,14 +382,14 @@ export const SKILLS_BLOCKS = [
   },
 ] as const
 
-/** Section B — headline metrics for impact strip + hero subset */
+/** Full impact corpus — Recognition page. */
 export const HEADLINE_IMPACT_STATS = [
   { value: 17, suffix: '+', label: 'Years of global experience' },
   { value: 100, suffix: '+', label: 'Google Scholar citations' },
   { value: 25, suffix: '+', label: 'Peer-reviewed publications (2023–2026)' },
   { value: 100, suffix: '+', label: 'Peer reviews (verified reviewer)' },
   { value: 30, suffix: '+', label: 'Technical certifications (AI, cloud, architecture)' },
-  { value: 7, suffix: '', label: 'Continents delivered (Asia, N. America, Europe, Australia)' },
+  { value: 4, suffix: '', label: 'Continents delivered (Asia, N. America, Europe, Australia)' },
   { prefix: '$', value: 100, suffix: 'M+', label: 'Measured annual operational impact from AI systems' },
   { prefix: '$', value: 200, suffix: 'M+', label: 'Annual operational savings driven (Samsung SDS)' },
   { prefix: '$', value: 50, suffix: 'M', label: 'Annual cost savings (Workspace migration)' },
@@ -401,14 +401,25 @@ export const HEADLINE_IMPACT_STATS = [
   { value: 3, suffix: 'M', label: 'Users on platforms architected' },
 ] as const
 
-/** Hero sidebar — six flagship numbers */
+/**
+ * Homepage impact strip — complementary to hero (no duplicate year/citation/pub tiles).
+ * Full set remains on /recognition.
+ */
+export const HOME_IMPACT_STATS = [
+  { prefix: '$', value: 100, suffix: 'M+', label: 'Measured annual AI operational impact' },
+  { prefix: '$', value: 200, suffix: 'M+', label: 'Annual operational savings (Samsung SDS)' },
+  { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
+  { value: 4, suffix: '', label: 'Continents delivered' },
+  { value: 1000, suffix: '+', label: 'Cloud applications delivered', format: 'comma' as const },
+  { value: 3, suffix: 'M', label: 'Users on platforms architected' },
+] as const
+
+/** Hero sidebar — four flagship numbers (keeps first viewport readable). */
 export const HERO_STATS = [
   { value: 17, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
   { value: 100, suffix: '+', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
   { value: 25, suffix: '+', label: 'Publications', sub: 'Peer-reviewed 2023–26', icon: 'library' as const },
-  { value: 100, suffix: '+', label: 'Peer reviews & Judge', sub: 'Verified reviewer', icon: 'badgeCheck' as const },
-  { value: 7, suffix: '', label: 'Continents', sub: 'Delivered', icon: 'globe2' as const },
-  { value: 30, suffix: '+', label: 'Certifications', sub: 'AI & cloud', icon: 'graduationCap' as const },
+  { prefix: '$', value: 100, suffix: 'M+', label: 'AI impact', sub: 'Annual operational', icon: 'rocket' as const },
 ] as const
 
 export const INITIATIVES = [

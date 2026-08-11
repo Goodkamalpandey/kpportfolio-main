@@ -1,23 +1,13 @@
 /** Site config + re-exports from verified corpus. */
 
-import {
-  PUBLICATIONS_FULL,
-  SCHOLAR_WORKS_BY_PUBDATE,
-  HERO_STATS,
-  HEADLINE_IMPACT_STATS,
-  CAREER_ROLES,
-  INITIATIVES,
-  EDUCATION,
-  CERTIFICATIONS,
-  SKILLS_BLOCKS,
-} from './verifiedContent'
+import { PUBLICATIONS_FULL, SCHOLAR_WORKS_BY_PUBDATE, HERO_STATS, CAREER_ROLES } from './verifiedContent'
 
 export const SITE = {
   name: 'Dr. Kamal Pandey',
   nameWithCredentials: 'Dr. Kamal Pandey, PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
   tagline: 'Architecting the Future of Agentic Enterprise',
   heroSubheadline:
-    '17 years. Seven continents. $100M+ in measured annual operational impact from AI systems in production. Turning frontier AI research into systems that survive contact with reality at industrial scale.',
+    '17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production. Turning frontier AI research into systems that survive contact with reality at industrial scale.',
   position:
     'Principal AI Architect — Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
@@ -47,11 +37,14 @@ export const HERO_IDENTITY = {
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
+  /** Full list — Recognition page + schema. */
   recognition: [
     'AI150 Global AI Influencer 2025–2026 & 2026–2027',
     'Global AI Leader 2025',
     'Top 50 AI Researcher (Stanford recognition)',
   ] as const,
+  /** Hero shows one primary honor; remainder live on /recognition. */
+  heroPrimaryRecognition: 'AI150 Global AI Influencer 2025–2026 & 2026–2027',
 } as const
 
 export const ABOUT_P1 =
@@ -61,7 +54,7 @@ export const ABOUT_P2 =
   'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 100+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
 
 export const ABOUT_P3 =
-  'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey brings what almost no one else does: the rigor of an active peer-reviewed researcher, the delivery record of an enterprise architect across 7 continents, and the technical depth of someone who has coded, shipped, and scaled AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
+  'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey brings what almost no one else does: the rigor of an active peer-reviewed researcher, the delivery record of an enterprise architect across four continents (Asia, North America, Europe, and Australia), and the technical depth of someone who has coded, shipped, and scaled AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
 
 /** Two-line hero contact headline (Section K). */
 export const CONTACT_HEADLINE_LINES = ["Let's build something", "the world hasn't seen yet."] as const
@@ -95,6 +88,7 @@ export {
   SCHOLAR_WORKS_BY_PUBDATE,
   HERO_STATS,
   HEADLINE_IMPACT_STATS,
+  HOME_IMPACT_STATS,
   CAREER_ROLES,
   INITIATIVES,
   EDUCATION,
@@ -140,17 +134,15 @@ export const EXPERTISE_CELLS = [
     n: '06',
     icon: 'usersRound' as const,
     title: 'Technical leadership at scale',
-    body: 'Design Thinking, global delivery, platform engineering, and stakeholder alignment across four continents.',
+    body: 'Design Thinking, global delivery, platform engineering, and stakeholder alignment across Asia, North America, Europe, and Australia.',
   },
 ] as const
 
 export const STATS = HERO_STATS
 
 /**
- * Selected work — proof-of-work case studies (Problem → Approach → Outcome).
- * DRAFT: drafted from Dr. Pandey's own CAREER_ROLES bullets (self-reported outcomes already in this repo).
- * Verify each metric, sharpen the copy, and point `href` at a real write-up before publishing.
- * `featured: true` renders the card full-width at the top of the bento grid.
+ * Selected work — Problem → Approach → Outcome.
+ * Metrics drawn from CAREER_ROLES (self-reported production outcomes). Featured card spans two columns.
  */
 export const CASE_STUDIES = [
   {
@@ -162,9 +154,9 @@ export const CASE_STUDIES = [
       'Compliance and legal review ran on manual document handling — 200+ processes, roughly 15 days per cycle.',
     approach:
       'Built agentic LLM pipelines (Amazon Bedrock, CrewAI, Google ADK, LangChain) for extraction, summarization, and Q&A, turned into a repeatable enterprise capability.',
-    metric: '15 days → <30 min',
-    metricLabel: '200+ processes automated',
-    href: '/#contact',
+    metric: '~15 days → <30 min',
+    metricLabel: 'Cycle time · 200+ processes automated (career record)',
+    href: '/experience',
   },
   {
     featured: false,
@@ -175,9 +167,9 @@ export const CASE_STUDIES = [
       'Manual inspection was slow and inconsistent, capping line throughput and letting defects reach later stages.',
     approach:
       'Architected and personally built a computer-vision detection system wired into the production line, on fault-tolerant infra (Kubernetes/Terraform).',
-    metric: '40% → 97%',
-    metricLabel: 'detection accuracy',
-    href: '/#contact',
+    metric: '~40% → 97%',
+    metricLabel: 'Detection accuracy (career record)',
+    href: '/experience',
   },
   {
     featured: false,
@@ -188,9 +180,9 @@ export const CASE_STUDIES = [
       'High-intent visitors lacked guided, real-time answers at the exact moment of the purchase decision.',
     approach:
       'Personally designed and built a customer-facing AI chatbot and its backend APIs, integrated into the commerce funnel with conversion tracking.',
-    metric: '$2.3M',
-    metricLabel: 'revenue growth · 17% conversion lift',
-    href: '/#contact',
+    metric: '~$2.3M',
+    metricLabel: 'Attributed revenue · ~17% conversion lift (career record)',
+    href: '/experience',
   },
 ] as const
 

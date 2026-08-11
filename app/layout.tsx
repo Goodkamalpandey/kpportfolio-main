@@ -94,7 +94,7 @@ const jsonLd = {
     'Top 50 AI Researcher — Stanford University',
     'IEEE Senior Member',
     'IET Fellow',
-    'Employee of the Year 2013 — L&T Infotech',
+    'Employee of the Year 2015 — L&T Infotech',
     'MVP 2014 — L&T Infotech',
     'Research & Innovation Awards — HCL Tech',
   ],
@@ -120,12 +120,13 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 }
 
+const ogTitle = 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise'
 const ogDescription =
-  'Sr. Staff Architect — Applied AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years.'
+  'Principal AI Architect — Applied & Agentic AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years across four continents.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise',
+  title: ogTitle,
   description: ogDescription,
   keywords: [
     'Dr. Kamal Pandey',
@@ -141,17 +142,19 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Dr. Kamal Pandey' }],
   openGraph: {
-    title: 'Dr. Kamal Pandey — AI Solutions Architect & Researcher',
+    title: ogTitle,
     description: ogDescription,
     type: 'profile',
     url: SITE.domain,
     siteName: 'Dr. Kamal Pandey',
     locale: 'en_US',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: ogTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Kamal Pandey — AI Solutions Architect & Researcher',
+    title: ogTitle,
     description: ogDescription,
+    images: ['/opengraph-image'],
   },
   alternates: { canonical: SITE.domain },
 }

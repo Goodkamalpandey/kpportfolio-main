@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import KpHeroStats from './KpHeroStats'
 import KpUiIcon from './KpUiIcon'
@@ -67,36 +68,28 @@ export default function KpHero() {
                 <span>{HERO_IDENTITY.location}</span>
               </p>
 
-              <div className="mt-5">
-                <p className="inline-flex items-center gap-2 font-mono text-caption2 font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
-                  <KpUiIcon name="badgeCheck" size={13} className="shrink-0 text-kp-accent/85 dark:text-blue-400/90" />
-                  Membership
-                </p>
-                <ul className="mt-2.5 flex flex-wrap gap-2">
-                  {HERO_IDENTITY.memberships.map((m) => (
-                    <li key={m}>
-                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
-                        {m}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                {HERO_IDENTITY.memberships.map((m) => (
+                  <span
+                    key={m}
+                    className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text"
+                  >
+                    {m}
+                  </span>
+                ))}
               </div>
 
-              <div className="mt-4">
-                <p className="inline-flex items-center gap-2 font-mono text-caption2 font-semibold uppercase tracking-[0.11em] text-kp-muted dark:text-kp-line">
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-2 rounded-full border border-kp-award/35 bg-kp-award/10 px-3 py-1.5 text-caption2 font-semibold leading-none tracking-[-0.01em] text-kp-ink dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-dark-text">
                   <KpUiIcon name="award" size={13} className="shrink-0 text-kp-award" />
-                  Recognition
-                </p>
-                <ul className="mt-2.5 flex flex-wrap gap-2">
-                  {HERO_IDENTITY.recognition.map((r) => (
-                    <li key={r}>
-                      <span className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text">
-                        {r}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                  {HERO_IDENTITY.heroPrimaryRecognition}
+                </span>
+                <Link
+                  href="/recognition"
+                  className="text-footnote font-semibold text-kp-accent underline-offset-2 hover:underline dark:text-blue-300"
+                >
+                  All recognition
+                </Link>
               </div>
             </div>
 
@@ -162,14 +155,12 @@ export default function KpHero() {
                 <KpUiIcon name="arrowUpRight" size={14} className="text-neutral-900" />
               </KpMagnetic>
               <KpMagnetic
-                href={SITE.scholar}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/research"
                 className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-footnote md:px-6 md:py-3 md:text-sm"
               >
                 <KpUiIcon name="library" size={14} className="text-white" />
                 View research
-                <KpUiIcon name="externalLink" size={14} className="text-white" />
+                <KpUiIcon name="arrowUpRight" size={14} className="text-white" />
               </KpMagnetic>
             </motion.div>
           </motion.div>
