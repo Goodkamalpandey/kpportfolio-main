@@ -1,7 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import KpCountUp from './KpCountUp'
-import { HEADLINE_IMPACT_STATS } from './data'
+import { HOME_IMPACT_STATS } from './data'
 
 export default function KpHeadlineImpact() {
   return (
@@ -10,12 +11,12 @@ export default function KpHeadlineImpact() {
       className="scroll-mt-24 border-y border-kp-line/80 bg-kp-strip/80 py-12 dark:border-white/10 dark:bg-dark-card/30 md:py-14"
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
-        <p className="kp-section-eyebrow text-center">Verified headline impact</p>
+        <p className="kp-section-eyebrow text-center">Measured outcomes</p>
         <h2 className="mt-3 text-center font-serif text-2xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-3xl">
           Scale you can measure
         </h2>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-          {HEADLINE_IMPACT_STATS.map((s) => {
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          {HOME_IMPACT_STATS.map((s) => {
             const fmt = 'format' in s && s.format === 'comma' ? 'comma' : 'default'
             const prefix = 'prefix' in s ? s.prefix : ''
             return (
@@ -31,6 +32,13 @@ export default function KpHeadlineImpact() {
             )
           })}
         </div>
+        <p className="mt-6 text-center text-footnote text-kp-muted dark:text-kp-line">
+          Full impact ledger on{' '}
+          <Link href="/recognition" className="font-medium text-kp-accent underline-offset-2 hover:underline dark:text-blue-300">
+            Recognition
+          </Link>
+          .
+        </p>
       </div>
     </section>
   )

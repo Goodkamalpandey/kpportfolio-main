@@ -1,5 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import { BadgeCheck, FileText, Github, GraduationCap, Linkedin, Mail, Microscope, Sparkles, Star } from 'lucide-react'
+import Link from 'next/link'
 import { SITE } from './data'
 import { externalLinkProps } from './externalLinkProps'
 
@@ -21,6 +22,15 @@ const FOOTER_PROFILES: readonly { href: string; label: string; Icon: LucideIcon 
   { href: SITE.topmate, label: 'Topmate', Icon: Star },
 ]
 
+const SITE_PAGES = [
+  { href: '/#work', label: 'Work' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/research', label: 'Research' },
+  { href: '/recognition', label: 'Recognition' },
+  { href: '/consulting', label: 'Consulting' },
+  { href: '/#contact', label: 'Contact' },
+] as const
+
 const linkClass =
   `${iconWrap} text-footnote font-normal tracking-wide text-zinc-400 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400/80`
 
@@ -30,6 +40,21 @@ export default function KpFooter() {
   return (
     <footer className="border-t border-white/[0.08] bg-[#1b0f19] pb-[calc(3rem+env(safe-area-inset-bottom,0px))] pt-12 text-zinc-200 md:pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] md:pt-14">
       <div className="mx-auto max-w-content px-6 text-center md:px-8">
+        <nav
+          className="mx-auto mb-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-4 gap-y-2"
+          aria-label="Site pages"
+        >
+          {SITE_PAGES.map((p) => (
+            <Link
+              key={p.href}
+              href={p.href}
+              className="text-footnote tracking-wide text-zinc-400 transition-colors hover:text-white"
+            >
+              {p.label}
+            </Link>
+          ))}
+        </nav>
+
         <nav
           className="mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-2xl border border-white/[0.1] bg-white/[0.04] px-4 py-4 backdrop-blur-md supports-[backdrop-filter]:bg-white/[0.03]"
           aria-label="Profiles and email"
@@ -46,9 +71,7 @@ export default function KpFooter() {
           </a>
         </nav>
 
-        <p className="mt-10 text-sm leading-relaxed text-zinc-500">
-          Orange County / Los Angeles, CA
-        </p>
+        <p className="mt-10 text-sm leading-relaxed text-zinc-500">Orange County / Los Angeles, CA</p>
 
         <p className="mt-3 text-footnote text-zinc-500">
           © {y} {SITE.name}

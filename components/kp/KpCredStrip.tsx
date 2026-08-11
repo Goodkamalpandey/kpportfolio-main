@@ -1,4 +1,4 @@
-import { TRUSTED_ORGS } from './trustedOrgs'
+import { TRUSTED_ORGS, TRUSTED_ORGS_HEADLINE } from './trustedOrgs'
 
 export default function KpCredStrip() {
   return (
@@ -7,9 +7,9 @@ export default function KpCredStrip() {
       className="scroll-mt-24 border-y border-kp-line/80 bg-gradient-to-r from-kp-bg via-white to-kp-bg py-10 dark:border-white/10 dark:from-dark-bg dark:via-dark-card/40 dark:to-dark-bg md:py-12"
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
-        <p className="kp-section-eyebrow text-center">Trust &amp; reach</p>
+        <p className="kp-section-eyebrow text-center">Network</p>
         <h2 className="mx-auto mt-3 max-w-3xl text-center font-serif text-2xl font-light leading-snug tracking-tight text-kp-ink dark:text-dark-text md:text-3xl md:leading-tight">
-          Trusted by organizations, clients, and industry bodies
+          {TRUSTED_ORGS_HEADLINE}
         </h2>
         <div className="mx-auto mt-8 max-w-5xl rounded-[var(--kp-radius-card)] border border-kp-line/50 bg-white/50 p-5 shadow-kp-soft backdrop-blur-md dark:border-white/[0.08] dark:bg-white/[0.04] dark:shadow-none md:mt-10 md:p-7">
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-2.5">

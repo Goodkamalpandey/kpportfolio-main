@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import { SITE } from './data'
-import { externalLinkProps } from './externalLinkProps'
 import KpUiIcon from './KpUiIcon'
 import type { KpUiIconName } from './KpUiIcon'
 
@@ -14,35 +12,32 @@ type NavItem = {
   href: string
   match: string
   icon: KpUiIconName
+  /** When set, active highlight uses pathname instead of scroll-spy. */
+  page?: boolean
 }
 
-/** Icons mirror footer semantics where possible; tuned for glanceable section wayfinding. */
+/** Six primary destinations — remainder live in page sections / footer. */
 const DESKTOP: readonly NavItem[] = [
-  { label: 'About', href: '/#about', match: 'about', icon: 'userRound' },
   { label: 'Work', href: '/#work', match: 'work', icon: 'briefcase' },
-  { label: 'Education', href: '/#education', match: 'education', icon: 'graduationCap' },
-  { label: 'Impact', href: '/#impact', match: 'impact', icon: 'rocket' },
-  { label: 'Expertise', href: '/#expertise', match: 'expertise', icon: 'layers2' },
-  { label: 'Skills', href: '/#skills', match: 'skills', icon: 'cpu' },
-  { label: 'Publications', href: '/#publications', match: 'publications', icon: 'library' },
-  { label: 'Honors', href: '/#honors', match: 'honors', icon: 'award' },
-  { label: 'Trusted', href: '/#trusted', match: 'trusted', icon: 'usersRound' },
+  { label: 'About', href: '/#about', match: 'about', icon: 'userRound' },
+  { label: 'Research', href: '/research', match: 'research', icon: 'library', page: true },
+  { label: 'Recognition', href: '/recognition', match: 'recognition', icon: 'award', page: true },
+  { label: 'Consulting', href: '/consulting', match: 'consulting', icon: 'network', page: true },
   { label: 'Contact', href: '/#contact', match: 'contact', icon: 'mail' },
 ]
 
 const MOBILE = DESKTOP.map(({ label, href, icon }) => ({ label, href, icon }))
 
-/** Document order on home — matches KpHomeShell for scroll-spy stability */
+/** Home scroll-spy — document order in KpHomeShell */
 const SECTION_IDS = [
-  'about',
   'work',
-  'education',
   'impact',
+  'about',
+  'education',
   'publications',
   'honors',
   'books',
   'expertise',
-  'skills',
   'initiatives',
   'trusted',
   'contact',
@@ -110,9 +105,12 @@ export default function KpNav() {
     }
   }, [open, closeMenu])
 
-  const isActive = (match: string) => {
+  const isActive = (item: NavItem) => {
+    if (item.page) return pathname === item.href
     if (pathname !== '/') return false
-    return active === match
+    if (item.match === 'about' && ['about', 'education'].includes(active)) return true
+    if (item.match === 'work' && ['work', 'impact'].includes(active)) return true
+    return active === item.match
   }
 
   return (
@@ -131,15 +129,15 @@ export default function KpNav() {
           >
             Dr. Kamal Pandey
           </Link>
-          <nav className="hidden items-center gap-3 xl:gap-4 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-1 lg:flex xl:gap-2" aria-label="Primary">
             {DESKTOP.map((item) => {
-              const active = isActive(item.match)
+              const activeItem = isActive(item)
               return (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium tracking-[-0.01em] transition-colors duration-200 ease-out-soft ${
-                    active
+                  className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-2 py-2 text-xs font-medium tracking-[-0.01em] transition-colors duration-200 ease-out-soft xl:px-2.5 ${
+                    activeItem
                       ? 'is-active text-kp-accent dark:text-blue-300'
                       : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
                   }`}
@@ -147,46 +145,15 @@ export default function KpNav() {
                   <KpUiIcon
                     name={item.icon}
                     size={15}
-                    className={`shrink-0 ${active ? 'opacity-100' : 'opacity-80'}`}
+                    className={`shrink-0 ${activeItem ? 'opacity-100' : 'opacity-80'}`}
                   />
                   <span>{item.label}</span>
                 </Link>
               )
             })}
             <Link
-              href="/recognition"
-              className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium ${
-                pathname === '/recognition'
-                  ? 'is-active text-kp-accent dark:text-blue-300'
-                  : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
-              }`}
-            >
-              <KpUiIcon
-                name="award"
-                size={15}
-                className={`shrink-0 ${pathname === '/recognition' ? 'opacity-100' : 'opacity-80'}`}
-              />
-              <span>Recognition</span>
-            </Link>
-            <a
-              href={SITE.medium}
-              {...externalLinkProps}
-              className={`kp-nav-link inline-flex min-h-[40px] items-center gap-2 rounded-lg px-1.5 py-2 text-xs font-medium ${
-                pathname === '/blog'
-                  ? 'is-active text-kp-accent dark:text-blue-300'
-                  : 'text-kp-muted hover:text-kp-ink dark:text-kp-line/90 dark:hover:text-dark-text'
-              }`}
-            >
-              <KpUiIcon
-                name="penLine"
-                size={15}
-                className={`shrink-0 ${pathname === '/blog' ? 'opacity-100' : 'opacity-80'}`}
-              />
-              <span>Blog</span>
-            </a>
-            <Link
               href="/#contact"
-              className="ml-1 inline-flex min-h-[40px] items-center gap-1.5 rounded-full bg-kp-accent px-4 py-2 text-xs font-semibold text-white shadow-kp-primary transition-[background-color,transform] duration-200 ease-out-soft hover:bg-kp-accent/90 active:scale-[0.98] dark:bg-blue-600 dark:hover:bg-blue-500 motion-reduce:active:scale-100"
+              className="ml-2 inline-flex min-h-[40px] items-center gap-1.5 rounded-full bg-kp-accent px-4 py-2 text-xs font-semibold text-white shadow-kp-primary transition-[background-color,transform] duration-200 ease-out-soft hover:bg-kp-accent/90 active:scale-[0.98] dark:bg-blue-600 dark:hover:bg-blue-500 motion-reduce:active:scale-100"
             >
               <KpUiIcon name="send" size={14} className="text-white" />
               Let&apos;s talk
@@ -244,35 +211,19 @@ export default function KpNav() {
                 </motion.div>
               ))}
               <motion.div
-                key="recognition-page"
+                key="experience-page"
                 initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: reduceMotion ? 0 : MOBILE.length * 0.05, duration: reduceMotion ? 0.01 : 0.28 }}
               >
                 <Link
-                  href="/recognition"
+                  href="/experience"
                   className="inline-flex items-center gap-4 font-serif text-3xl font-light text-white transition-opacity hover:opacity-90"
                   onClick={closeMenu}
                 >
-                  <KpUiIcon name="award" size={28} className="shrink-0 text-white/85" strokeWidth={1.5} />
-                  <span>Recognition</span>
+                  <KpUiIcon name="briefcase" size={28} className="shrink-0 text-white/85" strokeWidth={1.5} />
+                  <span>Experience</span>
                 </Link>
-              </motion.div>
-              <motion.div
-                key="blog-medium"
-                initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: reduceMotion ? 0 : (MOBILE.length + 1) * 0.05, duration: reduceMotion ? 0.01 : 0.28 }}
-              >
-                <a
-                  href={SITE.medium}
-                  {...externalLinkProps}
-                  className="inline-flex items-center gap-4 font-serif text-3xl font-light text-white transition-opacity hover:opacity-90"
-                  onClick={closeMenu}
-                >
-                  <KpUiIcon name="penLine" size={28} className="shrink-0 text-white/85" strokeWidth={1.5} />
-                  <span>Blog</span>
-                </a>
               </motion.div>
             </nav>
             <button

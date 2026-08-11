@@ -3,11 +3,7 @@ import KpReveal from './KpReveal'
 import KpUiIcon from './KpUiIcon'
 import { CASE_STUDIES } from './data'
 
-/**
- * Proof-of-work section — Problem → Approach → Outcome, with the metric as the hero of each card.
- * DRAFT: copy is drafted from Dr. Pandey's own CAREER_ROLES bullets. Verify wording/metrics and
- * point each `href` at a real write-up before publishing.
- */
+/** Proof-of-work — Problem → Approach → Outcome. Metrics from CAREER_ROLES (self-reported). */
 export default function KpCaseStudies() {
   return (
     <section id="work" className="scroll-mt-24 bg-kp-bg py-16 dark:bg-dark-bg md:py-20">
@@ -21,12 +17,11 @@ export default function KpCaseStudies() {
             Proof, not just publications.
           </h2>
           <p className="mt-4 max-w-xl text-pretty text-base leading-relaxed text-kp-muted dark:text-kp-line">
-            A few systems shipped into production at industrial scale — the problem, the approach, and
-            the measurable outcome.
+            Systems shipped into production at industrial scale — problem, approach, and outcomes from the
+            career record. Full timeline on Experience.
           </p>
         </KpReveal>
 
-        {/* Bento: first card featured (spans both columns), the rest in a 2-up grid. */}
         <div className="mt-10 grid gap-5 md:grid-cols-2 md:gap-6">
           {CASE_STUDIES.map((c) => (
             <KpReveal key={c.title} className={c.featured ? 'md:col-span-2' : ''}>
@@ -35,7 +30,6 @@ export default function KpCaseStudies() {
                   c.featured ? 'md:flex-row md:items-center md:gap-10' : ''
                 }`}
               >
-                {/* cursor-agnostic sheen on hover */}
                 <div
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   style={{
@@ -65,7 +59,7 @@ export default function KpCaseStudies() {
                     href={c.href}
                     className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-kp-accent transition-[gap] duration-200 hover:gap-3 dark:text-blue-300"
                   >
-                    Discuss this work
+                    See career context
                     <KpUiIcon name="arrowUpRight" size={16} />
                   </Link>
                 </div>

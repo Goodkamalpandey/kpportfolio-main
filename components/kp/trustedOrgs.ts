@@ -1,36 +1,25 @@
-/** Organizations / clients / bodies — single source for Cred strip + footer. */
+/**
+ * Selected employers, named client engagements, and professional bodies.
+ * Keep this list defensible — do not add brand names without a clear engagement.
+ */
 export const TRUSTED_ORGS = [
   'Rivian',
-  'Samsung',
+  'Samsung SDS',
   'Goodyear',
   'LTIMindtree',
   'HCL Technologies',
   'IBM',
   'Singtel Optus',
-  'Wipro',
-  'Infosys',
-  'TCS (Tata Consultancy Services)',
-  'Accenture',
-  'Microsoft',
+  'Viacom',
+  'Warner Bros.',
   'Ionis Pharmaceuticals',
+  'Merck',
+  'Microsoft',
   'IEEE',
   'IET',
-  'AAA',
-  'IAI',
+  'AAAI',
   'Constellation Research',
   'SAINexus',
-  'ExxonMobil Chemical (USA)',
-  'Tesla',
-  'Amazon',
-  'MGA Entertainment',
-  'Viacom',
-  'HBO',
-  'Singapore Stock Exchange',
-  'Citi Bank',
-  'Warner Bros.',
-  'Tyco International',
-  'Merck',
-  'Commonwealth Bank of Australia',
-  'Fonterra (New Zealand)',
-  'IAEA',
 ] as const
+
+export const TRUSTED_ORGS_HEADLINE = 'Selected employers, partners & professional bodies' as const

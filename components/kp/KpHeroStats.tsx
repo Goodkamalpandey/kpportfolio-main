@@ -39,7 +39,11 @@ export default function KpHeroStats({ variant = 'default' }: { variant?: Variant
                     : 'font-serif text-2xl font-light leading-none tracking-tight text-kp-ink tabular-nums dark:text-dark-text sm:text-3xl'
                 }
               >
-                <KpCountUp end={s.value} suffix={s.suffix} />
+                <KpCountUp
+                  end={s.value}
+                  prefix={'prefix' in s ? s.prefix : ''}
+                  suffix={s.suffix}
+                />
               </p>
               <p
                 className={
