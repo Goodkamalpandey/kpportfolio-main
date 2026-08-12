@@ -37,7 +37,7 @@ const jsonLd = {
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'DBA, MCA',
-  jobTitle: 'Sr Staff AI Architect — Applied & Agentic AI',
+  jobTitle: 'Sr Staff Software Architect — Applied & Agentic AI',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',
@@ -122,7 +122,7 @@ export const viewport: Viewport = {
 
 const ogTitle = 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise'
 const ogDescription =
-  'Sr Staff AI Architect — Applied & Agentic AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years across four continents.'
+  'Sr Staff Software Architect — Applied & Agentic AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years across four continents.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
