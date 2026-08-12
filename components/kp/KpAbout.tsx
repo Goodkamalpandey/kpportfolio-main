@@ -3,8 +3,8 @@ import KpUiIcon from './KpUiIcon'
 import { ABOUT_P1, ABOUT_P2, ABOUT_P3, SITE } from './data'
 
 const TIMELINE_ROWS = [
-  { icon: 'briefcase' as const, k: 'Present', line: 'Sr Staff AI Architect — Applied & Agentic AI @ Rivian' },
-  { icon: 'briefcase' as const, k: '2022–23', line: 'Principal Engineer / Technical Lead @ Rivian' },
+  { icon: 'briefcase' as const, k: 'Present', line: 'Sr Staff Software Architect — Applied & Agentic AI @ Rivian' },
+  { icon: 'briefcase' as const, k: '2022–23', line: 'Solution Architect, Applied AI @ Rivian' },
   { icon: 'briefcase' as const, k: '2021–22', line: 'Staff Software Engineer — Digital Workplace & Automation @ Rivian' },
   { icon: 'cloud' as const, k: '2020–21', line: 'Cloud Solutions Consulting Architect @ Samsung SDS America' },
   { icon: 'landmark' as const, k: '2015–19', line: 'Sr. Architect — Digital Workplace & M365 @ Goodyear' },
