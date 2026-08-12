@@ -33,3 +33,4 @@ Thumbs.db
 
 # accidental brace-expansion folder name (do not track) — literal “{” for ripglob/git
 [{]app,components,public/
+.env*
