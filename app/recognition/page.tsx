@@ -126,7 +126,7 @@ export default function RecognitionPage() {
         <section className="mt-16 md:mt-20">
           <PillarHeading n="02" eyebrow="Impact at scale" title="Research translated into industrial reality." />
           <p className="-mt-4 mb-8 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-line md:text-base">
-            As Principal AI Architect at Rivian and technical architect for the Rivian–Volkswagen JV AI
+            As Sr Staff AI Architect at Rivian and technical architect for the Rivian–Volkswagen JV AI
             transformation, delivering measurable enterprise outcomes at scale.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">

@@ -473,7 +473,7 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     org: 'Rivian Automotive Inc.',
     location: 'Orange County / Los Angeles, CA',
     roles: [
-      { title: 'Principal AI Architect — Applied & Agentic AI', dates: 'Jan 2023 – Present' },
+      { title: 'Sr Staff AI Architect — Applied & Agentic AI', dates: 'Jan 2023 – Present' },
       { title: 'Principal Engineer / Technical Lead', dates: 'Oct 2022 – Dec 2023' },
       { title: 'Staff Software Engineer — Digital Workplace & Automation', dates: 'Feb 2021 – Sep 2022' },
     ],
