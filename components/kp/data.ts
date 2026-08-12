@@ -9,7 +9,7 @@ export const SITE = {
   heroSubheadline:
     '17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production. Turning frontier AI research into systems that survive contact with reality at industrial scale.',
   position:
-    'Principal AI Architect — Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Sr Staff AI Architect — Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -33,7 +33,7 @@ export const SITE = {
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
   degrees: 'PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
-  roleTitle: 'Principal AI Architect — Applied & Agentic AI',
+  roleTitle: 'Sr Staff AI Architect — Applied & Agentic AI',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
@@ -48,7 +48,7 @@ export const HERO_IDENTITY = {
 } as const
 
 export const ABOUT_P1 =
-  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. At Rivian, he serves as Principal AI Architect — Applied & Agentic AI — leading the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
+  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. At Rivian, he serves as Sr Staff AI Architect — Applied & Agentic AI — leading the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
 
 export const ABOUT_P2 =
   'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 100+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
