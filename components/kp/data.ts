@@ -4,12 +4,12 @@ import { PUBLICATIONS_FULL, SCHOLAR_WORKS_BY_PUBDATE, HERO_STATS, CAREER_ROLES }
 
 export const SITE = {
   name: 'Dr. Kamal Pandey',
-  nameWithCredentials: 'Dr. Kamal Pandey, PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
+  nameWithCredentials: 'Dr. Kamal Pandey, Ph.D. in Computer Science (AI/ML), DBA (Doctor of Business Administration), MCA, BCA',
   tagline: 'Architecting the Future of Agentic Enterprise',
   heroSubheadline:
     'Distinguished Engineer and Chief Architect for Applied & Agentic AI. 17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production — research that ships at industrial scale.',
   position:
-    'Distinguished Engineer — Chief Architect, Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Distinguished Engineer — Architect, Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -32,16 +32,25 @@ export const SITE = {
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
-  degrees: 'PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
-  roleTitle: 'Distinguished Engineer — Chief Architect, Applied & Agentic AI',
+  degrees: 'Ph.D. in Computer Science (AI/ML), DBA (Doctor of Business Administration), MCA, BCA',
+  roleTitle: 'Distinguished Engineer — Architect, Applied & Agentic AI',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
   /** Full list — Recognition page + schema. */
   recognition: [
-    'AI150 Global AI Influencer 2025–2026 & 2026–2027',
+    'AI150 Global AI Influencer 2026–2027',
     'Global AI Leader 2025',
+    'Fellow of IET (Fellow)',
+    'Senior Member of IEEE (Senior Member)',
+    'Member of AAAI (Sr. Member)',
+    'IEEE SoutheastCon Best Paper Award 2025',
+    'IEEE Access Best Paper Award 2025',
+    'Box Work (AI) Award 2025',   
     'Top 50 AI Researcher (Stanford recognition)',
+    'Top 100 AI Reviewer (IEEE)',
+    'Top 100 AI Reviewer (ACM)',
+   
   ] as const,
   /** Hero shows one primary honor; remainder live on /recognition. */
   heroPrimaryRecognition: 'AI150 Global AI Influencer 2025–2026 & 2026–2027',
@@ -145,7 +154,9 @@ export const WORK_VISION = {
   eyebrow: 'Applied AI platforms',
   title: 'Building the Intelligence Layer for the AI-Native Enterprise',
   lead: 'I design AI platforms that turn complexity into momentum.',
-  body: 'AISDLC, CLUE AI, and the Rivian Agentic Platform form one connected mission: governed, traceable, scalable enterprise intelligence — where AI understands context, produces real work products, validates quality, and keeps humans in control of consequential decisions.',
+  body: "I'm building a new operating model for software, product, and enterprise decision-making—one where AI understands context, reasons across fragmented information, validates its work, and keeps humans in control of the decisions that matter. The portfolio spans AISDLC, CLUE AI, and the Rivian Agentic Platform through manufacturing intelligence, computer vision, quality platforms, supply-chain automation, and in-vehicle voice.",
+  closing:
+    'The future of AI is not autonomous output. It is trusted intelligence—grounded in context, bounded by controls, and designed to move real work forward.',
   principles: [
     { label: 'Context-first', detail: 'Not prompt-first — assemble the business and technical context the work requires.' },
     { label: 'Work products', detail: 'Architecture packages, investigation summaries, decision records — not chat demos.' },
@@ -157,6 +168,7 @@ export const WORK_VISION = {
 export const APPLIED_AI_PLATFORMS = [
   {
     n: '01',
+    tier: 'flagship' as const,
     icon: 'layers2' as const,
     org: 'Rivian',
     domain: 'AI Software Delivery',
@@ -180,6 +192,7 @@ export const APPLIED_AI_PLATFORMS = [
   },
   {
     n: '02',
+    tier: 'flagship' as const,
     icon: 'microscope' as const,
     org: 'Rivian',
     domain: 'Product Integrity · Defense',
@@ -203,6 +216,7 @@ export const APPLIED_AI_PLATFORMS = [
   },
   {
     n: '03',
+    tier: 'flagship' as const,
     icon: 'network' as const,
     org: 'Rivian',
     domain: 'Agentic Runtime',
@@ -224,11 +238,153 @@ export const APPLIED_AI_PLATFORMS = [
     ],
     href: '/#contact',
   },
+  {
+    n: '04',
+    tier: 'portfolio' as const,
+    icon: 'cpu' as const,
+    org: 'Rivian',
+    domain: 'Manufacturing Intelligence',
+    name: 'Weld PDM AI',
+    tagline: 'From reactive alerts to predictive weld intelligence',
+    role: 'Architect & Technical Lead',
+    problem:
+      'Weld monitoring was reactive and fragmented — limited visibility into wire-feed degradation, clogged liners, arc instability, and process drift until failure made the issue visible.',
+    solution:
+      'Governed monitoring of weld trends, threshold alerts, fault visibility, and maintenance tracking — with a path to AI anomaly detection, diagnostics, and quality forecasting.',
+    contribution:
+      'Shaped data ingestion, platform architecture, machine-inventory mapping, analytical data design, dashboard direction, and the roadmap to AI-enabled weld diagnostics.',
+    metric: '30–50%',
+    metricLabel: 'Target downtime reduction (400+ min / month)',
+    targets: [
+      'MVP surfaced detections including a feeder-liner defect',
+      'Target MTTA: ~45 min → <1 min',
+      'Target: 100% virtual inspection · up to 30% OpEx reduction',
+    ],
+    href: '/#contact',
+  },
+  {
+    n: '05',
+    tier: 'portfolio' as const,
+    icon: 'fileText' as const,
+    org: 'Rivian',
+    domain: 'Perceived Quality',
+    name: 'PQ Apps',
+    tagline: 'The digital source of truth for perceived quality',
+    role: 'Technical Lead & Solution Architect',
+    problem:
+      'Excel- and email-based design-quality workflows do not scale — evidence disconnects from owners, approvals, and decisions.',
+    solution:
+      'A secure web source of truth for interface records, measurements, images, issues, actions, approvals, and 2D/3D section-map context in one traceable workflow.',
+    contribution:
+      'Shaped application architecture, identity and access, cloud environment, security direction, and the technical ownership model for the platform.',
+    metric: '~5,500 hrs',
+    metricLabel: 'Target annual capacity release · ~$1.2M modeled avoidance',
+    targets: [
+      'MVP live with high-accuracy legacy migration',
+      'Target: 35% faster design cycle · 40% less manual effort',
+    ],
+    href: '/#contact',
+  },
+  {
+    n: '06',
+    tier: 'portfolio' as const,
+    icon: 'cloud' as const,
+    org: 'Rivian',
+    domain: 'Manufacturing Data',
+    name: 'ShimLog AI',
+    tagline: 'AI-ready foundation for manufacturing fixture intelligence',
+    role: 'Solution Architect & Technical Lead',
+    problem:
+      'Engineers rely on static 2D snapshots and disconnected historical files — hard to compare versions, validate entries, or trace decisions.',
+    solution:
+      'Interactive, searchable, version-aware 3D fixture experience with shim/spacer data, validation rules, history, file management, and reporting — a knowledge layer for future AI assistants.',
+    contribution:
+      'Shaped migration and exit strategy, requirements, solution design, architecture, integrations, knowledge transfer, and go-live readiness.',
+    metric: '10–15%',
+    metricLabel: 'Target productivity lift for designated workflows',
+    targets: [
+      'Production launch with release, smoke, integration, and access checks',
+      'Foundation for AI-assisted troubleshooting and fixture-change analysis',
+    ],
+    href: '/#contact',
+  },
+  {
+    n: '07',
+    tier: 'portfolio' as const,
+    icon: 'car' as const,
+    org: 'Rivian',
+    domain: 'Computer Vision · Quality',
+    name: 'Paint Defect Detection AI',
+    tagline: 'Computer vision for consistent surface quality',
+    role: 'AI Strategy & Use-Case Architecture',
+    problem:
+      'Manual paint inspection is subjective, inconsistent, and hard to scale — defects are missed and recurring patterns stay invisible.',
+    solution:
+      'Controlled imaging plus computer vision to classify and trend paint conditions (blemishes, inclusions, thin paint), supporting review, analytics, and repair workflows with humans in the loop.',
+    contribution:
+      'Contributed AI strategy and use-case architecture for vision-based quality inspection and how visual intelligence supports manufacturing decisions.',
+    metric: '~$1.5M',
+    metricLabel: 'Modeled annual value · 40% inspection-time target',
+    targets: [
+      'Target first-time-yield improvement: 15%',
+      'Business-case model: potential two-year payback',
+    ],
+    href: '/#contact',
+  },
+  {
+    n: '08',
+    tier: 'portfolio' as const,
+    icon: 'shoppingBag' as const,
+    org: 'Rivian',
+    domain: 'Supply Chain',
+    name: 'Supply Chain Automation',
+    tagline: 'From manual reporting to resilient operations',
+    role: 'Solution Design & AI Roadmap Author',
+    problem:
+      'Manual SAP reporting consumes expert time, creates error risk, and delays response to shortages, inventory shifts, and supplier risk.',
+    solution:
+      'Governed automation for recurring SAP reports, scheduling, monitoring, and exceptions — with a roadmap to forecasting, supplier-risk monitoring, and intelligent supplier communications.',
+    contribution:
+      'Authored the reporting solution design and the broader enterprise AI roadmap connecting automation, operational intelligence, and agent-based decision support.',
+    metric: '~$2.5k/wk',
+    metricLabel: 'Modeled automation opportunity (defined reporting workflow)',
+    targets: [
+      'Target: 10%+ OEE · 15% lower AI-detected warranty costs',
+      'Target: 25%+ critical-asset downtime reduction · 300%+ 3-yr modeled return',
+    ],
+    href: '/#contact',
+  },
+  {
+    n: '09',
+    tier: 'portfolio' as const,
+    icon: 'bot' as const,
+    org: 'Rivian',
+    domain: 'Software-Defined Vehicle',
+    name: 'Rivian Voice Assist',
+    tagline: 'A natural interface for the software-defined vehicle',
+    role: 'Architect',
+    problem:
+      'As vehicles grow more capable, finding controls and learning features becomes complex — drivers need safer, hands-free interaction without diverting attention from the road.',
+    solution:
+      'Speech recognition, NLU, retrieval-grounded Owner’s Guide knowledge, voice responses, and deep vehicle integration — with safety guardrails, privacy controls, and confirmation for higher-risk actions.',
+    contribution:
+      'Architected design and delivery across AI orchestration, vehicle-system integration, platform connectivity, UX flows, and production-grade release requirements.',
+    metric: 'OTA live',
+    metricLabel: 'In-vehicle experience via over-the-air release',
+    targets: [
+      'Target: 30% of drivers use ≥1× per trip within 6 months',
+      'Target: 50% prefer voice for some interactions · NPS 90',
+    ],
+    href: '/#contact',
+  },
 ] as const
+
+export const WORK_FLAGSHIP = APPLIED_AI_PLATFORMS.filter((p) => p.tier === 'flagship')
+export const WORK_PORTFOLIO = APPLIED_AI_PLATFORMS.filter((p) => p.tier === 'portfolio')
 
 /** @deprecated Prefer APPLIED_AI_PLATFORMS — kept for any legacy imports. */
 export const CASE_STUDIES = APPLIED_AI_PLATFORMS.map((p) => ({
-  featured: p.n === '01',
+  featured: p.tier === 'flagship',
   org: p.org,
   domain: p.domain,
   title: `${p.name}: ${p.tagline}`,
