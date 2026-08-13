@@ -21,15 +21,15 @@ export default function ConsultingPage() {
           Consulting
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-kp-muted dark:text-kp-line">
-          Engagements focus on agentic AI architecture, cloud and digital workplace modernization, software-defined
-          vehicle programs, and research-to-production governance — with explicit outcomes, named technologies, and
-          clear decision records.
+          Executive-level partnership with a Distinguished Engineer / Chief Architect lens: agentic AI strategy,
+          reference architectures, software-defined vehicle programs, and research-to-production governance — with
+          explicit outcomes, named technologies, and clear decision records for leadership teams.
         </p>
         <ul className="mt-10 max-w-2xl list-disc space-y-3 pl-5 text-kp-muted dark:text-kp-line">
-          <li>Architecture reviews and reference designs (multi-cloud, M365, Google Workspace, GenAI)</li>
-          <li>AI-DLC and delivery governance for cross-functional teams</li>
+          <li>Chief-architect reviews and reference designs (multi-cloud, M365, Google Workspace, GenAI)</li>
+          <li>AI-DLC and delivery governance for cross-functional executive programs</li>
           <li>Research collaboration on verifiable reasoning and enterprise deployment</li>
-          <li>Speaking and workshop formats for leadership and engineering audiences</li>
+          <li>Speaking and workshop formats for C-suite, board, and engineering leadership audiences</li>
         </ul>
         <div className="mt-12 flex flex-wrap gap-1.5 sm:gap-2">
           <a

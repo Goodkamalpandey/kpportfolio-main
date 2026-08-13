@@ -7,9 +7,9 @@ export const SITE = {
   nameWithCredentials: 'Dr. Kamal Pandey, PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
   tagline: 'Architecting the Future of Agentic Enterprise',
   heroSubheadline:
-    '17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production. Turning frontier AI research into systems that survive contact with reality at industrial scale.',
+    'Distinguished Engineer and Chief Architect for Applied & Agentic AI. 17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production — research that ships at industrial scale.',
   position:
-    'Sr Staff Software Architect — Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Distinguished Engineer — Chief Architect, Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -33,7 +33,7 @@ export const SITE = {
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
   degrees: 'PhD (in progress), DBA (Doctor of Business Administration), MCA, BCA',
-  roleTitle: 'Sr Staff Software Architect — Applied & Agentic AI',
+  roleTitle: 'Distinguished Engineer — Chief Architect, Applied & Agentic AI',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
@@ -48,19 +48,19 @@ export const HERO_IDENTITY = {
 } as const
 
 export const ABOUT_P1 =
-  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. At Rivian, he serves as Sr Staff Software Architect — Applied & Agentic AI — leading the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
+  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. As Distinguished Engineer — Chief Architect, Applied & Agentic AI at Rivian, he leads the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
 
 export const ABOUT_P2 =
   'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 100+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
 
 export const ABOUT_P3 =
-  'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey brings what almost no one else does: the rigor of an active peer-reviewed researcher, the delivery record of an enterprise architect across four continents (Asia, North America, Europe, and Australia), and the technical depth of someone who has coded, shipped, and scaled AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
+  'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey operates at the executive–technical seam: peer-reviewed research rigor, enterprise architecture leadership across four continents (Asia, North America, Europe, and Australia), and hands-on delivery of AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
 
 /** Two-line hero contact headline (Section K). */
 export const CONTACT_HEADLINE_LINES = ["Let's build something", "the world hasn't seen yet."] as const
 
 export const CONTACT_SUBTEXT =
-  'Available for strategic AI consulting, architecture advisory, research collaboration, speaking engagements, and peer review.'
+  'Engagements for executive teams: agentic AI strategy, chief-architect advisory, research-to-production governance, speaking, and board-level technical partnership.'
 
 /** Author pages on Amazon — fixed URLs only. */
 export const BOOKS = [
