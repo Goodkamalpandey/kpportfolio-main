@@ -140,51 +140,104 @@ export const EXPERTISE_CELLS = [
 
 export const STATS = HERO_STATS
 
-/**
- * Selected work — Problem → Approach → Outcome.
- * Metrics drawn from CAREER_ROLES (self-reported production outcomes). Featured card spans two columns.
- */
-export const CASE_STUDIES = [
+/** Work section — intelligence-layer platforms (KPI figures are design targets until production-validated). */
+export const WORK_VISION = {
+  eyebrow: 'Applied AI platforms',
+  title: 'Building the Intelligence Layer for the AI-Native Enterprise',
+  lead: 'I design AI platforms that turn complexity into momentum.',
+  body: 'AISDLC, CLUE AI, and the Rivian Agentic Platform form one connected mission: governed, traceable, scalable enterprise intelligence — where AI understands context, produces real work products, validates quality, and keeps humans in control of consequential decisions.',
+  principles: [
+    { label: 'Context-first', detail: 'Not prompt-first — assemble the business and technical context the work requires.' },
+    { label: 'Work products', detail: 'Architecture packages, investigation summaries, decision records — not chat demos.' },
+    { label: 'Governance in-product', detail: 'Approvals, audit trails, versioning, and validation gates are first-class.' },
+    { label: 'Trust as engineering', detail: 'Completeness, faithfulness, freshness, and precision as design criteria.' },
+  ],
+} as const
+
+export const APPLIED_AI_PLATFORMS = [
   {
-    featured: true,
+    n: '01',
+    icon: 'layers2' as const,
     org: 'Rivian',
-    domain: 'Agentic AI · Compliance',
-    title: 'Cognitive automation for compliance & legal review',
+    domain: 'AI Software Delivery',
+    name: 'AISDLC',
+    tagline: 'AI-powered software delivery with governance built in',
+    role: 'Solution Architect',
     problem:
-      'Compliance and legal review ran on manual document handling — 200+ processes, roughly 15 days per cycle.',
-    approach:
-      'Built agentic LLM pipelines (Amazon Bedrock, CrewAI, Google ADK, LangChain) for extraction, summarization, and Q&A, turned into a repeatable enterprise capability.',
-    metric: '~15 days → <30 min',
-    metricLabel: 'Cycle time · 200+ processes automated (career record)',
-    href: '/experience',
+      'Meaning fractures between requirement and implementation — designs drift, reviews arrive late, and teams duplicate work.',
+    solution:
+      'A coordinated multi-agent lifecycle that turns requirements into architecture, design, validation, and delivery-ready artifacts with approvals, version history, and end-to-end traceability.',
+    contribution:
+      'Shaped platform architecture, owned key intelligence and validation capabilities, contributed to gate-control logic, and defined how architecture decisions become traceable implementation work.',
+    metric: '8-day',
+    metricLabel: 'Target PRD → engineering cycle (14-day max)',
+    targets: [
+      '99.5% orchestration availability (monthly target)',
+      '85%+ completeness · 90%+ precision on designated outputs',
+      'Usable architecture packages in ≥2 of 3 pilot projects',
+    ],
+    href: '/#contact',
   },
   {
-    featured: false,
+    n: '02',
+    icon: 'microscope' as const,
     org: 'Rivian',
-    domain: 'Computer Vision · Manufacturing',
-    title: 'Production defect detection',
+    domain: 'Product Integrity · Defense',
+    name: 'CLUE AI',
+    tagline: 'Turning fragmented case intelligence into action',
+    role: 'Principal / Lead Architect',
     problem:
-      'Manual inspection was slow and inconsistent, capping line throughput and letting defects reach later stages.',
-    approach:
-      'Architected and personally built a computer-vision detection system wired into the production line, on fault-tolerant infra (Kubernetes/Terraform).',
-    metric: '~40% → 97%',
-    metricLabel: 'Detection accuracy (career record)',
-    href: '/experience',
+      'Investigators and legal teams assemble a complete picture from many systems before they can act — slow, repetitive, hard to scale, and inconsistent.',
+    solution:
+      'A governed retrieval and synthesis platform for citation-backed summaries, report generation, vehicle/case-scoped evidence, audit trails, and human confirmation before consequential updates.',
+    contribution:
+      'Shaped and stress-tested the architecture; established secure retrieval, AI analysis patterns, and human-reviewed workflow automation for high-stakes product-integrity work.',
+    metric: '<5 min',
+    metricLabel: 'Target VIN research (from 2–4 hours)',
+    targets: [
+      'Report prep target: 4–8 hrs → ~30 min',
+      'Capacity target: ~33 → 200+ VINs / day',
+      '>$1.1M modeled annualized value opportunity',
+    ],
+    href: '/#contact',
   },
   {
-    featured: false,
-    org: 'Goodyear',
-    domain: 'Conversational AI · Revenue',
-    title: 'Customer-facing sales assistant',
+    n: '03',
+    icon: 'network' as const,
+    org: 'Rivian',
+    domain: 'Agentic Runtime',
+    name: 'Rivian Agentic Platform',
+    tagline: 'The foundation for scalable, governable AI agents',
+    role: 'Applied AI Agentic Solutions Architect',
     problem:
-      'High-intent visitors lacked guided, real-time answers at the exact moment of the purchase decision.',
-    approach:
-      'Personally designed and built a customer-facing AI chatbot and its backend APIs, integrated into the commerce funnel with conversion tracking.',
-    metric: '~$2.3M',
-    metricLabel: 'Attributed revenue · ~17% conversion lift (career record)',
-    href: '/experience',
+      'One useful assistant is easy; a family of reliable agents is hard — lost context, stale answers, unbounded loops, and inconsistent behavior across environments.',
+    solution:
+      'A control plane for agentic work: event-driven orchestration, explicit handoffs, bounded validation loops, versioned outputs, concurrency controls, and operational observability.',
+    contribution:
+      'Contributed to platform architecture, agent design, deployment coordination, access and infrastructure planning, and the control patterns that make agentic systems governable at enterprise scale.',
+    metric: '5 agents',
+    metricLabel: 'Target coordinated stages · ≤3 validation cycles / gate',
+    targets: [
+      '48-hour max for bounded validation workflows',
+      'Phase 1: up to 10 concurrent pipeline instances',
+      'Freshness-stamped, versioned, traceable outputs',
+    ],
+    href: '/#contact',
   },
 ] as const
+
+/** @deprecated Prefer APPLIED_AI_PLATFORMS — kept for any legacy imports. */
+export const CASE_STUDIES = APPLIED_AI_PLATFORMS.map((p) => ({
+  featured: p.n === '01',
+  org: p.org,
+  domain: p.domain,
+  title: `${p.name}: ${p.tagline}`,
+  problem: p.problem,
+  approach: p.solution,
+  metric: p.metric,
+  metricLabel: p.metricLabel,
+  href: p.href,
+}))
 
 /** Legacy `/experience` page — condensed. */
 export const EXPERIENCE = CAREER_ROLES.map((c) => ({
