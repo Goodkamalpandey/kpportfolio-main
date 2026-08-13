@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            Sr Staff Software Architect · Rivian
+            Distinguished Engineer · Chief Architect · Rivian
           </div>
           <div
             style={{
