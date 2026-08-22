@@ -32,18 +32,17 @@ export const SITE = {
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
-  degrees: 'Ph.D. in Computer Science (AI/ML), DBA (Doctor of Business Administration), MCA, BCA',
-  roleTitle: 'Distinguished Engineer — Architect, Applied & Agentic AI',
+  degrees: 'Ph.D. in Computer Science (AI/ML -In Progress), DBA (Doctor of Business Administration), MCA, BCA',
+  roleTitle: 'Sr Staff Software — Architect, Applied & Agentic AI',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
-  memberships: ['Senior Member IEEE', 'Fellow IET', 'Member AAAI'] as const,
+  memberships: ['Senior Member IEEE', 'Senior Member IET', 'Member AAAI'] as const,
   /** Full list — Recognition page + schema. */
   recognition: [
     'AI150 Global AI Influencer 2026–2027',
-    'Global AI Leader 2025',
-    'Fellow of IET (Fellow)',
+    'Global AI Leader 2025-2026',
     'Senior Member of IEEE (Senior Member)',
-    'Member of AAAI (Sr. Member)',
+    'Member of AAAI (Member)',
     'IEEE SoutheastCon Best Paper Award 2025',
     'IEEE Access Best Paper Award 2025',
     'Box Work (AI) Award 2025',   
