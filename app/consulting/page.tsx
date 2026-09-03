@@ -21,12 +21,12 @@ export default function ConsultingPage() {
           Consulting
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-kp-muted dark:text-kp-line">
-          Executive-level partnership with a Distinguished Engineer / Chief Architect lens: agentic AI strategy,
-          reference architectures, software-defined vehicle programs, and research-to-production governance — with
-          explicit outcomes, named technologies, and clear decision records for leadership teams.
+          Executive-level partnership through an Enterprise Applied AI and solution architecture lens: agentic AI
+          strategy, reference architectures, digital employee experience, software-defined vehicle programs, and
+          research-to-production governance — with explicit outcomes and clear decision records for leadership teams.
         </p>
         <ul className="mt-10 max-w-2xl list-disc space-y-3 pl-5 text-kp-muted dark:text-kp-line">
-          <li>Chief-architect reviews and reference designs (multi-cloud, M365, Google Workspace, GenAI)</li>
+          <li>Enterprise architecture reviews and reference designs (multi-cloud, M365, Google Workspace, GenAI)</li>
           <li>AI-DLC and delivery governance for cross-functional executive programs</li>
           <li>Research collaboration on verifiable reasoning and enterprise deployment</li>
           <li>Speaking and workshop formats for C-suite, board, and engineering leadership audiences</li>

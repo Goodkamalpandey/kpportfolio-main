@@ -1,15 +1,21 @@
 /** Site config + re-exports from verified corpus. */
 
-import { PUBLICATIONS_FULL, SCHOLAR_WORKS_BY_PUBDATE, HERO_STATS, CAREER_ROLES } from './verifiedContent'
+import {
+  PUBLICATIONS_FULL,
+  PUBLICATIONS_MOVES_FIELD,
+  SCHOLAR_WORKS_BY_PUBDATE,
+  HERO_STATS,
+  CAREER_ROLES,
+} from './verifiedContent'
 
 export const SITE = {
   name: 'Dr. Kamal Pandey',
-  nameWithCredentials: 'Dr. Kamal Pandey, Ph.D. in Computer Science (AI/ML), DBA (Doctor of Business Administration), MCA, BCA',
+  nameWithCredentials: 'Dr. Kamal Pandey, PhD in Information Systems (in progress), DBA in Computer Science, MCA, BCA',
   tagline: 'Architecting the Future of Agentic Enterprise',
   heroSubheadline:
-    'Distinguished Engineer and Chief Architect for Applied & Agentic AI. 17 years. Four continents. $100M+ in measured annual operational impact from AI systems in production — research that ships at industrial scale.',
+    'Designing enterprise AI, solution engineering, and digital employee experiences across four continents — with $25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
   position:
-    'Distinguished Engineer — Architect, Applied & Agentic AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -32,43 +38,41 @@ export const SITE = {
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
-  degrees: 'Ph.D. in Computer Science (AI/ML -In Progress), DBA (Doctor of Business Administration), MCA, BCA',
-  roleTitle: 'Sr Staff Software — Architect, Applied & Agentic AI',
+  degrees: 'PhD in Information Systems (in progress), Doctor of Business Administration (DBA) in Computer Science, MCA, BCA',
+  roleTitle: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Senior Member IET', 'Member AAAI'] as const,
   /** Full list — Recognition page + schema. */
   recognition: [
     'AI150 Global AI Influencer 2026–2027',
-    'Global AI Leader 2025-2026',
-    'Senior Member of IEEE (Senior Member)',
-    'Member of AAAI (Member)',
+    'Global AI Leader 2025–2026',
+    'Senior Member of IEEE',
+    'Member of AAAI',
     'IEEE SoutheastCon Best Paper Award 2025',
     'IEEE Access Best Paper Award 2025',
-    'Box Work (AI) Award 2025',   
-    'Top 50 AI Researcher (Stanford recognition)',
+    'Box Work (AI) Award 2025',
     'Top 100 AI Reviewer (IEEE)',
     'Top 100 AI Reviewer (ACM)',
-   
   ] as const,
   /** Hero shows one primary honor; remainder live on /recognition. */
   heroPrimaryRecognition: 'AI150 Global AI Influencer 2025–2026 & 2026–2027',
 } as const
 
 export const ABOUT_P1 =
-  'Dr. Kamal Pandey has spent 17 years at the exact intersection where AI research becomes industrial reality. As Distinguished Engineer — Chief Architect, Applied & Agentic AI at Rivian, he leads the design and deployment of advanced agentic systems using Amazon Bedrock, Vertex AI, PyTorch, and LangChain that are driving $100M+ in measured annual operational impact from AI systems. He is the technical architect for the Rivian–Volkswagen JV digital transformation, building the Foundry-style AI infrastructure for next-generation EV development.'
+  'Dr. Kamal Pandey has spent 17 years turning enterprise AI and business application strategy into production solutions. As Sr. Manager / Distinguished Engineer for Enterprise Applied AI & Business Applications Development at Rivian, he leads architecture and solution engineering across agentic AI, cloud platforms, and enterprise applications. His work across Goodyear and Rivian digital workplace transformation has contributed to $25M+ in annual operational savings.'
 
 export const ABOUT_P2 =
-  'His research advances some of the hardest problems in AI: making reasoning verifiable through Agentic Self-Correction, resolving the LLM faithfulness gap through Synthetic Reasoning and Modular Program Synthesis, and advancing human-AI collaboration frameworks for the multimodal LLM era. With 100+ citations, 25+ peer-reviewed publications (2023–2026), and papers including IEEE SoutheastCon, IEEE Access, and the World Journal of AI & Robotics Research, his research directly informs the safety and reliability of every production system he builds at scale.'
+  'His research focuses on verifiable reasoning, Agentic Self-Correction, Synthetic Reasoning, Modular Program Synthesis, and human–AI collaboration. His work includes 20+ peer-reviewed publications, 69 Google Scholar citations, 70 ResearchGate citations, and an article read 6,246 times on ResearchGate.'
 
 export const ABOUT_P3 =
-  'Named to the AI150 Global Influencer list 2025–26, recognized as a Top 50 AI Researcher by Stanford University, elected Senior Member of IEEE and Fellow of IET, and honored as Global AI Leader 2025, Dr. Pandey operates at the executive–technical seam: peer-reviewed research rigor, enterprise architecture leadership across four continents (Asia, North America, Europe, and Australia), and hands-on delivery of AI systems from first principles across Rivian, Samsung, Goodyear, and the Fortune 100.'
+  'Named to the AI150 Global Influencer list for 2025–2026 and 2026–2027 and honored as a Global AI Leader, Dr. Pandey combines research rigor with enterprise architecture leadership across Asia, North America, Europe, and Australia.'
 
 /** Two-line hero contact headline (Section K). */
 export const CONTACT_HEADLINE_LINES = ["Let's build something", "the world hasn't seen yet."] as const
 
 export const CONTACT_SUBTEXT =
-  'Engagements for executive teams: agentic AI strategy, chief-architect advisory, research-to-production governance, speaking, and board-level technical partnership.'
+  'Engagements for executive teams: enterprise applied AI strategy, solution architecture, digital employee experience, research-to-production governance, speaking, and technical partnership.'
 
 /** Author pages on Amazon — fixed URLs only. */
 export const BOOKS = [
@@ -88,7 +92,7 @@ export const BOOKS = [
   },
 ] as const
 
-export const PUBLICATIONS_HOME = PUBLICATIONS_FULL
+export const PUBLICATIONS_HOME = PUBLICATIONS_MOVES_FIELD
 
 export {
   PUBLICATIONS_FULL,
@@ -402,4 +406,4 @@ export const EXPERIENCE = CAREER_ROLES.map((c) => ({
   bullets: [...c.bullets],
 }))
 
-export const RESEARCH_PAGE_PAPERS = [...PUBLICATIONS_FULL]
+export const RESEARCH_PAGE_PAPERS = [...PUBLICATIONS_MOVES_FIELD]

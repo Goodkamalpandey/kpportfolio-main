@@ -126,8 +126,8 @@ export default function RecognitionPage() {
         <section className="mt-16 md:mt-20">
           <PillarHeading n="02" eyebrow="Impact at scale" title="Research translated into industrial reality." />
           <p className="-mt-4 mb-8 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-line md:text-base">
-            As Distinguished Engineer — Chief Architect, Applied & Agentic AI at Rivian and technical architect for the Rivian–Volkswagen JV AI
-            transformation, delivering measurable enterprise outcomes at scale.
+            As Sr. Manager / Distinguished Engineer for Enterprise Applied AI &amp; Business Applications Development at
+            Rivian, translating research and architecture into measurable enterprise outcomes.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {HEADLINE_IMPACT_STATS.map((s) => (
@@ -161,9 +161,9 @@ export default function RecognitionPage() {
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <span className="text-sm text-kp-muted dark:text-kp-line">
-              <strong className="text-kp-ink dark:text-dark-text">25+</strong> peer-reviewed publications ·{' '}
-              <strong className="text-kp-ink dark:text-dark-text">100+</strong> Scholar citations ·{' '}
-              <strong className="text-kp-ink dark:text-dark-text">100+</strong> peer reviews
+              <strong className="text-kp-ink dark:text-dark-text">20+</strong> peer-reviewed publications ·{' '}
+              <strong className="text-kp-ink dark:text-dark-text">69</strong> Google Scholar citations ·{' '}
+              <strong className="text-kp-ink dark:text-dark-text">70</strong> ResearchGate citations
             </span>
             <Link
               href="/research"

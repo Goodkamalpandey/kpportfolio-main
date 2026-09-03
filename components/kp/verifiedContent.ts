@@ -220,14 +220,6 @@ const PUBLICATIONS_MOVES_FIELD_ORDER = [
   'The Novel Framework for Next-Gen Predictive Maintenance of Software-Defined Vehicles',
   'Autonomous ASN Label Compliance Using a Hybrid YOLOV8—Vision-Language Framework and Florence-2',
   'The Agentic Enterprise: A Strategic Analysis of Advanced Agentic Workflows and Collaborative AI',
-  'Artificial Intelligence and the Evolving Labor Market: A Comprehensive Review and Policy Roadmap',
-  'Principles of Building AI Agents, 1st Edition: The Next Generation Foreword: The Next Generation is Here',
-  'Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI',
-  'The Dynamic Reasoning Trace: Achieving Verifiable Faithfulness through Agentic Self-Correction',
-  'The Intelligent Workplace: AI and Automation Shaping the Future of Digital Workplaces',
-  'AI Powered Transformation in the Modern Digital Workplace: Roadmap for the Future of Work and Ethical Consideration',
-  'An Architectural Framework for AI-Driven Intelligent Commerce: The Data Nervous System',
-  'Synthetic Reasoning: Verifiable AI by Modular Program Synthesis',
 ] as const
 
 export const PUBLICATIONS_MOVES_FIELD = PUBLICATIONS_MOVES_FIELD_ORDER.map((title) => {
@@ -239,8 +231,7 @@ export const PUBLICATIONS_MOVES_FIELD = PUBLICATIONS_MOVES_FIELD_ORDER.map((titl
 export const GLOBAL_RECOGNITION = [
   'AI150 Global AI Influencer — 2025–2026 & 2026–2027 (Constellation Research · constellationr.com)',
   'Global AI Leader Award — 2025',
-  'Top 50 AI Researcher & Reviewer — Stanford University recognition',
-  'Guest Lecturer & Research Student Mentor — California State University, Fullerton',
+  'Student Mentor — California State University, Fullerton',
   'IEEE Conference Judge, Chair & Research Contributor — USA, UK, Europe & Asia',
   'Speaker — IEEE, September 2025',
 ] as const
@@ -281,7 +272,7 @@ export const EDUCATION = [
   },
   {
     degree: 'Doctor of Business Administration (DBA) in Computer Science',
-    school: 'Westcliff University, USA',
+    school: 'IMET, USA',
     years: '2023',
   },
   {
@@ -385,18 +376,17 @@ export const SKILLS_BLOCKS = [
 /** Full impact corpus — Recognition page. */
 export const HEADLINE_IMPACT_STATS = [
   { value: 17, suffix: '+', label: 'Years of global experience' },
-  { value: 100, suffix: '+', label: 'Google Scholar citations' },
-  { value: 25, suffix: '+', label: 'Peer-reviewed publications (2023–2026)' },
+  { value: 69, suffix: '', label: 'Google Scholar citations' },
+  { value: 70, suffix: '', label: 'ResearchGate citations' },
+  { value: 20, suffix: '+', label: 'Peer-reviewed publications' },
+  { value: 6246, suffix: '', label: 'ResearchGate article reads', format: 'comma' as const },
   { value: 100, suffix: '+', label: 'Peer reviews (verified reviewer)' },
   { value: 30, suffix: '+', label: 'Technical certifications (AI, cloud, architecture)' },
   { value: 4, suffix: '', label: 'Continents delivered (Asia, N. America, Europe, Australia)' },
-  { prefix: '$', value: 100, suffix: 'M+', label: 'Measured annual operational impact from AI systems' },
-  { prefix: '$', value: 200, suffix: 'M+', label: 'Annual operational savings driven (Samsung SDS)' },
-  { prefix: '$', value: 50, suffix: 'M', label: 'Annual cost savings (Workspace migration)' },
+  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual operational savings — Goodyear and Rivian digital workplace transformation' },
   { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
   { value: 20, suffix: '+', label: 'Design Thinking sessions facilitated' },
   { value: 1000, suffix: '+', label: 'Applications on Microsoft + Google Cloud', format: 'comma' as const },
-  { value: 1000, suffix: '+', label: 'Petabytes migrated to cloud', format: 'comma' as const },
   { value: 5, suffix: 'M', label: 'Associates served globally' },
   { value: 3, suffix: 'M', label: 'Users on platforms architected' },
 ] as const
@@ -406,20 +396,20 @@ export const HEADLINE_IMPACT_STATS = [
  * Full set remains on /recognition.
  */
 export const HOME_IMPACT_STATS = [
-  { prefix: '$', value: 100, suffix: 'M+', label: 'Measured annual AI operational impact' },
-  { prefix: '$', value: 200, suffix: 'M+', label: 'Annual operational savings (Samsung SDS)' },
+  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual operational savings — Goodyear and Rivian digital workplace transformation' },
   { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
   { value: 4, suffix: '', label: 'Continents delivered' },
   { value: 1000, suffix: '+', label: 'Cloud applications delivered', format: 'comma' as const },
+  { value: 5, suffix: 'M', label: 'Associates served globally' },
   { value: 3, suffix: 'M', label: 'Users on platforms architected' },
 ] as const
 
 /** Hero sidebar — four flagship numbers (keeps first viewport readable). */
 export const HERO_STATS = [
   { value: 17, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
-  { value: 100, suffix: '+', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
-  { value: 25, suffix: '+', label: 'Publications', sub: 'Peer-reviewed 2023–26', icon: 'library' as const },
-  { prefix: '$', value: 100, suffix: 'M+', label: 'AI impact', sub: 'Annual operational', icon: 'rocket' as const },
+  { value: 69, suffix: '', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
+  { value: 20, suffix: '+', label: 'Publications', sub: 'Peer-reviewed', icon: 'library' as const },
+  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual savings', sub: 'Goodyear + Rivian', icon: 'rocket' as const },
 ] as const
 
 export const INITIATIVES = [
@@ -473,20 +463,20 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     org: 'Rivian Automotive Inc.',
     location: 'Orange County / Los Angeles, CA',
     roles: [
-      { title: 'Distinguished Engineer — Chief Architect, Applied & Agentic AI', dates: 'Jan 2023 – Present' },
-      { title: 'Solution Architect, Applied AI', dates: 'Oct 2022 – Dec 2023' },
+      { title: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development', dates: '' },
+      { title: 'Sr. Staff Architect — Enterprise Applied AI', dates: '' },
       { title: 'Staff Software Engineer — Digital Workplace & Automation', dates: 'Feb 2021 – Sep 2022' },
     ],
     bullets: [
-      'Partnered with CIO/CPO as technical architect for $50M AI budget.',
-      '$100M+ measured annual operational impact from AI systems.',
+      'Partnered with CIO/CPO as technical architect for a major enterprise AI program.',
+      '$25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
       'Led Rivian–Volkswagen JV digital transformation (Foundry-style AI).',
       'Architected 50+ agentic AI systems using Gemini and Claude → throughput +75%.',
       'Paint defect detection: accuracy 40% → 98% (computer vision / PyTorch).',
       'MLOps (Terraform + Vertex AI): deployment time −70%; ~30ms inference latency.',
       '$6M+ direct savings via license rationalization.',
-      '$50M+ annual savings via unified agentic workflows (Workday, SAP, SharePoint, Slack, Salesforce).',
-      '$15.7M annual Digital Workspace budget delivered; 33% productivity boost.',
+      'Unified agentic workflows across Workday, SAP, SharePoint, Slack, and Salesforce.',
+      'Led a major annual Digital Workplace program; 33% productivity boost.',
       'Migrated 20,000 users from M365 to Google Workspace + Gemini → $12M annual cost reduction.',
       '15,000+ manual hours eliminated annually via autonomous AI portfolio.',
       '1000+ applications delivered on Microsoft + Google Cloud.',
@@ -506,18 +496,17 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     icon: 'briefcase',
   },
   {
-    period: 'March 2020 – March 2021',
-    org: 'Samsung SDS America, Inc.',
+    period: '2020–2021',
+    org: 'Samsung SDS America & Krish Service Group',
     location: 'New Jersey',
     roles: [
       {
-        title: 'Cloud Solutions Consulting Architect / Solutions Architect, Product Development & Research',
-        dates: 'Mar 2020 – Mar 2021',
+        title: 'Solutions Consulting Architect',
+        dates: '2020–2021',
       },
     ],
     bullets: [
       '50+ production-grade AI applications deployed globally.',
-      '$200M+ annual operational savings driven.',
       'ML anomaly detection: false alerts −45%; MTTR halved.',
       'Infrastructure optimization: solution delivery 40% faster.',
       'CI/CD (Jenkins, AWS CodePipeline, GitLab): release cycles +89%.',

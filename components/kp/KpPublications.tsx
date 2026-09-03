@@ -23,15 +23,23 @@ export default function KpPublications() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 font-medium text-kp-accent underline-offset-4 hover:underline dark:text-blue-300"
               >
-                100+ citations on Google Scholar
+                69 citations on Google Scholar
                 <KpUiIcon name="externalLink" size={14} className="text-kp-accent dark:text-blue-300" />
               </a>
-              <span>· 59+ indexed on primary profile · 25+ peer-reviewed publications (2023–2026)</span>
+              <span>·</span>
+              <a
+                href={SITE.researchgate}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-kp-accent underline-offset-4 hover:underline dark:text-blue-300"
+              >
+                70 citations on ResearchGate
+              </a>
+              <span>· 20+ peer-reviewed publications</span>
             </p>
             <p className="inline-flex flex-wrap items-center gap-2 text-sm">
               <KpUiIcon name="badgeCheck" size={16} className="text-kp-emerald dark:text-emerald-400" />
-              <span className="font-medium text-kp-ink dark:text-dark-text">Verified reviewer:</span>
-              <span>100+ peer-reviewed manuscripts reviewed</span>
+              <span>Article read 6,246 times on ResearchGate · 100+ peer-reviewed manuscripts reviewed</span>
             </p>
           </div>
         </KpReveal>

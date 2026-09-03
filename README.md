@@ -1,6 +1,6 @@
 # Dr. Kamal Pandey — Official Portfolio
 
-Next.js 14 portfolio for **Dr. Kamal Pandey** (Distinguished Engineer — Chief Architect, Applied & Agentic AI @ Rivian).
+Next.js 14 portfolio for **Dr. Kamal Pandey** (Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian).
 
 Live site: [drkamalpandey.com](https://www.drkamalpandey.com)
 

@@ -30,140 +30,107 @@ export default function KpHero() {
   return (
     <section className="kp-hero relative">
       <div className="mx-auto flex max-w-content flex-col justify-start px-5 pb-16 pt-4 md:px-8 md:pb-20 md:pt-8 lg:pb-16 lg:pt-10">
-        <div className="kp-glass-surface p-5 transition-shadow duration-500 ease-out-soft hover:shadow-kp-elevated md:p-6 dark:hover:shadow-none">
+        <div ref={specRef} className="kp-hero-spec-panel overflow-hidden">
+          <div className="kp-hero-spotlight" aria-hidden />
           <motion.header
-            className="kp-hero-identity flex max-w-5xl flex-col-reverse gap-6 md:flex-row md:items-start md:gap-8 lg:gap-10"
-            initial={{ opacity: 0, y: 10 }}
+            className="px-5 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12"
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-            aria-label="Credentials and role"
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="min-w-0 flex-1">
-              <div className="kp-hero-identity-nameblock">
-                <p className="text-pretty text-base font-semibold leading-tight tracking-[-0.022em] text-kp-ink md:text-lg dark:text-dark-text">
-                  {HERO_IDENTITY.displayName}
-                </p>
-                <p className="mt-2 max-w-prose text-pretty text-footnote font-normal leading-snug text-kp-muted md:text-sm dark:text-kp-line">
-                  {HERO_IDENTITY.degrees}
-                </p>
-              </div>
-
-              <div
-                className="my-5 h-px w-full max-w-md bg-gradient-to-r from-kp-line/90 via-kp-line/35 to-transparent dark:from-white/12 dark:via-white/6"
-                aria-hidden
-              />
-
-              <div className="space-y-1">
-                <p className="text-pretty text-sm font-medium leading-snug tracking-[-0.015em] text-kp-ink dark:text-dark-text">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-14">
+              <div className="min-w-0">
+                <p className="font-mono text-caption2 font-semibold uppercase leading-relaxed tracking-[0.16em] text-blue-300">
                   {HERO_IDENTITY.roleTitle}
                 </p>
-                <p className="text-footnote font-normal text-kp-muted dark:text-kp-line">
-                  <span className="text-kp-ink/55 dark:text-white/45">@ </span>
-                  {HERO_IDENTITY.employer}
-                </p>
-              </div>
-
-              <p className="mt-4 inline-flex items-start gap-2 text-footnote leading-snug text-kp-muted dark:text-kp-line">
-                <KpUiIcon name="mapPin" size={15} className="mt-0.5 shrink-0 text-kp-accent/80 dark:text-blue-400/90" />
-                <span>{HERO_IDENTITY.location}</span>
-              </p>
-
-              <div className="mt-5 flex flex-wrap items-center gap-2">
-                {HERO_IDENTITY.memberships.map((m) => (
-                  <span
-                    key={m}
-                    className="inline-flex rounded-full border border-kp-line/80 bg-white/70 px-3 py-1 text-caption2 font-medium leading-none tracking-[-0.01em] text-kp-ink shadow-sm dark:border-white/[0.08] dark:bg-white/[0.04] dark:text-dark-text"
-                  >
-                    {m}
+                <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-footnote text-neutral-400">
+                  <span>{HERO_IDENTITY.employer}</span>
+                  <span aria-hidden>·</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <KpUiIcon name="mapPin" size={13} className="text-neutral-500" />
+                    {HERO_IDENTITY.location}
                   </span>
-                ))}
+                </p>
+
+                <h1 className="mt-8 max-w-4xl text-pretty font-serif text-5xl font-medium leading-[0.96] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+                  {HERO_IDENTITY.displayName}
+                </h1>
+                <p className="mt-6 max-w-3xl text-pretty font-sans text-xl font-medium leading-tight tracking-[-0.025em] text-neutral-100 sm:text-2xl md:text-3xl">
+                  {SITE.tagline}
+                </p>
+                <p className="mt-6 max-w-2xl border-l-2 border-blue-500/70 pl-5 text-pretty text-sm leading-relaxed text-neutral-400 md:text-base">
+                  {SITE.heroSubheadline}
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
+                  <KpMagnetic
+                    href={SITE.topmate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="kp-hero-spec-cta-primary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[13px] md:px-6 md:py-3 md:text-sm"
+                  >
+                    <KpUiIcon name="calendarDays" size={14} className="text-neutral-900" />
+                    Book a consult
+                    <KpUiIcon name="arrowUpRight" size={14} className="text-neutral-900" />
+                  </KpMagnetic>
+                  <KpMagnetic
+                    href="/#work"
+                    className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-footnote md:px-6 md:py-3 md:text-sm"
+                  >
+                    <KpUiIcon name="briefcase" size={14} className="text-white" />
+                    View selected work
+                    <KpUiIcon name="arrowUpRight" size={14} className="text-white" />
+                  </KpMagnetic>
+                </div>
               </div>
 
-              <div className="mt-4 flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full border border-kp-award/35 bg-kp-award/10 px-3 py-1.5 text-caption2 font-semibold leading-none tracking-[-0.01em] text-kp-ink dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-dark-text">
-                  <KpUiIcon name="award" size={13} className="shrink-0 text-kp-award" />
-                  {HERO_IDENTITY.heroPrimaryRecognition}
-                </span>
-                <Link
-                  href="/recognition"
-                  className="text-footnote font-semibold text-kp-accent underline-offset-2 hover:underline dark:text-blue-300"
-                >
-                  All recognition
+              <div className="mx-auto w-full max-w-sm lg:mx-0">
+                <figure>
+                  <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden rounded-2xl bg-white/[0.06] shadow-[0_20px_60px_-24px_rgba(0,0,0,0.8)] ring-1 ring-white/10 lg:max-w-none">
+                    <Image
+                      src={SITE.heroPortraitSrc}
+                      alt={SITE.heroPortraitAlt}
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 240px, 352px"
+                      className="object-cover object-[center_12%]"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-center font-mono text-caption2 uppercase tracking-[0.14em] text-neutral-500 lg:text-left">
+                    Ai4 · 2025
+                  </figcaption>
+                </figure>
+                <div className="mt-6">
+                  <KpHeroStats variant="spec" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 grid gap-7 border-t border-white/10 pt-8 md:grid-cols-[1.35fr_1fr_1fr] md:gap-8">
+              <div>
+                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Education</p>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-300">{HERO_IDENTITY.degrees}</p>
+              </div>
+              <div>
+                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Professional standing</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {HERO_IDENTITY.memberships.map((membership) => (
+                    <span key={membership} className="rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-caption2 font-medium text-neutral-200">
+                      {membership}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Recognition</p>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-300">{HERO_IDENTITY.heroPrimaryRecognition}</p>
+                <Link href="/recognition" className="mt-3 inline-flex items-center gap-1.5 text-footnote font-semibold text-blue-300 hover:underline">
+                  View recognition
+                  <KpUiIcon name="arrowUpRight" size={13} className="text-blue-300" />
                 </Link>
               </div>
             </div>
-
-            <figure className="kp-hero-portrait mx-auto shrink-0 md:mx-0 md:pt-0.5">
-              <div className="relative aspect-[3/4] w-[9.25rem] overflow-hidden rounded-[1.35rem] bg-kp-line/20 shadow-[0_12px_40px_-12px_rgba(15,23,42,0.28)] ring-1 ring-black/[0.06] dark:bg-white/[0.06] dark:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.55)] dark:ring-white/[0.08] sm:w-[10.25rem] md:w-[11.25rem]">
-                <Image
-                  src={SITE.heroPortraitSrc}
-                  alt={SITE.heroPortraitAlt}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 148px, 180px"
-                  className="object-cover object-[center_12%]"
-                />
-              </div>
-              <figcaption className="mt-2 max-w-[11.25rem] text-center text-caption2 font-medium leading-snug tracking-wide text-kp-muted dark:text-kp-line md:text-left">
-                Ai4 · 2025
-              </figcaption>
-            </figure>
           </motion.header>
-        </div>
-
-        <div ref={specRef} className="kp-hero-spec-panel mt-6 md:mt-8">
-          <div className="kp-hero-spotlight" aria-hidden />
-          <motion.div
-            className="kp-hero-main-grid px-5 py-8 md:px-8 md:py-10 md:pb-9 lg:px-10 lg:py-11 lg:pb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="kp-hero-grid-title">
-              <p className="mb-2 font-mono text-caption2 font-semibold uppercase tracking-[0.2em] text-neutral-500">
-                Overview
-              </p>
-              <h1 className="max-w-4xl text-pretty font-sans text-2xl font-medium leading-[1.12] tracking-[-0.035em] text-white sm:text-3xl sm:leading-[1.1] md:text-5xl md:leading-[1.08] lg:text-6xl lg:leading-[1.06]">
-                {SITE.tagline}
-              </h1>
-            </div>
-            <div className="kp-hero-grid-stats">
-              <KpHeroStats variant="spec" />
-            </div>
-            <motion.p
-              className="kp-hero-grid-copy max-w-xl border-l-2 border-blue-500/70 pl-5 text-pretty text-sm font-normal leading-relaxed text-neutral-400 md:max-w-[28rem] md:text-base md:leading-relaxed"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.12 }}
-            >
-              {SITE.heroSubheadline}
-            </motion.p>
-            <motion.div
-              className="kp-hero-grid-cta flex flex-wrap gap-2 sm:gap-3"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.18 }}
-            >
-              <KpMagnetic
-                href={SITE.topmate}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="kp-hero-spec-cta-primary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[13px] md:px-6 md:py-3 md:text-sm"
-              >
-                <KpUiIcon name="calendarDays" size={14} className="text-neutral-900" />
-                Book a consult
-                <KpUiIcon name="arrowUpRight" size={14} className="text-neutral-900" />
-              </KpMagnetic>
-              <KpMagnetic
-                href="/research"
-                className="kp-hero-spec-cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 text-footnote md:px-6 md:py-3 md:text-sm"
-              >
-                <KpUiIcon name="library" size={14} className="text-white" />
-                View research
-                <KpUiIcon name="arrowUpRight" size={14} className="text-white" />
-              </KpMagnetic>
-            </motion.div>
-          </motion.div>
         </div>
 
         <div className="mt-8 flex justify-center md:mt-10" aria-hidden>

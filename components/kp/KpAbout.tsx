@@ -3,15 +3,11 @@ import KpUiIcon from './KpUiIcon'
 import { ABOUT_P1, ABOUT_P2, ABOUT_P3, SITE } from './data'
 
 const TIMELINE_ROWS = [
-  { icon: 'briefcase' as const, k: 'Present', line: 'Sr Staff Software Architect, Applied & Agentic AI @ Rivian' },
-  { icon: 'briefcase' as const, k: '2022–23', line: 'Solution Architect, Applied AI @ Rivian' },
-  { icon: 'briefcase' as const, k: '2021–22', line: 'Staff Software Engineer — Digital Workplace & Automation @ Rivian' },
-  { icon: 'cloud' as const, k: '2020–21', line: 'Cloud Solutions Consulting Architect @ Samsung SDS America' },
+  { icon: 'briefcase' as const, k: 'Current', line: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian' },
+  { icon: 'briefcase' as const, k: 'Previous', line: 'Sr. Staff Architect — Enterprise Applied AI @ Rivian' },
+  { icon: 'cloud' as const, k: '2020–21', line: 'Solutions Consulting Architect @ Samsung SDS America & Krish Service Group' },
   { icon: 'landmark' as const, k: '2015–19', line: 'Sr. Architect — Digital Workplace & Modern Workplace @ Goodyear' },
-  { icon: 'rocket' as const, k: '2012–15', line: 'Project Lead / Sr. Software Engineer @ LTI (Viacom, Warner Bros, WSP)' },
-  { icon: 'cpu' as const, k: '2010–11', line: 'Lead Engineer, ECM @ HCL Technologies' },
-  { icon: 'globe2' as const, k: '2011–12', line: 'Consultant @ Singtel Optus (Sydney)' },
-  { icon: 'cpu' as const, k: '2008–10', line: 'Senior Software Engineer @ IBM / Shriram Value Services' },
+  { icon: 'globe2' as const, k: '2008–15', line: 'Progressive engineering and architecture roles @ IBM, HCL, Singtel Optus & LTI' },
 ] as const
 
 export default function KpAbout() {

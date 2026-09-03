@@ -37,13 +37,13 @@ const jsonLd = {
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'DBA, MCA',
-  jobTitle: 'Distinguished Engineer — Chief Architect, Applied & Agentic AI',
+  jobTitle: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',
   },
   description:
-    'AI150 Global Influencer 2025-26. Global AI Leader 2025. Top 50 AI Researcher (Stanford). Senior Member IEEE. Fellow IET. Distinguished Engineer — Chief Architect, Applied & Agentic AI. 100+ citations. 25+ peer-reviewed publications. 17+ years. $100M+ measured annual AI operational impact.',
+    'AI150 Global AI Influencer 2025–2026 and 2026–2027. Global AI Leader. Senior Member IEEE and IET. Sr. Manager / Distinguished Engineer for Enterprise Applied AI & Business Applications Development at Rivian. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, 17+ years of global experience, and $25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
   url: SITE.domain,
   email: SITE.email,
    address: {
@@ -60,8 +60,8 @@ const jsonLd = {
     },
     {
       '@type': 'CollegeOrUniversity',
-      name: 'Westcliff University',
-      description: 'Doctor of Business Administration in Computer Science (2023)',
+      name: 'IMET, USA',
+      description: 'Doctor of Business Administration (DBA) in Computer Science (2023)',
     },
   ],
   knowsAbout: [
@@ -91,9 +91,8 @@ const jsonLd = {
   award: [
     'AI150 Global AI Influencer 2025-2026 & 2026-2027',
     'Global AI Leader 2025',
-    'Top 50 AI Researcher — Stanford University',
     'IEEE Senior Member',
-    'IET Fellow',
+    'IET Senior Member',
     'Employee of the Year 2015 — L&T Infotech',
     'MVP 2014 — L&T Infotech',
     'Research & Innovation Awards — HCL Tech',
@@ -122,7 +121,7 @@ export const viewport: Viewport = {
 
 const ogTitle = 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise'
 const ogDescription =
-  'Distinguished Engineer — Chief Architect, Applied & Agentic AI @ Rivian. AI150 2025–26. Global AI Leader 2025. IEEE Senior Member. IET Fellow. 100+ Scholar citations. 25+ peer-reviewed publications. 17+ years across four continents.'
+  'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian. AI150 Global AI Influencer. IEEE and IET Senior Member. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, and 17+ years across four continents.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),

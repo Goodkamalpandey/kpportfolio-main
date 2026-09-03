@@ -17,12 +17,7 @@ const HIGHLIGHTS = [
     title: 'Global AI Leader Award',
     body: 'Recognition for sustained delivery of enterprise AI programs at Fortune-scale impact.',
   },
-  {
-    year: '2025',
-    border: 'border-t-kp-accent dark:border-t-blue-400',
-    title: 'Top 50 AI Researcher & Reviewer',
-    body: 'Stanford University recognition — research, peer review, and field leadership.',
-  },
+
 ] as const
 
 export default function KpHonors() {
@@ -42,7 +37,7 @@ export default function KpHonors() {
           </h2>
         </KpReveal>
 
-        <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-3 md:gap-8">
+        <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-2 md:gap-8">
           {HIGHLIGHTS.map((c) => (
             <KpReveal key={c.title}>
               <div

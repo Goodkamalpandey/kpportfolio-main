@@ -25,14 +25,14 @@ export default function OpenGraphImage() {
           <div
             style={{
               display: 'flex',
-              fontSize: 22,
+              fontSize: 18,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
               color: '#93C5FD',
               fontWeight: 600,
             }}
           >
-            Distinguished Engineer · Chief Architect · Rivian
+            Sr. Manager / Distinguished Engineer · Enterprise Applied AI & Business Applications Development · Rivian
           </div>
           <div
             style={{
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           <div style={{ display: 'flex', fontSize: 36, fontWeight: 600 }}>Dr. Kamal Pandey</div>
           <div style={{ display: 'flex', fontSize: 24, color: '#A1A1AA' }}>
-            AI150 · IEEE Senior Member · IET Fellow · 17+ years · Four continents
+            AI150 · IEEE & IET Senior Member · 20+ publications · 17+ years
           </div>
           <div style={{ display: 'flex', fontSize: 20, color: '#71717A', marginTop: 8 }}>
             drkamalpandey.com

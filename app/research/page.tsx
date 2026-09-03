@@ -32,25 +32,20 @@ export default function ResearchPage() {
               rel="noopener noreferrer"
               className="font-medium text-kp-accent hover:underline dark:text-blue-300"
             >
-              100+ citations on Google Scholar
-            </a>
-            <span className="text-kp-muted">
-              {' '}
-              · Verified reviewer: 100+ peer reviews.
-            </span>
-          </p>
-          <p>
-            Expandable detail per paper. For the full list sorted by publication date (newest first), see{' '}
+              69 citations on Google Scholar
+            </a>{' '}
+            ·{' '}
             <a
-              href={SITE.scholarWorksByPubDate}
+              href={SITE.researchgate}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-kp-accent hover:underline dark:text-blue-300"
             >
-              Google Scholar — all works by date
-            </a>
-            .
+              70 citations on ResearchGate
+            </a>{' '}
+            · 20+ peer-reviewed publications.
           </p>
+          <p>Featured research: five selected publications. One ResearchGate article has been read 6,246 times.</p>
         </div>
         <ul className="mt-14 space-y-4">
           {RESEARCH_PAGE_PAPERS.map((p) => (
