@@ -37,7 +37,7 @@ npm run dev
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Executive overview (hero → network → about → impact → capabilities → featured research → recognition → selected systems → contact) |
+| `/` | Executive overview (hero → about → education → impact → capabilities → featured research → honors → selected systems → contact) |
 | `/work` | Full Applied AI systems portfolio |
 | `/research` | Categorized publication index and books |
 | `/recognition` | Awards, memberships, full impact ledger |
