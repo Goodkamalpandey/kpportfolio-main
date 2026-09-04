@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: light dark;
+    color-scheme: dark;
     --kp-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --kp-radius-card: 1.25rem;
     --kp-radius-hero: 1.375rem;
@@ -30,8 +30,8 @@
     z-index: 10000;
     padding: 0.5rem 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
-    background: #1d4ed8;
-    color: #fff;
+    background: #d4af37;
+    color: #0f172a;
     font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
@@ -39,7 +39,7 @@
     transition:
       transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.2s ease;
-    box-shadow: 0 8px 24px -8px rgba(29, 78, 216, 0.45);
+    box-shadow: 0 8px 24px -8px rgba(212, 175, 55, 0.35);
   }
 
   .kp-skip-link:focus {
@@ -71,13 +71,13 @@
   }
 
   ::selection {
-    background-color: rgba(29, 78, 216, 0.2);
-    color: #09090b;
+    background-color: rgba(212, 175, 55, 0.28);
+    color: #f8fafc;
   }
 
   .dark ::selection {
-    background-color: rgba(96, 165, 250, 0.22);
-    color: #f0f4ff;
+    background-color: rgba(240, 207, 106, 0.28);
+    color: #f8fafc;
   }
 
   body {
@@ -92,12 +92,12 @@
   }
 
   :where(a, button, input, textarea, select, summary):focus-visible {
-    outline: 2px solid #1d4ed8;
+    outline: 2px solid #d4af37;
     outline-offset: 3px;
   }
 
   .dark :where(a, button, input, textarea, select, summary):focus-visible {
-    outline-color: #60a5fa;
+    outline-color: #f0cf6a;
   }
 }
 
@@ -105,16 +105,16 @@
   /* Editorial “glass” — iOS-like material: soft radius, hairline, restrained shadow */
   .kp-glass-surface {
     border-radius: var(--kp-radius-hero);
-    @apply border border-kp-line/55 bg-white/[0.82] shadow-kp-soft ring-1 ring-black/[0.025] backdrop-blur-2xl backdrop-saturate-150 dark:border-white/[0.09] dark:bg-dark-card/80 dark:shadow-none dark:ring-white/[0.035];
+    @apply border border-kp-accent/25 bg-dark-card/85 shadow-kp-soft ring-1 ring-kp-accent/[0.04] backdrop-blur-2xl backdrop-saturate-150 dark:border-kp-accent/25 dark:bg-dark-card/85 dark:shadow-none dark:ring-kp-accent/[0.04];
   }
 
   /** Section eyebrow — Caption 2 scale + mono (SF Mono on iOS via theme) */
   .kp-section-eyebrow {
-    @apply font-mono text-caption2 font-semibold uppercase tracking-[0.13em] text-kp-muted dark:text-kp-line;
+    @apply font-sans text-caption2 font-bold uppercase tracking-[0.2em] text-kp-accent dark:text-kp-accent;
   }
 
   /** iOS Settings–style grouped surface (inset list / CTAs) */
   .kp-grouped-inset {
-    @apply rounded-2xl border border-kp-line/50 bg-white/[0.72] p-4 shadow-kp-soft backdrop-blur-md dark:border-white/[0.09] dark:bg-white/[0.05] dark:shadow-none;
+    @apply rounded-lg border border-kp-accent/20 bg-dark-card/70 p-4 shadow-kp-soft backdrop-blur-md dark:border-kp-accent/20 dark:bg-dark-card/70 dark:shadow-none;
   }
 }

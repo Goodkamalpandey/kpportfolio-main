@@ -23,7 +23,7 @@ export default function KpScrollProgress() {
       aria-hidden
     >
       <div
-        className="h-full origin-left will-change-transform bg-kp-accent/90 dark:bg-blue-400/95"
+        className="h-full origin-left will-change-transform bg-kp-accent/90 dark:bg-kp-accent/95"
         style={{ transform: `scaleX(${p})` }}
       />
     </div>

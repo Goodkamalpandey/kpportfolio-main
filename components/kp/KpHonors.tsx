@@ -2,14 +2,13 @@ import Link from 'next/link'
 import { Star } from 'lucide-react'
 import KpReveal from './KpReveal'
 import KpUiIcon from './KpUiIcon'
-import { EMPLOYER_RECOGNITION, GLOBAL_RECOGNITION, SPEAKING_DETAIL } from './data'
 
 const HIGHLIGHTS = [
   {
-    year: '2025–2027',
+    year: '2025–2026 · 2026–2027',
     border: 'border-t-kp-award',
-    title: 'AI150 Global AI Influencer',
-    body: 'Constellation Research — constellationr.com — among the world’s most visible AI leaders shaping research and industry (2025–2026 & 2026–2027).',
+    title: 'Artificial Intelligence 150 (AI150) by Constellation Research',
+    body: 'Constellation Research — constellationr.com — among the world’s most visible AI leaders shaping research and industry.',
   },
   {
     year: '2025',
@@ -41,60 +40,22 @@ export default function KpHonors() {
           {HIGHLIGHTS.map((c) => (
             <KpReveal key={c.title}>
               <div
-                className={`flex h-full flex-col rounded-[14px] border border-kp-line/70 border-t-[3px] bg-white p-8 shadow-kp-soft dark:border-white/10 dark:bg-dark-card dark:shadow-none ${c.border}`}
+                className={`flex h-full flex-col rounded-lg border border-kp-line/70 border-t-[3px] bg-dark-card p-8 shadow-kp-soft dark:border-white/10 dark:bg-dark-card dark:shadow-none ${c.border}`}
               >
-                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-kp-muted dark:text-kp-line">
+                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-kp-muted dark:text-kp-muted">
                   {c.year}
                 </span>
                 <h3 className="mt-3 text-lg font-semibold text-kp-ink dark:text-dark-text">{c.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-kp-muted dark:text-kp-line">{c.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-kp-muted dark:text-kp-muted">{c.body}</p>
               </div>
             </KpReveal>
           ))}
         </div>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:items-start">
-          <div className="flex flex-col gap-12">
-            <KpReveal>
-              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-kp-ink dark:text-dark-text">
-                <KpUiIcon name="globe2" size={16} className="shrink-0 text-kp-accent dark:text-blue-300" />
-                Global recognition
-              </h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kp-muted dark:text-kp-line">
-                {GLOBAL_RECOGNITION.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-            </KpReveal>
-            <KpReveal>
-              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-kp-ink dark:text-dark-text">
-                <KpUiIcon name="briefcase" size={16} className="shrink-0 text-kp-accent dark:text-blue-300" />
-                Employer recognition
-              </h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kp-muted dark:text-kp-line">
-                {EMPLOYER_RECOGNITION.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-            </KpReveal>
-          </div>
-          <KpReveal>
-            <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-kp-ink dark:text-dark-text">
-              <KpUiIcon name="calendarDays" size={16} className="shrink-0 text-kp-accent dark:text-blue-300" />
-              Speaking &amp; forums
-            </h3>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kp-muted dark:text-kp-line">
-              {SPEAKING_DETAIL.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </KpReveal>
-        </div>
-
         <div className="mt-12 flex justify-center">
           <Link
             href="/recognition"
-            className="inline-flex items-center gap-2 rounded-full border border-kp-line/70 bg-white/80 px-5 py-2.5 text-sm font-semibold text-kp-ink shadow-sm transition hover:border-kp-accent/40 hover:text-kp-accent dark:border-white/15 dark:bg-white/[0.06] dark:text-dark-text dark:hover:border-blue-400/40 dark:hover:text-blue-300"
+            className="inline-flex items-center gap-2 rounded-full border border-kp-line/70 bg-dark-card/80 px-5 py-2.5 text-sm font-semibold text-kp-ink shadow-sm transition hover:border-kp-accent/40 hover:text-kp-accent dark:border-white/15 dark:bg-dark-card/[0.06] dark:text-dark-text dark:hover:border-kp-accent/40 dark:hover:text-kp-accent"
           >
             Full recognition &amp; standing
             <KpUiIcon name="arrowUpRight" size={15} />

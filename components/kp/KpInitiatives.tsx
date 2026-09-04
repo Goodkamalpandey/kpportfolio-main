@@ -47,7 +47,7 @@ export default function KpInitiatives() {
                 : 'border-kp-accent/40 bg-kp-accent/15 text-blue-200'
             return (
               <KpReveal key={item.title}>
-                <article className="group h-full rounded-[14px] border border-white/[0.12] bg-dark-card/90 p-8 shadow-sm transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:border-kp-accent/40 hover:shadow-kp-primary md:p-9">
+                <article className="group h-full rounded-lg border border-white/[0.12] bg-dark-card/90 p-8 shadow-sm transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:border-kp-accent/40 hover:shadow-kp-primary md:p-9">
                   <span
                     className={`inline-flex rounded-full border px-3 py-1 font-mono text-caption2 font-semibold uppercase tracking-wider ${tagClass}`}
                   >

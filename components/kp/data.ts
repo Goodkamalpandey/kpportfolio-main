@@ -1,7 +1,6 @@
 /** Site config + re-exports from verified corpus. */
 
 import {
-  PUBLICATIONS_FULL,
   PUBLICATIONS_MOVES_FIELD,
   SCHOLAR_WORKS_BY_PUBDATE,
   HERO_STATS,
@@ -11,11 +10,11 @@ import {
 export const SITE = {
   name: 'Dr. Kamal Pandey',
   nameWithCredentials: 'Dr. Kamal Pandey, PhD in Information Systems (in progress), DBA in Computer Science, MCA, BCA',
-  tagline: 'Architecting the Future of Agentic Enterprise',
+  tagline: 'Engineering Applied AI for Enterprise Transformation',
   heroSubheadline:
-    'Designing enterprise AI, solution engineering, and digital employee experiences across four continents — with $25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
+    'I lead practical AI engineering from architecture through production—building enterprise AI systems and business applications that transform complex global operations.',
   position:
-    'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -39,16 +38,14 @@ export const SITE = {
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
   degrees: 'PhD in Information Systems (in progress), Doctor of Business Administration (DBA) in Computer Science, MCA, BCA',
-  roleTitle: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development',
+  roleTitle: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
   memberships: ['Senior Member IEEE', 'Senior Member IET', 'Member AAAI'] as const,
   /** Full list — Recognition page + schema. */
   recognition: [
-    'AI150 Global AI Influencer 2026–2027',
+    'Artificial Intelligence 150 (AI150) by Constellation Research — 2025–2026 and 2026–2027',
     'Global AI Leader 2025–2026',
-    'Senior Member of IEEE',
-    'Member of AAAI',
     'IEEE SoutheastCon Best Paper Award 2025',
     'IEEE Access Best Paper Award 2025',
     'Box Work (AI) Award 2025',
@@ -56,23 +53,20 @@ export const HERO_IDENTITY = {
     'Top 100 AI Reviewer (ACM)',
   ] as const,
   /** Hero shows one primary honor; remainder live on /recognition. */
-  heroPrimaryRecognition: 'AI150 Global AI Influencer 2025–2026 & 2026–2027',
+  heroPrimaryRecognition: 'Artificial Intelligence 150 (AI150) by Constellation Research — 2025–2026 and 2026–2027',
 } as const
 
 export const ABOUT_P1 =
-  'Dr. Kamal Pandey has spent 17 years turning enterprise AI and business application strategy into production solutions. As Sr. Manager / Distinguished Engineer for Enterprise Applied AI & Business Applications Development at Rivian, he leads architecture and solution engineering across agentic AI, cloud platforms, and enterprise applications. His work across Goodyear and Rivian digital workplace transformation has contributed to $25M+ in annual operational savings.'
+  'I work at the intersection of enterprise AI, business applications, and digital employee experience—turning ambiguous problems into governed systems that teams can operate, measure, and trust.'
 
 export const ABOUT_P2 =
-  'His research focuses on verifiable reasoning, Agentic Self-Correction, Synthetic Reasoning, Modular Program Synthesis, and human–AI collaboration. His work includes 20+ peer-reviewed publications, 69 Google Scholar citations, 70 ResearchGate citations, and an article read 6,246 times on ResearchGate.'
-
-export const ABOUT_P3 =
-  'Named to the AI150 Global Influencer list for 2025–2026 and 2026–2027 and honored as a Global AI Leader, Dr. Pandey combines research rigor with enterprise architecture leadership across Asia, North America, Europe, and Australia.'
+  'My research explores verifiable reasoning, Agentic Self-Correction, Synthetic Reasoning, Modular Program Synthesis, and human–AI collaboration. It informs how I design production systems: grounded in context, bounded by controls, and reviewed by people when decisions matter.'
 
 /** Two-line hero contact headline (Section K). */
 export const CONTACT_HEADLINE_LINES = ["Let's build something", "the world hasn't seen yet."] as const
 
 export const CONTACT_SUBTEXT =
-  'Engagements for executive teams: enterprise applied AI strategy, solution architecture, digital employee experience, research-to-production governance, speaking, and technical partnership.'
+  'Available for enterprise AI architecture, practical AI engineering, digital transformation advisory, research collaboration, speaking, and technical leadership partnerships.'
 
 /** Author pages on Amazon — fixed URLs only. */
 export const BOOKS = [
@@ -154,12 +148,12 @@ export const STATS = HERO_STATS
 
 /** Work section — intelligence-layer platforms (KPI figures are design targets until production-validated). */
 export const WORK_VISION = {
-  eyebrow: 'Applied AI platforms',
-  title: 'Building the Intelligence Layer for the AI-Native Enterprise',
-  lead: 'I design AI platforms that turn complexity into momentum.',
-  body: "I'm building a new operating model for software, product, and enterprise decision-making—one where AI understands context, reasons across fragmented information, validates its work, and keeps humans in control of the decisions that matter. The portfolio spans AISDLC, CLUE AI, and the Rivian Agentic Platform through manufacturing intelligence, computer vision, quality platforms, supply-chain automation, and in-vehicle voice.",
+  eyebrow: 'Production AI & transformation',
+  title: 'Applied AI engineered for enterprise-scale outcomes',
+  lead: 'From architecture to adoption, I build systems that move real work.',
+  body: 'My portfolio connects agentic AI, business applications, manufacturing intelligence, computer vision, quality, supply chain, and software-defined vehicles. Each platform is designed for production reliability, measurable value, and responsible human oversight.',
   closing:
-    'The future of AI is not autonomous output. It is trusted intelligence—grounded in context, bounded by controls, and designed to move real work forward.',
+    'The goal is not autonomous output. It is trusted intelligence that improves decisions, accelerates delivery, and transforms operations.',
   principles: [
     { label: 'Context-first', detail: 'Not prompt-first — assemble the business and technical context the work requires.' },
     { label: 'Work products', detail: 'Architecture packages, investigation summaries, decision records — not chat demos.' },
@@ -225,7 +219,7 @@ export const APPLIED_AI_PLATFORMS = [
     domain: 'Agentic Runtime',
     name: 'Rivian Agentic Platform',
     tagline: 'The foundation for scalable, governable AI agents',
-    role: 'Applied AI Agentic Solutions Architect',
+    role: 'Agentic AI Solutions Architect',
     problem:
       'One useful assistant is easy; a family of reliable agents is hard — lost context, stale answers, unbounded loops, and inconsistent behavior across environments.',
     solution:

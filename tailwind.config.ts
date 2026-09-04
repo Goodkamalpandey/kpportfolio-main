@@ -16,20 +16,20 @@ const config: Config = {
        */
       colors: {
         kp: {
-          bg: '#F6F7F9',
-          ink: '#09090B',
-          accent: '#1D4ED8',
-          emerald: '#059669',
-          award: '#D97706',
-          muted: '#71717A',
-          line: '#E4E4E7',
-          navy: '#070D1C',
-          strip: '#F0F1F4',
+          bg: '#0F172A',
+          ink: '#F1F5F9',
+          accent: '#D4AF37',
+          emerald: '#D4AF37',
+          award: '#F0CF6A',
+          muted: '#94A3B8',
+          line: '#334155',
+          navy: '#0A0F1E',
+          strip: '#1E293B',
         },
         dark: {
-          bg: '#070D1C',
-          text: '#F0F4FF',
-          card: '#0D1528',
+          bg: '#0F172A',
+          text: '#F1F5F9',
+          card: '#1E293B',
         },
       },
       fontFamily: {
@@ -104,12 +104,12 @@ const config: Config = {
       },
       boxShadow: {
         'kp-soft':
-          '0 1px 0 rgba(9, 9, 11, 0.04), 0 18px 48px -20px rgba(9, 9, 11, 0.07)',
-        'kp-nav': '0 8px 32px -6px rgba(9, 9, 11, 0.08)',
+          '0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 48px -20px rgba(0, 0, 0, 0.4)',
+        'kp-nav': '0 8px 32px -6px rgba(0, 0, 0, 0.45)',
         'kp-elevated':
-          '0 1px 2px rgba(9, 9, 11, 0.04), 0 24px 56px -28px rgba(9, 9, 11, 0.09)',
+          '0 1px 2px rgba(255, 255, 255, 0.04), 0 24px 56px -28px rgba(0, 0, 0, 0.55)',
         'kp-primary':
-          '0 1px 2px rgba(29, 78, 216, 0.12), 0 8px 24px -6px rgba(29, 78, 216, 0.28)',
+          '0 1px 2px rgba(212, 175, 55, 0.18), 0 8px 24px -6px rgba(212, 175, 55, 0.32)',
       },
       transitionTimingFunction: {
         'out-soft': 'cubic-bezier(0.22, 1, 0.36, 1)',

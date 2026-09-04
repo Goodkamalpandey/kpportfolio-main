@@ -229,8 +229,6 @@ export const PUBLICATIONS_MOVES_FIELD = PUBLICATIONS_MOVES_FIELD_ORDER.map((titl
 })
 
 export const GLOBAL_RECOGNITION = [
-  'AI150 Global AI Influencer — 2025–2026 & 2026–2027 (Constellation Research · constellationr.com)',
-  'Global AI Leader Award — 2025',
   'Student Mentor — California State University, Fullerton',
   'IEEE Conference Judge, Chair & Research Contributor — USA, UK, Europe & Asia',
   'Speaker — IEEE, September 2025',
@@ -383,7 +381,7 @@ export const HEADLINE_IMPACT_STATS = [
   { value: 100, suffix: '+', label: 'Peer reviews (verified reviewer)' },
   { value: 30, suffix: '+', label: 'Technical certifications (AI, cloud, architecture)' },
   { value: 4, suffix: '', label: 'Continents delivered (Asia, N. America, Europe, Australia)' },
-  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual operational savings — Goodyear and Rivian digital workplace transformation' },
+  { prefix: '$', value: 125, suffix: 'M+', label: 'Annual operational savings — Goodyear and Rivian digital workplace transformation' },
   { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
   { value: 20, suffix: '+', label: 'Design Thinking sessions facilitated' },
   { value: 1000, suffix: '+', label: 'Applications on Microsoft + Google Cloud', format: 'comma' as const },
@@ -396,7 +394,6 @@ export const HEADLINE_IMPACT_STATS = [
  * Full set remains on /recognition.
  */
 export const HOME_IMPACT_STATS = [
-  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual operational savings — Goodyear and Rivian digital workplace transformation' },
   { value: 50, suffix: '+', label: 'Agentic AI systems architected' },
   { value: 4, suffix: '', label: 'Continents delivered' },
   { value: 1000, suffix: '+', label: 'Cloud applications delivered', format: 'comma' as const },
@@ -409,7 +406,9 @@ export const HERO_STATS = [
   { value: 17, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
   { value: 69, suffix: '', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
   { value: 20, suffix: '+', label: 'Publications', sub: 'Peer-reviewed', icon: 'library' as const },
-  { prefix: '$', value: 25, suffix: 'M+', label: 'Annual savings', sub: 'Goodyear + Rivian', icon: 'rocket' as const },
+  { prefix: '$', value: 125, suffix: 'M+', label: 'Annual savings', sub: 'Goodyear + Rivian', icon: 'rocket' as const },
+  { value: 2, suffix: '', label: 'Books', sub: 'Published', icon: 'bookOpen' as const },
+  { value: 3, suffix: '', label: 'IP', sub: '1 patent in progress', icon: 'fileText' as const },
 ] as const
 
 export const INITIATIVES = [
@@ -463,13 +462,13 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     org: 'Rivian Automotive Inc.',
     location: 'Orange County / Los Angeles, CA',
     roles: [
-      { title: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development', dates: '' },
-      { title: 'Sr. Staff Architect — Enterprise Applied AI', dates: '' },
+      { title: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development', dates: '' },
+      { title: 'Solutions Architect — Enterprise Applied AI & Software Engineering', dates: '' },
       { title: 'Staff Software Engineer — Digital Workplace & Automation', dates: 'Feb 2021 – Sep 2022' },
     ],
     bullets: [
       'Partnered with CIO/CPO as technical architect for a major enterprise AI program.',
-      '$25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
+      '$125M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
       'Led Rivian–Volkswagen JV digital transformation (Foundry-style AI).',
       'Architected 50+ agentic AI systems using Gemini and Claude → throughput +75%.',
       'Paint defect detection: accuracy 40% → 98% (computer vision / PyTorch).',

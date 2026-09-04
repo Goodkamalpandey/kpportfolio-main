@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise'
+export const alt = 'Dr. Kamal Pandey | Engineering Applied AI for Enterprise Transformation'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            Sr. Manager / Distinguished Engineer · Enterprise Applied AI & Business Applications Development · Rivian
+            Sr. Staff Applied Engineer · Enterprise Applied AI & Business Applications Development · Rivian
           </div>
           <div
             style={{
@@ -44,13 +44,13 @@ export default function OpenGraphImage() {
               maxWidth: 980,
             }}
           >
-            Architecting the Future of Agentic Enterprise
+            Engineering Applied AI for Enterprise Transformation
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           <div style={{ display: 'flex', fontSize: 36, fontWeight: 600 }}>Dr. Kamal Pandey</div>
           <div style={{ display: 'flex', fontSize: 24, color: '#A1A1AA' }}>
-            AI150 · IEEE & IET Senior Member · 20+ publications · 17+ years
+            AI150 by Constellation Research · IEEE & IET · 20+ publications · 17+ years
           </div>
           <div style={{ display: 'flex', fontSize: 20, color: '#71717A', marginTop: 8 }}>
             drkamalpandey.com

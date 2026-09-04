@@ -15,11 +15,6 @@ export const TRUSTED_ORGS = [
   'Ionis Pharmaceuticals',
   'Merck',
   'Microsoft',
-  'IEEE',
-  'IET',
-  'AAAI',
-  'Constellation Research',
-  'SAINexus',
 ] as const
 
-export const TRUSTED_ORGS_HEADLINE = 'Selected employers, partners & professional bodies' as const
+export const TRUSTED_ORGS_HEADLINE = 'Trusted By' as const

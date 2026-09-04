@@ -38,7 +38,7 @@ function formatStat(s: (typeof HEADLINE_IMPACT_STATS)[number]) {
 function PillarHeading({ n, eyebrow, title }: { n: string; eyebrow: string; title: string }) {
   return (
     <div className="mb-8">
-      <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-accent dark:text-blue-300">
+      <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-accent dark:text-kp-accent">
         <span className="font-mono">{n}</span>
         {eyebrow}
       </p>
@@ -54,7 +54,7 @@ export default function RecognitionPage() {
     <main
       id="main-content"
       tabIndex={-1}
-      className="min-h-screen bg-gradient-to-b from-kp-bg to-white/40 pb-24 pt-28 dark:from-dark-bg dark:to-dark-bg md:pb-28 md:pt-32"
+      className="min-h-screen bg-gradient-to-b from-kp-bg to-dark-card/40 pb-24 pt-28 dark:from-dark-bg dark:to-dark-bg md:pb-28 md:pt-32"
     >
       <div className="mx-auto max-w-content px-5 md:px-8">
         {/* Header */}
@@ -65,7 +65,7 @@ export default function RecognitionPage() {
         <h1 className="mt-4 max-w-4xl font-serif text-4xl font-light leading-tight text-kp-ink dark:text-dark-text md:text-6xl">
           Standing in the field.
         </h1>
-        <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-kp-muted dark:text-kp-line md:text-lg">
+        <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-kp-muted dark:text-kp-muted md:text-lg">
           A convergence of independent recognition — from the profession&apos;s senior engineering bodies, from
           global analyst indices, and from the peer-review community — alongside quantified enterprise impact and
           original, published research in agentic AI.
@@ -79,7 +79,7 @@ export default function RecognitionPage() {
             {HERO_IDENTITY.recognition.map((r) => (
               <div
                 key={r}
-                className="rounded-2xl border border-kp-line/70 border-t-[3px] border-t-kp-award bg-white p-7 shadow-kp-soft dark:border-white/10 dark:border-t-kp-award dark:bg-dark-card dark:shadow-none"
+                className="rounded-lg border border-kp-line/70 border-t-[3px] border-t-kp-award bg-dark-card p-7 shadow-kp-soft dark:border-white/10 dark:border-t-kp-award dark:bg-dark-card dark:shadow-none"
               >
                 <KpUiIcon name="award" size={18} className="text-kp-award" />
                 <p className="mt-3 text-base font-semibold leading-snug text-kp-ink dark:text-dark-text">{r}</p>
@@ -90,30 +90,30 @@ export default function RecognitionPage() {
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
             <div>
               <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-kp-ink dark:text-dark-text">
-                <KpUiIcon name="badgeCheck" size={16} className="shrink-0 text-kp-accent dark:text-blue-300" />
+                <KpUiIcon name="badgeCheck" size={16} className="shrink-0 text-kp-accent dark:text-kp-accent" />
                 Elite professional memberships
               </h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {HERO_IDENTITY.memberships.map((m) => (
                   <li
                     key={m}
-                    className="inline-flex rounded-full border border-kp-line/80 bg-white px-3.5 py-1.5 text-sm font-medium text-kp-ink dark:border-white/10 dark:bg-dark-card dark:text-dark-text"
+                    className="inline-flex rounded-full border border-kp-line/80 bg-dark-card px-3.5 py-1.5 text-sm font-medium text-kp-ink dark:border-white/10 dark:bg-dark-card dark:text-dark-text"
                   >
                     {m}
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 max-w-md text-sm leading-relaxed text-kp-muted dark:text-kp-line">
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-kp-muted dark:text-kp-muted">
                 Senior grades conferred only on members with demonstrated outstanding achievement, adjudged by
                 expert peer panels.
               </p>
             </div>
             <div>
               <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-kp-ink dark:text-dark-text">
-                <KpUiIcon name="globe2" size={16} className="shrink-0 text-kp-accent dark:text-blue-300" />
+                <KpUiIcon name="globe2" size={16} className="shrink-0 text-kp-accent dark:text-kp-accent" />
                 Recognition &amp; peer-review leadership
               </h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kp-muted dark:text-kp-line">
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-kp-muted dark:text-kp-muted">
                 {GLOBAL_RECOGNITION.map((line) => (
                   <li key={line}>{line}</li>
                 ))}
@@ -125,20 +125,20 @@ export default function RecognitionPage() {
         {/* Pillar 2 — Impact at scale */}
         <section className="mt-16 md:mt-20">
           <PillarHeading n="02" eyebrow="Impact at scale" title="Research translated into industrial reality." />
-          <p className="-mt-4 mb-8 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-line md:text-base">
-            As Sr. Manager / Distinguished Engineer for Enterprise Applied AI &amp; Business Applications Development at
+          <p className="-mt-4 mb-8 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-muted md:text-base">
+            As Sr. Staff Applied Engineer for Enterprise Applied AI &amp; Business Applications Development at
             Rivian, translating research and architecture into measurable enterprise outcomes.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {HEADLINE_IMPACT_STATS.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-kp-line/60 bg-white/92 p-5 shadow-kp-soft dark:border-white/10 dark:bg-dark-card/70 dark:shadow-none"
+                className="rounded-xl border border-kp-line/60 bg-dark-card/92 p-5 shadow-kp-soft dark:border-white/10 dark:bg-dark-card/70 dark:shadow-none"
               >
                 <p className="font-serif text-2xl font-light tabular-nums text-kp-ink dark:text-dark-text md:text-3xl">
                   {formatStat(s)}
                 </p>
-                <p className="mt-2 text-xs font-medium leading-snug text-kp-muted dark:text-kp-line">{s.label}</p>
+                <p className="mt-2 text-xs font-medium leading-snug text-kp-muted dark:text-kp-muted">{s.label}</p>
               </div>
             ))}
           </div>
@@ -151,23 +151,23 @@ export default function RecognitionPage() {
             {SIGNATURE_CONTRIBUTIONS.map((c) => (
               <article
                 key={c.title}
-                className="rounded-2xl border border-kp-line/70 bg-white p-7 shadow-kp-soft dark:border-white/10 dark:bg-dark-card dark:shadow-none"
+                className="rounded-lg border border-kp-line/70 bg-dark-card p-7 shadow-kp-soft dark:border-white/10 dark:bg-dark-card dark:shadow-none"
               >
                 <KpUiIcon name="microscope" size={18} className="text-kp-emerald dark:text-emerald-400" />
                 <h3 className="mt-3 font-serif text-xl font-normal text-kp-ink dark:text-dark-text">{c.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-kp-muted dark:text-kp-line">{c.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-kp-muted dark:text-kp-muted">{c.body}</p>
               </article>
             ))}
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <span className="text-sm text-kp-muted dark:text-kp-line">
+            <span className="text-sm text-kp-muted dark:text-kp-muted">
               <strong className="text-kp-ink dark:text-dark-text">20+</strong> peer-reviewed publications ·{' '}
               <strong className="text-kp-ink dark:text-dark-text">69</strong> Google Scholar citations ·{' '}
               <strong className="text-kp-ink dark:text-dark-text">70</strong> ResearchGate citations
             </span>
             <Link
               href="/research"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-blue-300"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-kp-accent"
             >
               Browse publications
               <KpUiIcon name="arrowUpRight" size={15} />
@@ -176,7 +176,7 @@ export default function RecognitionPage() {
               href={SITE.scholar}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-blue-300"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-kp-accent"
             >
               Google Scholar
               <KpUiIcon name="externalLink" size={15} />
@@ -185,7 +185,7 @@ export default function RecognitionPage() {
         </section>
 
         <p className="mt-16">
-          <Link href="/" className="text-sm font-semibold text-kp-accent hover:underline dark:text-blue-300">
+          <Link href="/" className="text-sm font-semibold text-kp-accent hover:underline dark:text-kp-accent">
             ← Back to home
           </Link>
         </p>

@@ -12,12 +12,12 @@
   width: 2.25rem;
   height: 2px;
   margin-top: 0.625rem;
-  background: linear-gradient(90deg, #1d4ed8, transparent);
+  background: linear-gradient(90deg, #d4af37, transparent);
   border-radius: 1px;
 }
 
 .dark .kp-hero-identity-nameblock::after {
-  background: linear-gradient(90deg, #60a5fa, transparent);
+  background: linear-gradient(90deg, #f0cf6a, transparent);
 }
 
 /* Headline + stats + copy share one grid so copy isn’t pushed below a tall stats column */
@@ -80,24 +80,32 @@
 /* Soft ambient light behind the hero — keeps layout flat, adds depth */
 /* Keep hero background close to flat kp-bg — top radial was reading as a pale band above the headline */
 .kp-hero {
-  background-color: #f6f7f9;
-  background-image: radial-gradient(ellipse 80% 55% at 100% 100%, rgba(5, 150, 105, 0.04), transparent 50%);
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 100% 0%, rgba(212, 175, 55, 0.08), transparent 55%),
+    linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+  background-size: auto, 60px 60px, 60px 60px;
 }
 
 .dark .kp-hero {
-  background-color: #070d1c;
-  background-image: radial-gradient(ellipse 70% 50% at 100% 100%, rgba(5, 150, 105, 0.06), transparent 50%);
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 100% 0%, rgba(212, 175, 55, 0.08), transparent 55%),
+    linear-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.035) 1px, transparent 1px);
+  background-size: auto, 60px 60px, 60px 60px;
 }
 
 /* Hero “spec” slab — charcoal field; 14px radius reads closer to continuous corners on retina */
 .kp-hero-spec-panel {
   position: relative;
-  border-radius: 14px;
-  background: linear-gradient(168deg, #0a0a0a 0%, #141414 42%, #0c0c0c 100%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #0d1b2a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 28px 90px -28px rgba(0, 0, 0, 0.55);
+    0 1px 0 rgba(240, 207, 106, 0.06) inset,
+    0 28px 90px -28px rgba(0, 0, 0, 0.6);
 }
 
 .kp-hero-spec-panel::before {
@@ -128,7 +136,7 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.4s ease;
-  background: radial-gradient(440px circle at var(--mx) var(--my), rgba(96, 165, 250, 0.16), transparent 60%);
+  background: radial-gradient(440px circle at var(--mx) var(--my), rgba(212, 175, 55, 0.14), transparent 60%);
 }
 
 .kp-hero-spec-panel:hover .kp-hero-spotlight {
@@ -148,9 +156,9 @@
 }
 
 .kp-hero-spec-cta-primary {
-  border-radius: 10px;
-  background: #f5f5f5;
-  color: #0a0a0a;
+  border-radius: 4px;
+  background: #d4af37;
+  color: #0f172a;
   font-weight: 600;
   letter-spacing: 0.01em;
   transition:
@@ -160,7 +168,7 @@
 }
 
 .kp-hero-spec-cta-primary:hover {
-  background: #ffffff;
+  background: #f0cf6a;
 }
 
 .kp-hero-spec-cta-primary:active {
@@ -168,14 +176,14 @@
 }
 
 .kp-hero-spec-cta-primary:focus-visible {
-  outline: 2px solid #f5f5f5;
+  outline: 2px solid #f0cf6a;
   outline-offset: 3px;
 }
 
 .kp-hero-spec-cta-secondary {
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #fafafa;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #d4af37;
   font-weight: 600;
   letter-spacing: 0.01em;
   background: transparent;
@@ -186,8 +194,8 @@
 }
 
 .kp-hero-spec-cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(212, 175, 55, 0.08);
+  border-color: #d4af37;
 }
 
 .kp-hero-spec-cta-secondary:active {
@@ -240,7 +248,7 @@ html {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #1d4ed8;
+  background: #d4af37;
   pointer-events: none;
   z-index: 9999;
   opacity: 0;
@@ -264,7 +272,7 @@ html {
 }
 
 .dark .kp-cursor-dot {
-  background: #60a5fa;
+  background: #f0cf6a;
 }
 
 .dark .kp-cursor-dot.is-hover {
@@ -289,7 +297,7 @@ html {
   bottom: -2px;
   width: 0;
   height: 1px;
-  background: #1d4ed8;
+  background: #d4af37;
   transition: width 0.2s ease-out;
 }
 
@@ -299,15 +307,15 @@ html {
 }
 
 .kp-nav-link.is-active {
-  color: #1d4ed8;
+  color: #d4af37;
 }
 
 .dark .kp-nav-link::after {
-  background: #60a5fa;
+  background: #f0cf6a;
 }
 
 .dark .kp-nav-link.is-active {
-  color: #60a5fa;
+  color: #f0cf6a;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -332,45 +340,46 @@ html {
 
 /* Topmate — storefront-style CTA (aligned with topmate.io creator marketing) */
 .kp-topmate-cta {
-  color: #fff;
-  background: linear-gradient(92deg, #5b21b6 0%, #7c3aed 38%, #c026d3 72%, #db2777 100%);
+  color: #0f172a;
+  background: #d4af37;
   box-shadow:
-    0 1px 2px rgba(91, 33, 182, 0.18),
-    0 4px 16px -3px rgba(124, 58, 237, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+    0 1px 2px rgba(212, 175, 55, 0.18),
+    0 4px 16px -3px rgba(212, 175, 55, 0.32);
+  border: 1px solid #d4af37;
 }
 
 .kp-topmate-cta:hover {
-  color: #fff;
-  filter: brightness(1.06);
+  color: #0f172a;
+  background: #f0cf6a;
+  filter: brightness(1.02);
   box-shadow:
-    0 2px 3px rgba(91, 33, 182, 0.22),
-    0 6px 20px -3px rgba(192, 38, 211, 0.42);
+    0 2px 3px rgba(212, 175, 55, 0.2),
+    0 6px 20px -3px rgba(212, 175, 55, 0.38);
 }
 
 .kp-topmate-cta:focus-visible {
-  outline: 2px solid #e879f9;
+  outline: 2px solid #f0cf6a;
   outline-offset: 3px;
 }
 
 .kp-topmate-ghost {
-  color: #6d28d9;
-  background: rgba(124, 58, 237, 0.08);
-  border: 1.5px solid rgba(124, 58, 237, 0.45);
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
 }
 
 .kp-topmate-ghost:hover {
-  color: #fff;
-  background: linear-gradient(92deg, #5b21b6 0%, #7c3aed 50%, #a21caf 100%);
-  border-color: transparent;
+  color: #0f172a;
+  background: #d4af37;
+  border-color: #d4af37;
 }
 
 .dark .kp-topmate-ghost {
-  color: #e9d5ff;
-  background: rgba(124, 58, 237, 0.15);
-  border-color: rgba(216, 180, 254, 0.35);
+  color: #f0cf6a;
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(240, 207, 106, 0.4);
 }
 
 .dark .kp-topmate-ghost:hover {
-  color: #fff;
+  color: #0f172a;
 }

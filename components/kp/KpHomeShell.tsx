@@ -7,7 +7,6 @@ import KpExpertise from './KpExpertise'
 import KpPublications from './KpPublications'
 import KpHonors from './KpHonors'
 import KpCredStrip from './KpCredStrip'
-import KpInitiatives from './KpInitiatives'
 import KpBooks from './KpBooks'
 import KpContact from './KpContact'
 
@@ -15,16 +14,15 @@ export default function KpHomeShell() {
   return (
     <main id="main-content" tabIndex={-1}>
       <KpHero />
-      <KpCaseStudies />
-      <KpHeadlineImpact />
+      <KpCredStrip />
       <KpAbout />
-      <KpEducationCerts />
+      <KpHeadlineImpact />
+      <KpCaseStudies />
+      <KpExpertise />
       <KpPublications />
       <KpHonors />
       <KpBooks />
-      <KpExpertise />
-      <KpInitiatives />
-      <KpCredStrip />
+      <KpEducationCerts />
       <KpContact />
     </main>
   )

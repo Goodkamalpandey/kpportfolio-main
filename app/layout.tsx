@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { DM_Sans, Playfair_Display, JetBrains_Mono } from 'next/font/google'
+import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import './kp.css'
 import KpCursor from '@/components/kp/KpCursor'
@@ -9,7 +9,7 @@ import KpFooter from '@/components/kp/KpFooter'
 import KpScrollProgress from '@/components/kp/KpScrollProgress'
 import { SITE } from '@/components/kp/data'
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-kp-sans',
@@ -37,13 +37,13 @@ const jsonLd = {
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'DBA, MCA',
-  jobTitle: 'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development',
+  jobTitle: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',
   },
   description:
-    'AI150 Global AI Influencer 2025–2026 and 2026–2027. Global AI Leader. Senior Member IEEE and IET. Sr. Manager / Distinguished Engineer for Enterprise Applied AI & Business Applications Development at Rivian. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, 17+ years of global experience, and $25M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
+    'Artificial Intelligence 150 (AI150) by Constellation Research for 2025–2026 and 2026–2027. Global AI Leader. Senior Member IEEE and IET. Sr. Staff Applied Engineer for Enterprise Applied AI & Business Applications Development at Rivian. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, 17+ years of global experience, and $125M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
   url: SITE.domain,
   email: SITE.email,
    address: {
@@ -89,7 +89,7 @@ const jsonLd = {
     'GCP',
   ],
   award: [
-    'AI150 Global AI Influencer 2025-2026 & 2026-2027',
+    'Artificial Intelligence 150 (AI150) by Constellation Research — 2025–2026 and 2026–2027',
     'Global AI Leader 2025',
     'IEEE Senior Member',
     'IET Senior Member',
@@ -112,16 +112,16 @@ const jsonLd = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F6F7F9' },
-    { media: '(prefers-color-scheme: dark)', color: '#070D1C' },
+    { media: '(prefers-color-scheme: light)', color: '#0F172A' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F172A' },
   ],
   /** Notched devices — full-bleed backgrounds respect safe areas in layout/CSS */
   viewportFit: 'cover',
 }
 
-const ogTitle = 'Dr. Kamal Pandey | Architecting the Future of Agentic Enterprise'
+const ogTitle = 'Dr. Kamal Pandey | Engineering Applied AI for Enterprise Transformation'
 const ogDescription =
-  'Sr. Manager / Distinguished Engineer — Enterprise Applied AI & Business Applications Development @ Rivian. AI150 Global AI Influencer. IEEE and IET Senior Member. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, and 17+ years across four continents.'
+  'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development @ Rivian. Artificial Intelligence 150 (AI150) by Constellation Research. IEEE and IET Senior Member. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, and 17+ years across four continents.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -133,7 +133,7 @@ export const metadata: Metadata = {
     'Agentic enterprise',
     'Rivian',
     'IEEE Senior Member',
-    'IET Fellow',
+    'IET Senior Member',
     'AI150',
     'Synthetic Reasoning',
     'Vertex AI',
@@ -160,7 +160,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
       <body className="min-h-dvh bg-kp-bg pl-[env(safe-area-inset-left,0px)] pr-[env(safe-area-inset-right,0px)] font-sans text-base text-kp-ink antialiased dark:bg-dark-bg dark:text-dark-text">
         <a href="#main-content" className="kp-skip-link">
           Skip to main content

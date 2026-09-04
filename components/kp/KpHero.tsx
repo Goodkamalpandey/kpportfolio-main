@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import KpHeroStats from './KpHeroStats'
 import KpUiIcon from './KpUiIcon'
@@ -40,7 +39,7 @@ export default function KpHero() {
           >
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-14">
               <div className="min-w-0">
-                <p className="font-mono text-caption2 font-semibold uppercase leading-relaxed tracking-[0.16em] text-blue-300">
+                <p className="font-mono text-caption2 font-semibold uppercase leading-relaxed tracking-[0.16em] text-kp-accent">
                   {HERO_IDENTITY.roleTitle}
                 </p>
                 <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-footnote text-neutral-400">
@@ -55,10 +54,10 @@ export default function KpHero() {
                 <h1 className="mt-8 max-w-4xl text-pretty font-serif text-5xl font-medium leading-[0.96] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[5.5rem]">
                   {HERO_IDENTITY.displayName}
                 </h1>
-                <p className="mt-6 max-w-3xl text-pretty font-sans text-xl font-medium leading-tight tracking-[-0.025em] text-neutral-100 sm:text-2xl md:text-3xl">
-                  {SITE.tagline}
+                <p className="mt-5 font-serif text-lg italic tracking-[0.02em] text-kp-accent sm:text-xl">
+                  Applied AI Engineer&nbsp; · &nbsp;Enterprise Architect&nbsp; · &nbsp;Digital Transformation Leader&nbsp; · &nbsp;AI Researcher
                 </p>
-                <p className="mt-6 max-w-2xl border-l-2 border-blue-500/70 pl-5 text-pretty text-sm leading-relaxed text-neutral-400 md:text-base">
+                <p className="mt-6 max-w-2xl border-l-2 border-kp-accent/70 pl-5 text-pretty text-sm leading-relaxed text-neutral-400 md:text-base">
                   {SITE.heroSubheadline}
                 </p>
 
@@ -86,7 +85,7 @@ export default function KpHero() {
 
               <div className="mx-auto w-full max-w-sm lg:mx-0">
                 <figure>
-                  <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden rounded-2xl bg-white/[0.06] shadow-[0_20px_60px_-24px_rgba(0,0,0,0.8)] ring-1 ring-white/10 lg:max-w-none">
+                  <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden rounded-lg bg-dark-card/[0.06] shadow-[0_20px_60px_-24px_rgba(0,0,0,0.8)] ring-1 ring-white/10 lg:max-w-none">
                     <Image
                       src={SITE.heroPortraitSrc}
                       alt={SITE.heroPortraitAlt}
@@ -100,36 +99,13 @@ export default function KpHero() {
                     Ai4 · 2025
                   </figcaption>
                 </figure>
-                <div className="mt-6">
-                  <KpHeroStats variant="spec" />
-                </div>
               </div>
             </div>
 
-            <div className="mt-10 grid gap-7 border-t border-white/10 pt-8 md:grid-cols-[1.35fr_1fr_1fr] md:gap-8">
-              <div>
-                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Education</p>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-300">{HERO_IDENTITY.degrees}</p>
-              </div>
-              <div>
-                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Professional standing</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {HERO_IDENTITY.memberships.map((membership) => (
-                    <span key={membership} className="rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-caption2 font-medium text-neutral-200">
-                      {membership}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Recognition</p>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-300">{HERO_IDENTITY.heroPrimaryRecognition}</p>
-                <Link href="/recognition" className="mt-3 inline-flex items-center gap-1.5 text-footnote font-semibold text-blue-300 hover:underline">
-                  View recognition
-                  <KpUiIcon name="arrowUpRight" size={13} className="text-blue-300" />
-                </Link>
-              </div>
+            <div className="mt-10 border-t border-white/10 pt-8">
+              <KpHeroStats variant="spec" />
             </div>
+
           </motion.header>
         </div>
 
