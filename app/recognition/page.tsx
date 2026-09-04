@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import KpUiIcon from '@/components/kp/KpUiIcon'
-import { GLOBAL_RECOGNITION, HERO_IDENTITY, HEADLINE_IMPACT_STATS, SITE } from '@/components/kp/data'
+import {
+  GLOBAL_RECOGNITION,
+  HERO_IDENTITY,
+  HEADLINE_IMPACT_STATS,
+  SITE,
+  createPageMetadata,
+} from '@/components/kp/data'
 
-export const metadata: Metadata = {
-  title: 'Recognition & Distinction | Dr. Kamal Pandey',
-  description:
-    'Global recognition, elite professional memberships, peer-review judging, quantified enterprise impact, and pioneering agentic-AI research by Dr. Kamal Pandey.',
-}
+export const metadata = createPageMetadata(
+  '/recognition',
+  'Recognition & Distinction | Dr. Kamal Pandey',
+  'Global recognition, elite professional memberships, peer-review judging, quantified enterprise impact, and pioneering agentic-AI research by Dr. Kamal Pandey.'
+)
 
 /** Signature original contributions — sourced from Dr. Pandey's peer-reviewed corpus. */
 const SIGNATURE_CONTRIBUTIONS = [
@@ -66,13 +71,18 @@ export default function RecognitionPage() {
           Standing in the field.
         </h1>
         <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-kp-muted dark:text-kp-muted md:text-lg">
-          A convergence of independent recognition — from the profession&apos;s senior engineering bodies, from
-          global analyst indices, and from the peer-review community — alongside quantified enterprise impact and
-          original, published research in agentic AI.
+          A structured record of recognition from professional engineering bodies, global analyst indices, employers,
+          and the peer-review community — alongside quantified enterprise impact and original research in agentic AI.
         </p>
 
+        <nav className="mt-10 flex flex-wrap gap-2 border-b border-kp-line/70 pb-5 dark:border-white/10" aria-label="Recognition categories">
+          <a href="#global-acclaim" className="rounded-full border border-kp-accent/35 bg-kp-accent/10 px-4 py-2 text-sm font-semibold text-kp-accent">Global acclaim</a>
+          <a href="#impact-at-scale" className="rounded-full border border-kp-line/70 px-4 py-2 text-sm font-semibold text-kp-muted transition hover:border-kp-accent/35 hover:text-kp-accent">Impact at scale</a>
+          <a href="#research-contributions" className="rounded-full border border-kp-line/70 px-4 py-2 text-sm font-semibold text-kp-muted transition hover:border-kp-accent/35 hover:text-kp-accent">Research contributions</a>
+        </nav>
+
         {/* Pillar 1 — Global acclaim */}
-        <section className="mt-16 md:mt-20">
+        <section id="global-acclaim" className="scroll-mt-24 pt-16 md:pt-20">
           <PillarHeading n="01" eyebrow="Global acclaim" title="Recognized among the leaders of the field." />
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -123,10 +133,10 @@ export default function RecognitionPage() {
         </section>
 
         {/* Pillar 2 — Impact at scale */}
-        <section className="mt-16 md:mt-20">
+        <section id="impact-at-scale" className="scroll-mt-24 pt-16 md:pt-20">
           <PillarHeading n="02" eyebrow="Impact at scale" title="Research translated into industrial reality." />
           <p className="-mt-4 mb-8 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-muted md:text-base">
-            As Sr. Staff Applied Engineer for Enterprise Applied AI &amp; Business Applications Development at
+            As Sr. Staff Applied AI Engineer for Enterprise Applied AI at
             Rivian, translating research and architecture into measurable enterprise outcomes.
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -145,7 +155,7 @@ export default function RecognitionPage() {
         </section>
 
         {/* Pillar 3 — Pioneering research */}
-        <section className="mt-16 md:mt-20">
+        <section id="research-contributions" className="scroll-mt-24 pt-16 md:pt-20">
           <PillarHeading n="03" eyebrow="Pioneering research" title="Original contributions to trustworthy AI." />
           <div className="grid gap-6 md:grid-cols-2">
             {SIGNATURE_CONTRIBUTIONS.map((c) => (
@@ -160,11 +170,6 @@ export default function RecognitionPage() {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <span className="text-sm text-kp-muted dark:text-kp-muted">
-              <strong className="text-kp-ink dark:text-dark-text">20+</strong> peer-reviewed publications ·{' '}
-              <strong className="text-kp-ink dark:text-dark-text">69</strong> Google Scholar citations ·{' '}
-              <strong className="text-kp-ink dark:text-dark-text">70</strong> ResearchGate citations
-            </span>
             <Link
               href="/research"
               className="inline-flex items-center gap-2 text-sm font-semibold text-kp-accent hover:underline dark:text-kp-accent"

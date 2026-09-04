@@ -30,15 +30,13 @@ const MOBILE = DESKTOP.map(({ label, href, icon }) => ({ label, href, icon }))
 
 /** Home scroll-spy — document order in KpHomeShell */
 const SECTION_IDS = [
-  'trusted',
   'about',
+  'education',
   'impact',
-  'work',
   'expertise',
   'publications',
   'honors',
-  'books',
-  'education',
+  'work',
   'contact',
 ] as const
 
@@ -151,7 +149,7 @@ export default function KpNav() {
               )
             })}
             <Link
-              href="/#contact"
+              href="/contact"
               className="ml-2 inline-flex min-h-[40px] items-center gap-1.5 rounded bg-kp-accent px-4 py-2 text-xs font-semibold text-kp-navy shadow-kp-primary transition-[background-color,transform] duration-200 ease-out-soft hover:bg-kp-award active:scale-[0.98] dark:bg-kp-accent dark:hover:bg-kp-award motion-reduce:active:scale-100"
             >
               <KpUiIcon name="send" size={14} className="text-kp-navy" />

@@ -5,7 +5,7 @@ import { ABOUT_P1, ABOUT_P2, SITE } from './data'
 const TIMELINE_ROWS = [
   {
     period: 'Current',
-    title: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development',
+    title: 'Sr. Staff Applied AI Engineer — Enterprise Applied AI',
     org: 'Rivian Automotive Inc.',
   },
   {
@@ -20,7 +20,7 @@ const TIMELINE_ROWS = [
   },
   {
     period: '2015–2019',
-    title: 'Sr. Architect — Digital Workplace & Modern Workplace',
+    title: 'Sr. Architect — Digital Workplace, M365, Future of Work',
     org: 'The Goodyear Tire & Rubber Company',
   },
   {

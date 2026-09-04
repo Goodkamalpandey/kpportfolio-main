@@ -37,13 +37,18 @@ const jsonLd = {
   name: 'Dr. Kamal Pandey',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'DBA, MCA',
-  jobTitle: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development',
+  jobTitle: 'Sr. Staff Applied AI Engineer — Enterprise Applied AI',
   worksFor: {
     '@type': 'Organization',
     name: 'Rivian Automotive Inc.',
   },
+  memberOf: [
+    { '@type': 'Organization', name: 'IEEE', description: 'Senior Member' },
+    { '@type': 'Organization', name: 'IET', description: 'Member' },
+    { '@type': 'Organization', name: 'AAAI', description: 'Member' },
+  ],
   description:
-    'Artificial Intelligence 150 (AI150) by Constellation Research for 2025–2026 and 2026–2027. Global AI Leader. Senior Member IEEE and IET. Sr. Staff Applied Engineer for Enterprise Applied AI & Business Applications Development at Rivian. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, 17+ years of global experience, and $125M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
+    'Artificial Intelligence 150 (AI150) by Constellation Research for 2025–2026 and 2026–2027. Senior Member IEEE and Member IET. Sr. Staff Applied AI Engineer for Enterprise Applied AI at Rivian. 69 Google Scholar citations, 70 ResearchGate citations, 19 indexed research works, 17+ years of global experience, and $125M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
   url: SITE.domain,
   email: SITE.email,
    address: {
@@ -89,13 +94,14 @@ const jsonLd = {
     'GCP',
   ],
   award: [
-    'Artificial Intelligence 150 (AI150) by Constellation Research — 2025–2026 and 2026–2027',
-    'Global AI Leader 2025',
-    'IEEE Senior Member',
-    'IET Senior Member',
-    'Employee of the Year 2015 — L&T Infotech',
-    'MVP 2014 — L&T Infotech',
-    'Research & Innovation Awards — HCL Tech',
+    'Artificial Intelligence 150 (AI150) — 2025–2026 · Constellation Research Inc.',
+    'Artificial Intelligence 150 (AI150) — 2026–2027 · Constellation Research Inc.',
+    'BoxWorks Customer Award — Ecosystem Innovator (2025)',
+    'Best Performing Project Award — L&T Infotech (2014)',
+    'Valuable Contribution Award — L&T Infotech',
+    'R&D Innovation Award — HCL Technologies (2011)',
+    'Top 100 ADPList Mentor (2024)',
+    'Excellence in Voluntary Activities Award — Goodyear',
   ],
   sameAs: [
     SITE.linkedin,
@@ -121,7 +127,7 @@ export const viewport: Viewport = {
 
 const ogTitle = 'Dr. Kamal Pandey | Engineering Applied AI for Enterprise Transformation'
 const ogDescription =
-  'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development @ Rivian. Artificial Intelligence 150 (AI150) by Constellation Research. IEEE and IET Senior Member. 69 Google Scholar citations, 70 ResearchGate citations, 20+ peer-reviewed publications, and 17+ years across four continents.'
+  'Sr. Staff Applied AI Engineer — Enterprise Applied AI @ Rivian. Artificial Intelligence 150 (AI150) by Constellation Research. IEEE Senior Member and IET Member. 69 Google Scholar citations, 70 ResearchGate citations, 19 indexed research works, and 17+ years across four continents.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -133,7 +139,7 @@ export const metadata: Metadata = {
     'Agentic enterprise',
     'Rivian',
     'IEEE Senior Member',
-    'IET Senior Member',
+    'IET Member',
     'AI150',
     'Synthetic Reasoning',
     'Vertex AI',

@@ -1,5 +1,6 @@
 /** Site config + re-exports from verified corpus. */
 
+import type { Metadata } from 'next'
 import {
   PUBLICATIONS_MOVES_FIELD,
   SCHOLAR_WORKS_BY_PUBDATE,
@@ -12,9 +13,9 @@ export const SITE = {
   nameWithCredentials: 'Dr. Kamal Pandey, PhD in Information Systems (in progress), DBA in Computer Science, MCA, BCA',
   tagline: 'Engineering Applied AI for Enterprise Transformation',
   heroSubheadline:
-    'I lead practical AI engineering from architecture through production—building enterprise AI systems and business applications that transform complex global operations.',
+    'I lead Applied AI engineering end to end—directing the architecture, development, and production deployment of enterprise-grade AI systems. My work on global business and productivity applications transforms complex operations, improves workforce efficiency, and advances physical-asset and endpoint engineering through Applied AI.',
   position:
-    'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
+    'Sr. Staff Applied AI Engineer — Enterprise Applied AI @ Rivian Automotive Inc. · Orange County / Los Angeles, CA',
   email: 'kamalkismca@gmail.com',
   /** Creator page — https://topmate.io/kamalpandey/ */
   topmate: 'https://topmate.io/kamalpandey/',
@@ -34,21 +35,40 @@ export const SITE = {
   heroPortraitAlt: 'Dr. Kamal Pandey speaking at Ai4 2025',
 } as const
 
+export function createPageMetadata(path: string, title: string, description: string): Metadata {
+  const url = `${SITE.domain}${path}`
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url,
+      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: ['/opengraph-image'] },
+  }
+}
+
 /** Hero identity strip — structured for editorial hierarchy (credentials → role → place → honors). */
 export const HERO_IDENTITY = {
   displayName: 'Dr. Kamal Pandey',
   degrees: 'PhD in Information Systems (in progress), Doctor of Business Administration (DBA) in Computer Science, MCA, BCA',
-  roleTitle: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development',
+  roleTitle: 'Sr. Staff Applied AI Engineer — Enterprise Applied AI',
   employer: 'Rivian Automotive Inc.',
   location: 'Orange County / Los Angeles, CA',
-  memberships: ['Senior Member IEEE', 'Senior Member IET', 'Member AAAI'] as const,
+  memberships: ['Senior Member IEEE', 'Member IET', 'Member AAAI'] as const,
   /** Full list — Recognition page + schema. */
   recognition: [
-    'Artificial Intelligence 150 (AI150) by Constellation Research — 2025–2026 and 2026–2027',
-    'Global AI Leader 2025–2026',
-    'IEEE SoutheastCon Best Paper Award 2025',
-    'IEEE Access Best Paper Award 2025',
-    'Box Work (AI) Award 2025',
+    'Artificial Intelligence 150 (AI150) — 2025–2026 · Constellation Research Inc.',
+    'Artificial Intelligence 150 (AI150) — 2026–2027 · Constellation Research Inc.',
+    'BoxWorks Customer Award — Ecosystem Innovator (2025)',
+    'Best Performing Project Award — L&T Infotech (2014)',
+    'Valuable Contribution Award — L&T Infotech',
+    'R&D Innovation Award — HCL Technologies (2011)',
+    'Top 100 ADPList Mentor (2024)',
     'Top 100 AI Reviewer (IEEE)',
     'Top 100 AI Reviewer (ACM)',
   ] as const,

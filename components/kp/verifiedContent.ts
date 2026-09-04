@@ -256,8 +256,9 @@ export const EMPLOYER_RECOGNITION = [
   'Rivian CPO Recognition — COVID management & EHS app development',
   'Rivian CIO Recognition — Google Workspace + Microsoft/Google Cloud AI',
   'Goodyear CIO Recognition — modern global IT, HR & enterprise intranet; first responsive SharePoint portal (“GO” intranet rollout)',
-  'L&T Infotech — Employee of the Year 2015 (client service excellence & contribution)',
-  'HCL Technologies — R&D Innovation Delivery Individual Award (Tyco project)',
+  'L&T Infotech — Best Performing Project Award (E8759 Microsoft Support Project, Sep 19, 2014)',
+  'L&T Infotech — Valuable Contribution Award (SharePoint/HBO team technical contribution)',
+  'HCL Technologies — R&D Innovation Award (2011)',
   'Goodyear — Excellence in Voluntary Activities Award (Food Bank, United Way, LeBron James Family Foundation)',
 ] as const
 
@@ -279,7 +280,7 @@ export const EDUCATION = [
     years: '2007',
   },
   {
-    degree: 'Bachelor of Computer Science & Engineering',
+    degree: 'Bachelor of Computer Applications (BCA)',
     school: 'Awadhesh Pratap Singh University, India',
     years: '',
   },
@@ -376,7 +377,7 @@ export const HEADLINE_IMPACT_STATS = [
   { value: 17, suffix: '+', label: 'Years of global experience' },
   { value: 69, suffix: '', label: 'Google Scholar citations' },
   { value: 70, suffix: '', label: 'ResearchGate citations' },
-  { value: 20, suffix: '+', label: 'Peer-reviewed publications' },
+  { value: 19, suffix: '', label: 'Indexed research works' },
   { value: 6246, suffix: '', label: 'ResearchGate article reads', format: 'comma' as const },
   { value: 100, suffix: '+', label: 'Peer reviews (verified reviewer)' },
   { value: 30, suffix: '+', label: 'Technical certifications (AI, cloud, architecture)' },
@@ -405,10 +406,10 @@ export const HOME_IMPACT_STATS = [
 export const HERO_STATS = [
   { value: 17, suffix: '+', label: 'Years', sub: 'Global experience', icon: 'clock' as const },
   { value: 69, suffix: '', label: 'Citations', sub: 'Google Scholar', icon: 'bookmark' as const },
-  { value: 20, suffix: '+', label: 'Publications', sub: 'Peer-reviewed', icon: 'library' as const },
+  { value: 19, suffix: '', label: 'Research works', sub: 'Indexed 2024–2026', icon: 'library' as const },
   { prefix: '$', value: 125, suffix: 'M+', label: 'Annual savings', sub: 'Goodyear + Rivian', icon: 'rocket' as const },
   { value: 2, suffix: '', label: 'Books', sub: 'Published', icon: 'bookOpen' as const },
-  { value: 3, suffix: '', label: 'IP', sub: '1 patent in progress', icon: 'fileText' as const },
+  { value: 3, suffix: '', label: 'IP assets', sub: 'Including 1 patent in progress', icon: 'fileText' as const },
 ] as const
 
 export const INITIATIVES = [
@@ -462,13 +463,12 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     org: 'Rivian Automotive Inc.',
     location: 'Orange County / Los Angeles, CA',
     roles: [
-      { title: 'Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development', dates: '' },
+      { title: 'Sr. Staff Applied AI Engineer — Enterprise Applied AI', dates: '' },
       { title: 'Solutions Architect — Enterprise Applied AI & Software Engineering', dates: '' },
       { title: 'Staff Software Engineer — Digital Workplace & Automation', dates: 'Feb 2021 – Sep 2022' },
     ],
     bullets: [
       'Partnered with CIO/CPO as technical architect for a major enterprise AI program.',
-      '$125M+ in annual operational savings through Goodyear and Rivian digital workplace transformation.',
       'Led Rivian–Volkswagen JV digital transformation (Foundry-style AI).',
       'Architected 50+ agentic AI systems using Gemini and Claude → throughput +75%.',
       'Paint defect detection: accuracy 40% → 98% (computer vision / PyTorch).',
@@ -530,7 +530,6 @@ export const CAREER_ROLES: readonly CareerRole[] = [
     bullets: [
       '$600K annually saved — modern workplace for 65,000 associates + 11,000 contractors globally.',
       '“GO” multilingual intranet; deprecated legacy Tridion CMS → $500K direct savings; Office 365 ROI +56%.',
-      '$600K YoY direct cost elimination (3 CMS products, 10,000+ apps).',
       '$400K annual savings + 40% productivity via enterprise Teams chatbot.',
       '$1M SharePoint + Tridion CMS migration (transit authority).',
       'Goodyear.com chatbot: $2.3M revenue; 17% conversion.',
@@ -554,7 +553,7 @@ export const CAREER_ROLES: readonly CareerRole[] = [
       { title: 'Senior Software Engineer', dates: '2012–2013' },
     ],
     bullets: [
-      'Consultant for HOB, Viacom, Warner Bros, WSP Global (~$5M projects).',
+      'Consultant for HBO, Viacom, Warner Bros, WSP Global (~$5M projects).',
       'Won $1.5M contract — blended digital content + intranet solution.',
       'Automated 69.35% of Viacom Ad Sales and Nickelodeon processes.',
       'Viacom Ad Sales site: +30% sales; +56% sales collaboration.',
@@ -562,7 +561,8 @@ export const CAREER_ROLES: readonly CareerRole[] = [
       'New site development time −80% via reusable templates.',
       'Process automation: due diligence efficiency +45%.',
       'Completed project 2 weeks ahead of schedule.',
-      'Employee of the Year 2015.',
+      'Best Performing Project Award — E8759 Microsoft Support Project (Sep 19, 2014).',
+      'Valuable Contribution Award — SharePoint/HBO team technical contribution.',
     ],
     tags: ['SharePoint', 'Digital workplace', 'Media'],
     icon: 'rocket',
@@ -585,7 +585,7 @@ export const CAREER_ROLES: readonly CareerRole[] = [
       'Enterprise search for Commonwealth Bank (55K associates) → adoption +37%.',
       '50,000+ SharePoint sites migrated for SGX, Commonwealth Bank, Fonterra, CITI.',
       'Won $1.5M business process automation project (Tyco).',
-      'R&D Innovation Delivery Individual Award from HCL Tech.',
+      'R&D Innovation Award (2011).',
     ],
     tags: ['SharePoint', 'ECM', 'Migration'],
     icon: 'cpu',

@@ -63,33 +63,6 @@ export default function KpContact({ page = false }: { page?: boolean }) {
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed tracking-[-0.01em] text-kp-muted dark:text-kp-muted md:text-lg">
             {CONTACT_SUBTEXT}
           </p>
-          <div className="kp-grouped-inset mx-auto mt-10 flex w-full max-w-lg flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
-            <a
-              href={`mailto:${SITE.email}`}
-              className="inline-flex min-h-12 w-full flex-1 items-center justify-center gap-2 rounded bg-kp-accent px-5 py-3 text-sm font-semibold leading-tight text-kp-navy shadow-kp-primary transition duration-200 ease-out-soft hover:bg-kp-award active:scale-[0.98] motion-safe:hover:brightness-[1.02] motion-reduce:active:scale-100 sm:min-w-[10.5rem] sm:w-auto"
-            >
-              <KpUiIcon name="mail" size={14} className="text-kp-navy" />
-              Email Dr. Pandey
-            </a>
-            <a
-              href={SITE.topmate}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="kp-topmate-cta inline-flex min-h-12 w-full flex-1 items-center justify-center gap-2 rounded px-5 py-3 text-sm font-semibold leading-tight transition duration-200 ease-out-soft active:scale-[0.98] motion-safe:hover:brightness-[1.04] motion-reduce:active:scale-100 sm:min-w-[10.5rem] sm:w-auto"
-            >
-              <KpUiIcon name="calendarDays" size={14} className="text-kp-navy" />
-              Book on Topmate
-            </a>
-            <a
-              href={SITE.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-12 w-full flex-1 items-center justify-center gap-2 rounded border border-kp-accent px-5 py-3 text-sm font-semibold leading-tight text-kp-accent transition duration-200 ease-out-soft hover:bg-kp-accent hover:text-kp-navy active:scale-[0.98] dark:border-kp-accent dark:text-kp-accent dark:hover:bg-kp-accent dark:hover:text-kp-navy motion-reduce:active:scale-100 sm:min-w-[10.5rem] sm:w-auto"
-            >
-              <KpUiIcon name="linkedin" size={14} />
-              LinkedIn
-            </a>
-          </div>
         </div>
 
         <form

@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            Sr. Staff Applied Engineer · Enterprise Applied AI & Business Applications Development · Rivian
+            Sr. Staff Applied AI Engineer · Enterprise Applied AI · Rivian
           </div>
           <div
             style={{
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           <div style={{ display: 'flex', fontSize: 36, fontWeight: 600 }}>Dr. Kamal Pandey</div>
           <div style={{ display: 'flex', fontSize: 24, color: '#A1A1AA' }}>
-            AI150 by Constellation Research · IEEE & IET · 20+ publications · 17+ years
+            AI150 by Constellation Research · IEEE & IET · 19 research works · 17+ years
           </div>
           <div style={{ display: 'flex', fontSize: 20, color: '#71717A', marginTop: 8 }}>
             drkamalpandey.com

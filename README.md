@@ -1,6 +1,6 @@
 # Dr. Kamal Pandey — Official Portfolio
 
-Next.js 14 portfolio for **Dr. Kamal Pandey** (Sr. Staff Applied Engineer — Enterprise Applied AI & Business Applications Development @ Rivian).
+Next.js 14 portfolio for **Dr. Kamal Pandey** (Sr. Staff Applied AI Engineer — Enterprise Applied AI @ Rivian).
 
 Live site: [drkamalpandey.com](https://www.drkamalpandey.com)
 
@@ -37,8 +37,9 @@ npm run dev
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Homepage (hero → work → impact → about → pubs → honors → books → capabilities → initiatives → network → contact) |
-| `/research` | Full publication index |
+| `/` | Executive overview (hero → network → about → impact → capabilities → featured research → recognition → selected systems → contact) |
+| `/work` | Full Applied AI systems portfolio |
+| `/research` | Categorized publication index and books |
 | `/recognition` | Awards, memberships, full impact ledger |
 | `/experience` | Career timeline |
 | `/consulting` | Advisory offerings |

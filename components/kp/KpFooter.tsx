@@ -26,7 +26,7 @@ export default function KpFooter() {
   const y = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-white/[0.08] bg-kp-navy text-slate-200">
+    <footer id="contact" className="scroll-mt-24 border-t border-white/[0.08] bg-kp-navy text-slate-200">
       <div className="mx-auto max-w-content px-6 pb-10 pt-20 text-center md:px-8 md:pb-12 md:pt-24">
         <p className="font-sans text-caption2 font-bold uppercase tracking-[0.22em] text-kp-accent">Let&apos;s connect</p>
         <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-white md:text-5xl">Get in Touch</h2>

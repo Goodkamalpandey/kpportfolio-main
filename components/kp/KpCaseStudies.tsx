@@ -11,7 +11,7 @@ type Platform = (typeof WORK_FLAGSHIP)[number] | (typeof WORK_PORTFOLIO)[number]
  * Flagship cards = agentic intelligence layer; portfolio grid = manufacturing, quality, SDV, supply chain.
  * KPI figures are design targets / modeled opportunities until production-validated.
  */
-export default function KpCaseStudies() {
+export default function KpCaseStudies({ compact = false }: { compact?: boolean }) {
   return (
     <section id="work" className="scroll-mt-24 bg-kp-bg py-16 dark:bg-dark-bg md:py-24">
       <div className="mx-auto max-w-content px-5 md:px-8">
@@ -62,23 +62,32 @@ export default function KpCaseStudies() {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-20">
-          <KpReveal>
-            <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.14em] text-kp-muted dark:text-kp-muted">
-              Portfolio · Manufacturing, quality, SDV &amp; operations
-            </p>
-            <h3 className="mt-3 max-w-2xl font-serif text-2xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-3xl">
-              One connected mission across the enterprise.
-            </h3>
-          </KpReveal>
-          <div className="mt-8 grid gap-5 md:grid-cols-2 md:gap-6">
-            {WORK_PORTFOLIO.map((p) => (
-              <KpReveal key={p.name}>
-                <PortfolioCard platform={p} />
-              </KpReveal>
-            ))}
+        {compact ? (
+          <div className="mt-10 flex justify-center">
+            <Link href="/work" className="inline-flex items-center gap-2 rounded-full bg-kp-accent px-5 py-2.5 text-sm font-semibold text-kp-navy transition hover:bg-kp-award">
+              View full systems portfolio
+              <KpUiIcon name="arrowUpRight" size={15} />
+            </Link>
           </div>
-        </div>
+        ) : (
+          <div className="mt-16 md:mt-20">
+            <KpReveal>
+              <p className="font-mono text-caption2 font-semibold uppercase tracking-[0.14em] text-kp-muted dark:text-kp-muted">
+                Portfolio · Manufacturing, quality, SDV &amp; operations
+              </p>
+              <h3 className="mt-3 max-w-2xl font-serif text-2xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-3xl">
+                One connected mission across the enterprise.
+              </h3>
+            </KpReveal>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 md:gap-6">
+              {WORK_PORTFOLIO.map((p) => (
+                <KpReveal key={p.name}>
+                  <PortfolioCard platform={p} />
+                </KpReveal>
+              ))}
+            </div>
+          </div>
+        )}
 
         <KpReveal>
           <p className="mt-10 max-w-3xl text-footnote leading-relaxed text-kp-muted dark:text-kp-muted md:mt-12">

@@ -1,13 +1,10 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { externalLinkProps } from '@/components/externalLinkProps'
+import { createPageMetadata } from '@/components/kp/data'
 
 const MEDIUM = 'https://medium.com/@kamalkismca'
 
-export const metadata: Metadata = {
-  title: 'Blog | Dr. Kamal Pandey',
-  description: 'Essays and articles on Medium.',
-}
+export const metadata = createPageMetadata('/blog', 'Blog | Dr. Kamal Pandey', 'Essays and articles on Medium.')
 
 export default function BlogPage() {
   return (

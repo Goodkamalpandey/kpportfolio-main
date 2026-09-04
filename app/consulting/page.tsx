@@ -1,12 +1,12 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import KpUiIcon from '@/components/kp/KpUiIcon'
-import { SITE } from '@/components/kp/data'
+import { createPageMetadata } from '@/components/kp/data'
 
-export const metadata: Metadata = {
-  title: 'Consulting | Dr. Kamal Pandey',
-  description: 'Strategic AI consulting, architecture advisory, and executive-level technical partnership.',
-}
+export const metadata = createPageMetadata(
+  '/consulting',
+  'Consulting | Dr. Kamal Pandey',
+  'Strategic AI consulting, architecture advisory, and executive-level technical partnership.'
+)
 
 export default function ConsultingPage() {
   return (
@@ -31,29 +31,12 @@ export default function ConsultingPage() {
           <li>Research collaboration on verifiable reasoning and enterprise deployment</li>
           <li>Speaking and workshop formats for C-suite, board, and engineering leadership audiences</li>
         </ul>
-        <div className="mt-12 flex flex-wrap gap-1.5 sm:gap-2">
-          <a
-            href={SITE.topmate}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="kp-topmate-cta inline-flex items-center justify-center gap-1 rounded px-3 py-1.5 text-caption2 font-semibold leading-tight"
-          >
-            <KpUiIcon name="calendarDays" size={12} className="text-kp-navy" />
-            Book on Topmate
-          </a>
-          <a
-            href={`mailto:${SITE.email}`}
-            className="inline-flex items-center justify-center gap-1 rounded-full border border-kp-line px-3 py-1.5 text-caption2 font-semibold leading-tight text-kp-ink dark:border-white/10 dark:text-dark-text"
-          >
-            <KpUiIcon name="mail" size={12} className="text-kp-accent dark:text-kp-accent" />
-            Email
-          </a>
-        </div>
-        <p className="mt-12">
-          <Link href="/#contact" className="text-sm font-semibold text-kp-accent hover:underline dark:text-kp-accent">
-            ← Contact on home
+        <div className="mt-12">
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded bg-kp-accent px-5 py-3 text-sm font-semibold text-kp-navy transition hover:bg-kp-award">
+            Start a conversation
+            <KpUiIcon name="arrowUpRight" size={15} />
           </Link>
-        </p>
+        </div>
       </div>
     </main>
   )

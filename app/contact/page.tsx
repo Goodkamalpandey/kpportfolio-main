@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import KpContact from '@/components/kp/KpContact'
+import { createPageMetadata } from '@/components/kp/data'
 
-export const metadata: Metadata = {
-  title: 'Contact | Dr. Kamal Pandey',
-  description: 'Reach Dr. Kamal Pandey for consulting, research, and speaking.',
-}
+export const metadata = createPageMetadata(
+  '/contact',
+  'Contact | Dr. Kamal Pandey',
+  'Reach Dr. Kamal Pandey for consulting, research, and speaking.'
+)
 
 export default function ContactPage() {
   return (

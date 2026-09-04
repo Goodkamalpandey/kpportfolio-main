@@ -2,21 +2,25 @@ import KpReveal from './KpReveal'
 import KpUiIcon from './KpUiIcon'
 import { BOOKS } from './data'
 
-export default function KpBooks() {
+export default function KpBooks({ embedded = false }: { embedded?: boolean }) {
   return (
     <section
       id="books"
-      className="scroll-mt-24 bg-gradient-to-b from-kp-bg via-kp-bg to-kp-strip/80 pb-10 pt-16 dark:from-[#0B1020] dark:via-[#0a0f18] dark:to-[#060c14] md:pb-12 md:pt-20"
+      className={
+        embedded
+          ? 'mt-20 scroll-mt-24 border-t border-kp-line/70 pt-16 dark:border-white/10 md:mt-24 md:pt-20'
+          : 'scroll-mt-24 bg-gradient-to-b from-kp-bg via-kp-bg to-kp-strip/80 pb-10 pt-16 dark:from-[#0B1020] dark:via-[#0a0f18] dark:to-[#060c14] md:pb-12 md:pt-20'
+      }
     >
-      <div className="mx-auto max-w-content px-5 md:px-8">
+      <div className={embedded ? '' : 'mx-auto max-w-content px-5 md:px-8'}>
         <KpReveal>
           <p className="kp-section-eyebrow inline-flex items-center gap-2 text-kp-emerald dark:text-emerald-400">
             <KpUiIcon name="bookOpen" size={15} className="text-kp-emerald dark:text-emerald-400" />
             Books
           </p>
-          <h2 className="mt-4 font-serif text-4xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-5xl">
-            Long-form work you can hold.
-          </h2>
+          <h3 className="mt-4 font-serif text-4xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-5xl">
+            BOOK
+          </h3>
           <p className="mt-4 max-w-2xl text-kp-muted dark:text-kp-muted">
             Monograph and field guide — same rigor as the research, written for practitioners and leaders shipping in the
             real world.
@@ -32,16 +36,7 @@ export default function KpBooks() {
                     {b.kind}
                   </span>
                   <div>
-                    <a
-                      href={b.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group text-lg font-medium text-kp-ink dark:text-dark-text"
-                    >
-                      <span className="kp-nav-link inline bg-gradient-to-r from-kp-accent to-kp-accent bg-[length:0%_1px] bg-bottom bg-no-repeat transition-all group-hover:bg-[length:100%_1px] dark:from-kp-accent dark:to-kp-accent">
-                        {b.title}
-                      </span>
-                    </a>
+                    <h4 className="text-lg font-medium text-kp-ink dark:text-dark-text">{b.title}</h4>
                     <p className="mt-3 max-w-2xl text-sm leading-relaxed text-kp-muted dark:text-kp-muted">{b.blurb}</p>
                   </div>
                   <a

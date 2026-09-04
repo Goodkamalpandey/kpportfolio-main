@@ -6,10 +6,7 @@ import { HOME_IMPACT_STATS } from './data'
 
 export default function KpHeadlineImpact() {
   return (
-    <section
-      id="impact"
-      className="scroll-mt-24 border-y border-kp-line/80 bg-kp-strip/80 py-12 dark:border-white/10 dark:bg-dark-card/30 md:py-14"
-    >
+    <section id="impact" className="scroll-mt-24 border-y border-kp-line/70 bg-kp-strip/80 py-16 dark:border-white/10 dark:bg-dark-card/30 md:py-20">
       <div className="mx-auto max-w-content px-5 md:px-8">
         <p className="kp-section-eyebrow text-center">Measured outcomes</p>
         <h2 className="mt-3 text-center font-serif text-2xl font-light tracking-tight text-kp-ink dark:text-dark-text md:text-3xl">
